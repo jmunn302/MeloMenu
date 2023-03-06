@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link href="app/assets/stylesheets/halfmoon_css/halfmoon-variables.css" rel="stylesheet" />
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
@@ -13,5 +14,6 @@
 <%= render "shared/flashes" %>
 
     <%= yield %>
+    <script src="path/to/halfmoon.min.js"></script>
   </body>
 </html>
