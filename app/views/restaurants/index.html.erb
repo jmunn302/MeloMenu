@@ -1,0 +1,16 @@
+<h1>My Restaurants</h1>
+
+<% if @restaurants.any? %>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li>
+        <%= link_to restaurant.name, restaurant %>
+        (Cuisine: <%= restaurant.type %>)
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You haven't added any restaurants yet.</p>
+<% end %>
+
+<%= link_to 'Add a new restaurant', new_restaurant_path %>
