@@ -245,16 +245,16 @@ CSS variables (CSS custom properties)
     --indigo-box-shadow-color-darker: rgba(2, 14, 23, 0.6);
     --text-color-on-indigo-color-bg: #ffffff;
 
-  /* Gray */
+  /* Blue-Gray */
 
-  --gray-color: #afb7ba; /* rgba(176, 183, 186, 1) */
-  --gray-color-light: #cdd6d8;
-  --gray-color-very-light: #ebf4f8;
-  --gray-color-dark: #797f82;
-  --gray-color-very-dark: #474b4d;
-  --gray-box-shadow-color: rgba(45, 47, 48, 0.3);
-  --gray-box-shadow-color-darker: rgba(12, 13, 14, 0.6);
-  --text-color-on-gray-color-bg: #ffffff;
+  --blue-gray-color: #afb7ba; /* rgba(176, 183, 186, 1) */
+  --blue-gray-color-light: #cdd6d8;
+  --blue-gray-color-very-light: #ebf4f8;
+  --blue-gray-color-dark: #797f82;
+  --blue-gray-color-very-dark: #474b4d;
+  --blue-gray-box-shadow-color: rgba(45, 47, 48, 0.3);
+  --blue-gray-box-shadow-color-darker: rgba(12, 13, 14, 0.6);
+  --text-color-on-blue-gray-color-bg: #ffffff;
 
 
     /* Teal */
@@ -348,36 +348,36 @@ CSS variables (CSS custom properties)
 
     /* Success colors */
 
-    --success-color: var(--green-color);
-    --success-color-light: var(--green-color-light);
-    --success-color-very-light: var(--green-color-very-light);
-    --success-color-dark: var(--green-color-dark);
-    --success-color-very-dark: var(--green-color-very-dark);
-    --success-box-shadow-color: var(--green-box-shadow-color);
-    --success-box-shadow-color-darker: var(--green-box-shadow-color-darker);
-    --text-color-on-success-color-bg: var(--text-color-on-green-color-bg);
+    --success-color: var(--indigo-color);
+    --success-color-light: var(--indigo-color-light);
+    --success-color-very-light: var(--indigo-color-very-light);
+    --success-color-dark: var(--indigo-color-dark);
+    --success-color-very-dark: var(--indigo-color-very-dark);
+    --success-box-shadow-color: var(--indigo-box-shadow-color);
+    --success-box-shadow-color-darker: var(--indigo-box-shadow-color-darker);
+    --text-color-on-success-color-bg: var(--text-color-on-indigo-color-bg);
 
     /* Secondary colors */
 
-    --secondary-color: var(--yellow-color);
-    --secondary-color-light: var(--yellow-color-light);
-    --secondary-color-very-light: var(--yellow-color-very-light);
-    --secondary-color-dark: var(--yellow-color-dark);
-    --secondary-color-very-dark: var(--yellow-color-very-dark);
-    --secondary-box-shadow-color: var(--yellow-box-shadow-color);
-    --secondary-box-shadow-color-darker: var(--yellow-box-shadow-color-darker);
-    --text-color-on-secondary-color-bg: var(--text-color-on-yellow-color-bg);
+    --secondary-color: var(--blue-gray-color);
+    --secondary-color-light: var(--blue-gray-color-light);
+    --secondary-color-very-light: var(--blue-gray-color-very-light);
+    --secondary-color-dark: var(--blue-gray-color-dark);
+    --secondary-color-very-dark: var(--blue-gray-color-very-dark);
+    --secondary-box-shadow-color: var(--blue-gray-box-shadow-color);
+    --secondary-box-shadow-color-darker: var(--blue-graybox-shadow-color-darker);
+    --text-color-on-secondary-color-bg: var(--text-color-on-blue-gray-color-bg);
 
     /* Danger colors */
 
-    --danger-color: var(--red-color);
-    --danger-color-light: var(--red-color-light);
-    --danger-color-very-light: var(--red-color-very-light);
-    --danger-color-dark: var(--red-color-dark);
-    --danger-color-very-dark: var(--red-color-very-dark);
-    --danger-box-shadow-color: var(--red-box-shadow-color);
-    --danger-box-shadow-color-darker: var(--red-box-shadow-color-darker);
-    --text-color-on-danger-color-bg: var(--text-color-on-red-color-bg);
+    --danger-color: var(--yellow-color);
+    --danger-color-light: var(--yellow-color-light);
+    --danger-color-very-light: var(--yellow-color-very-light);
+    --danger-color-dark: var(--yellow-color-dark);
+    --danger-color-very-dark: var(--yellow-color-very-dark);
+    --danger-box-shadow-color: var(--yellow-box-shadow-color);
+    --danger-box-shadow-color-darker: var(--yellow-box-shadow-color-darker);
+    --text-color-on-danger-color-bg: var(--text-color-on-yellow-color-bg);
 
 
     /*
@@ -733,7 +733,7 @@ CSS variables (CSS custom properties)
     --lm-button-border-color: rgba(0, 0, 0, 0.2);
     --lm-button-box-shadow: 0 0.2rem 0 rgba(0, 0, 0, 0.05);
     --lm-button-text-color-hover: var(--lm-button-text-color);
-    --lm-button-bg-color-hover: var(--gray-color-very-light);
+    --lm-button-bg-color-hover: var(--blue-gray-color-very-light);
     --lm-button-bg-image-hover: none;
     --lm-button-border-color-hover: var(--lm-button-border-color);
     --lm-button-box-shadow-hover: var(--lm-button-box-shadow);
@@ -1022,9 +1022,9 @@ CSS variables (CSS custom properties)
     --table-foot-row-border-top-border-width: 2px;
     --table-border-width: var(--base-border-width);
 
-    --lm-table-border-color: var(--gray-color);
+    --lm-table-border-color: var(--blue-gray-color);
 
-    --dm-table-border-color: var(--gray-color-very-dark);
+    --dm-table-border-color: var(--blue-gray-color-very-dark);
 
     /* Hoverable table */
 
@@ -1045,22 +1045,22 @@ CSS variables (CSS custom properties)
     --lm-table-primary-text-color: var(--lm-base-text-color);
     --lm-table-primary-bg-color: var(--primary-color-very-light);
     --lm-table-primary-row-border-color: var(--primary-color-light);
-    --lm-table-primary-cell-border-color: var(--gray-color-dark);
+    --lm-table-primary-cell-border-color: var(--blue-gray-color-dark);
 
     --lm-table-success-text-color: var(--lm-base-text-color);
     --lm-table-success-bg-color: var(--success-color-very-light);
     --lm-table-success-row-border-color: var(--success-color);
-    --lm-table-success-cell-border-color: var(--gray-color-dark);
+    --lm-table-success-cell-border-color: var(--blue-gray-color-dark);
 
     --lm-table-secondary-text-color: var(--lm-base-text-color);
     --lm-table-secondary-bg-color: var(--secondary-color-very-light);
     --lm-table-secondary-row-border-color: var(--secondary-color);
-    --lm-table-secondary-cell-border-color: var(--gray-color-dark);
+    --lm-table-secondary-cell-border-color: var(--blue-gray-color-dark);
 
     --lm-table-danger-text-color: var(--lm-base-text-color);
     --lm-table-danger-bg-color: var(--danger-color-very-light);
     --lm-table-danger-row-border-color: var(--danger-color-light);
-    --lm-table-danger-cell-border-color: var(--gray-color-dark);
+    --lm-table-danger-cell-border-color: var(--blue-gray-color-dark);
 
     /* Dark mode */
 
@@ -2532,12 +2532,7 @@ button,
 select {
     text-transform: none;
 }
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-    -webkit-appearance: button;
-}
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -2578,7 +2573,6 @@ textarea {
     height: auto;
 }
 [type="search"] {
-    -webkit-appearance: textfield;
     outline-offset: -2px;
 }
 [type="search"]::-webkit-search-decoration {
