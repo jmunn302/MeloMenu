@@ -6,12 +6,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :menus, only: [:show]
+  resources :templates, only: [:index, :show]
   resources :users do
     resources :restaurants do
-      resources :templates, only: [:index, :show] do
       resources :menus, only: [:index, :edit, :update, :destroy, :create, :new] do
         resources :dishes
-      end
     end
   end
 end

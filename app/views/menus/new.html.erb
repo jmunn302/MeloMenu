@@ -1,29 +1,46 @@
-<h1>Create a new Menu </h1>
+<div class="container">
+  <h1>Create a New Menu</h1>
 
-<%= form_with model: @menu, url: user_restaurant_menus_path do |form| %>
-  <% if @menu.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+  <%= form_with model: @menu, url: user_restaurant_menus_path, method: :post do |form| %>
+    <% if @menu.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+        <ul>
+          <% @menu.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-      <ul>
-        <% @menu.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+    <div class="field">
+      <%= form.label :menu_name %>
+      <%= form.text_field :menu_name %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :menu_name %>
-    <%= form.text_field :menu_name %>
-  </div>
+    <div class="field">
+      <%= form.label :template_id %>
+      <%= radio_button_tag(:template_id, "2") %>
+      <%= label_tag(:template_1, "1") %>
+      <%= radio_button_tag(:template_id, "3") %>
+      <%= label_tag(:template_2, "2") %>
+      <%= radio_button_tag(:template_id, "4") %>
+      <%= label_tag(:template_3, "3") %>
+      <%= radio_button_tag(:template_id, "8") %>
+      <%= label_tag(:template_4, "4") %>
 
-  <%= form.select :template_id %>
+      <div class="actions">
+        <%= form.submit 'Save' %>
+      </div>
+    </div>
 
-
-
-  <div class="actions">
-    <%= form.submit 'Create Menu' %>
-  </div>
-
-<% end %>
+    <div class="d-flex justify-content-around">
+      <% i = 0 %>
+      <% @templates.each do | template | %>
+        <p> <%= i + 1 %>.)
+        <% i = i + 1 %>
+        <%= template.name %> </p>
+      <% end %>
+    </div>
+  <%end%>
+</div>

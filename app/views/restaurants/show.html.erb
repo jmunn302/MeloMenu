@@ -9,3 +9,5 @@
 <p><strong>Website:</strong> <%= link_to @restaurant.website, @restaurant.website %></p>
 
 <p><strong>Email:</strong> <%= @restaurant.email %></p>
+
+<%= link_to "Create new Menu", user_restaurant_templates_path(@restaurant.id, @restaurant) %>

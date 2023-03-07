@@ -12,6 +12,9 @@ class MenusController < ApplicationController
 
     def new
       @menu = Menu.new
+      @restaurant = Restaurant.find(params[:restaurant_id])
+      @user = current_user
+      @templates = Template.all
     end
 
     def edit
@@ -19,12 +22,19 @@ class MenusController < ApplicationController
 
     def create
       @menu = Menu.new(menu_params)
-
+      @restaurant = Restaurant.find(params[:restaurant_id])
+      @menu.restaurant = @restaurant
+      @menu.template = Template.find(params[:template_id])
+      @templates = Template.all
+      @user = current_user
+      @dish = Dish.new
       if @menu.save
-        redirect_to @menu, notice: "Menu was successfully created."
+        redirect_to user_restaurant_menu_dishes_path(@user, @restaurant, @menu)
+        # raise
       else
         render :new, status: :unprocessable_entity
       end
+
     end
 
     def update
@@ -43,7 +53,7 @@ class MenusController < ApplicationController
       end
 
       def menu_params
-        params.require(:menu).permit(:name, :template_id)
+        params.require(:menu).permit(:menu_name, :id)
       end
 
 end
