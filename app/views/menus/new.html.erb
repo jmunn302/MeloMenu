@@ -1,0 +1,26 @@
+<h1>Create a new Menu %> </h1>
+
+<%= form_with model: @menu, url: user_restaurant_menus_path do |form| %>
+  <% if @menu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+
+      <ul>
+        <% @menu.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :menu_name %>
+    <%= form.text_field :menu_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Create Restaurant' %>
+  </div>
+
+  <% redirect_to new_user_restaurant_menu_dish_path %>
+<% end %>
