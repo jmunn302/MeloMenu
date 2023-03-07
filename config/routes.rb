@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :templates, only: [:index, :show]
   resources :menus, only: [:show]
   resources :users do
-    resources :restaurants do
+    resources :restaurants  do
       resources :menus, only: [:index, :edit, :update, :destroy, :create, :new] do
         resources :dishes
       end

@@ -38,12 +38,13 @@ class DishesController < ApplicationController
   end
 
   private
+
     def set_dish
       @dish = Dish.find(params[:id])
     end
 
-    def dish_params
-      params.require(:dish).permit(:name, :description, :price, :dietary_type, :category)
-    end
+  def dish_params
+    params.require(:dish).permit(:name, :description, :price, :dietary_type, :category)
+  end
 
 end

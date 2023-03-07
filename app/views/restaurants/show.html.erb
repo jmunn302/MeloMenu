@@ -2,24 +2,10 @@
 
 <p><strong>Cuisine:</strong> <%= @restaurant.type %></p>
 
-<p><strong>Address:</strong> <%= @restaurant.address %></p>
+<p><strong>Address:</strong> <%= @restaurant.adress %></p>
 
 <p><strong>Phone number:</strong> <%= @restaurant.phone_number %></p>
 
 <p><strong>Website:</strong> <%= link_to @restaurant.website, @restaurant.website %></p>
 
 <p><strong>Email:</strong> <%= @restaurant.email %></p>
-
-<h2>Menus</h2>
-
-<% if @menus.any? %>
-  <ul>
-    <% @menus.each do |menu| %>
-      <li><%= link_to menu.name, menu %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>No menus yet. <%= link_to 'Add a menu', new_menu_path(restaurant_id: @restaurant.id) %></p>
-<% end %>
-
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
