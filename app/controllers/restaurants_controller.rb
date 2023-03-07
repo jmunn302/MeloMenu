@@ -7,7 +7,6 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @menus = @restaurant
   end
 
   def new
@@ -39,7 +38,6 @@ class RestaurantsController < ApplicationController
     @restaurant.destroy
     redirect_to user_restaurants_path, notice: 'Restaurant was successfully deleted.'
   end
-
 
   private
 

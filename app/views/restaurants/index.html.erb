@@ -3,8 +3,11 @@
   <ul>
     <% @restaurants.each do |restaurant| %>
       <li>
+
         <%= restaurant.name  %>
         <%= button_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %>
+
+        <%= link_to 'link', user_restaurant_path(restaurant.user, restaurant) %>
       </li>
     <% end %>
   </ul>
