@@ -42,8 +42,8 @@ class MenusController < ApplicationController
         @menu = Menu.find(params[:id])
       end
 
-      def restaurant_params
-        params.require(:menu).permit(:name)
+      def menu_params
+        params.require(:menu).permit(:name, :template_id)
       end
 
 end

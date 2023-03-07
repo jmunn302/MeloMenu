@@ -1,4 +1,4 @@
-<h1>Create a new Menu %> </h1>
+<h1>Create a new Menu </h1>
 
 <%= form_with model: @menu, url: user_restaurant_menus_path do |form| %>
   <% if @menu.errors.any? %>
@@ -18,9 +18,12 @@
     <%= form.text_field :menu_name %>
   </div>
 
+  <%= form.select :template_id %>
+
+
+
   <div class="actions">
-    <%= form.submit 'Create Restaurant' %>
+    <%= form.submit 'Create Menu' %>
   </div>
 
-  <% redirect_to new_user_restaurant_menu_dish_path %>
 <% end %>
