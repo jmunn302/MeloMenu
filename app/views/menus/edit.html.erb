@@ -1,0 +1,12 @@
+<h1>Edit Menu</h1>
+
+<%= form_for @menu, url: user_restaurant_menu_path(@menu), method: :patch do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit "update"%>
+  </div>
+<% end %>

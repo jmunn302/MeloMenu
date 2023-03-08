@@ -2,8 +2,12 @@ class MenuPolicy < ApplicationPolicy
 
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
-  def resolve
-    scope.all
+    def resolve
+      scope.all # If users can see all restaurants
+      # scope.where(user: user) # If users can only see their restaurants
+      # scope.where("name LIKE 't%'") # If users can only see restaurants starting with `t`
+      # ...
+    end
   end
 
   def show?
@@ -16,7 +20,7 @@ class MenuPolicy < ApplicationPolicy
 
   def update?
     record.user == user
-    # record: the restaurant passed to the `authorize` method in controller
+    # record: the menu passed to the `authorize` method in controller
     # user: the `current_user` signed in with Devise
   end
 
@@ -24,5 +28,4 @@ class MenuPolicy < ApplicationPolicy
     record.user == user
   end
 
-end
 end
