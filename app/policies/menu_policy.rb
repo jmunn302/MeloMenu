@@ -2,8 +2,10 @@ class MenuPolicy < ApplicationPolicy
 
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
-  def resolve
-    scope.all
+
+    def resolve
+      scope.all
+    end
   end
 
   def show?
@@ -11,7 +13,11 @@ class MenuPolicy < ApplicationPolicy
   end
 
   def create?
-    true
+    record.user == user
+  end
+
+  def new?
+    record.user == user
   end
 
   def update?
@@ -24,5 +30,4 @@ class MenuPolicy < ApplicationPolicy
     record.user == user
   end
 
-end
 end

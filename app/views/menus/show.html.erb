@@ -1,18 +1,29 @@
+
+<div class="template-header">
+<%= cl_image_tag "TemplateBanner1_v1s44h", class: "template-banner" %>
+<div class="menu-name">
+<h2> <%= @menu.menu_name %> </h2>
+</div>
+</div>
+
   <div class="d-flex">
-    <div class="d-flex align-items-stretch justify-content-center menu-sidebar bg-primary">
+    <div class="d-flex align-items-stretch justify-content-center menu-sidebar">
     <h1 class="text-white">Section 1</h1>
     </div>
-    <div class="d-flex align-items-center justify-content-center bg-success">
-        <h1 class="text-white">Section 2</h1>
+  <div class="main-section">
+    <div class="d-flex section-two justify-content-center">
+        <h1 class="text-dark">Section 2</h1>
     </div>
-
-
-<% if policy(@menu).edit? %>
-  <%= link_to "Edit this menu", edit_menu_path(@menu) %> |
-<% end %>
-<!-- [...] -->
-<%= button_to "Destroy this menu", @menu, method: :delete if policy(@menu).destroy? %>
-
+    <div class="d-flex section-three justify-content-center">
+        <h1 class="text-dark">Section 3</h1>
+    </div>
+    <div class="d-flex section-four justify-content-center">
+        <h1 class="text-dark">Section 4</h1>
+    </div>
+    <div class="d-flex section-five justify-content-center">
+        <h1 class="text-dark">Section 5</h1>
+  </div>
+</div>
 
 
 
