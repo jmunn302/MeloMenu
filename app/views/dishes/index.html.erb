@@ -27,13 +27,13 @@
 
   <div class="field">
   <%= form.label :vegan %>
-  <%= form.check_box("dietary_type", {:multiple => true}, "Vegan", nil) %>
+  <%= form.check_box("dietary_type", {:multiple => true}, "Vegan", nil) @dish.dietary_type.include?('Vegan') %>
   <%= form.label :vegetarian %>
-  <%= form.check_box("dietary_type", {:multiple => true}, "Vegetarian", nil) %>
+  <%= form.check_box("dietary_type", {:multiple => true}, "Vegetarian", nil) @dish.dietary_type.include?('Vegetarian') %>
   <%= form.label :gluten_free %>
-  <%= form.check_box("dietary_type", {:multiple => true}, "Gluten-free", nil) %>
+  <%= form.check_box("dietary_type", {:multiple => true}, "Gluten-free", nil) @dish.dietary_type.include?('Gluten-free') %>
   <%= form.label :lactose_free %>
-  <%= form.check_box("dietary_type", {:multiple => true}, "Lactose-free", nil) %>
+  <%= form.check_box("dietary_type", {:multiple => true}, "Lactose-free", nil) @dish.dietary_type.include?('Lactose-free') %>
 
   </div>
   </div>
