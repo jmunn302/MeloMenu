@@ -1,11 +1,10 @@
-class MenuPolicy < ApplicationPolicy
-
-
+class DishPolicy < ApplicationPolicy
 
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
+
     def resolve
-      scope.where(user: user) # If users can only see their restaurants
+      scope.all
     end
   end
 
@@ -21,14 +20,18 @@ class MenuPolicy < ApplicationPolicy
     true
   end
 
+  def index?
+    true
+  end
+
   def update?
-    record.user == user
-    # record: the menu passed to the `authorize` method in controller
+    true
+    # record: the restaurant passed to the `authorize` method in controller
     # user: the `current_user` signed in with Devise
   end
 
   def destroy?
-    record.user == user
+    true
   end
 
 end

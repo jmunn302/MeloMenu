@@ -1,4 +1,4 @@
 class Dish < ApplicationRecord
   belongs_to :menu
-  validates :dietary_type, inclusion: { in: %w(vegan vegetarian gluten-free lactose-free)}
+  validates :dietary_type, inclusion: { in: %w(Vegan Vegetarian Gluten-Free Lactose-Free)}
 end
