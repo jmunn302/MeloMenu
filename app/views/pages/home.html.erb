@@ -29,7 +29,7 @@
           </div>
            <% end %>
       <% else %>
-        <%= link_to user_restaurants_path(user_id = current_user.id) do %>
+        <%= link_to new_user_restaurant_path(user_id = current_user.id) do %>
           <div class="d-flex flex-column align-items-center justify-content-center">
           <%= cl_image_tag "brand_images-02_sw3oqb", class: "brand-img" %>
           <h4 class="mt-0">Create a New Restaurants</h4>
@@ -46,7 +46,7 @@
           </div>
            <% end %>
       <% else %>
-        <%= link_to user_restaurants_path(user_id = current_user.id) do %>
+        <%= link_to new_support_request_path do %>
           <div class="d-flex flex-column align-items-center justify-content-center">
           <%= cl_image_tag "brand_images-03_hqpedg", class: "brand-img" %>
           <h4 class="mt-0">Contact Us</h4>
