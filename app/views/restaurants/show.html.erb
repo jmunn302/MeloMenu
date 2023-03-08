@@ -1,8 +1,8 @@
 <h1><%= @restaurant.name %></h1>
 
-<p><strong>Cuisine:</strong> <%= @restaurant.type %></p>
+<p><strong>Cuisine:</strong> <%= @restaurant.cuisine %></p>
 
-<p><strong>Address:</strong> <%= @restaurant.adress %></p>
+<p><strong>Address:</strong> <%= @restaurant.address %></p>
 
 <p><strong>Phone number:</strong> <%= @restaurant.phone_number %></p>
 
@@ -10,4 +10,7 @@
 
 <p><strong>Email:</strong> <%= @restaurant.email %></p>
 
-<%= link_to "Create new Menu", user_restaurant_templates_path(@restaurant.id, @restaurant) %>
+
+<%= button_to 'Delete this Restaurant', user_restaurant_path(@restaurant.user, @restaurant), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<%= link_to "Edit Restaurant", edit_user_restaurant_path(@restaurant) %>
