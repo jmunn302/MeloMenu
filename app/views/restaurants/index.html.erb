@@ -6,7 +6,7 @@
 
         <h3><%= restaurant.name %></h3>
 
-        <%= link_to 'Restaurant information', user_restaurant_path(restaurant.user, restaurant) %>
+        <%= link_to 'Restaurant information', method: "patch", user_restaurant_path(restaurant.user, restaurant) %>
       </li>
     <% end %>
   </ul>
