@@ -69,7 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_094915) do
     t.string "name"
     t.string "cuisine"
     t.string "address"
-    t.string "phone_number"
+    t.integer "phone_number"
     t.string "website"
     t.string "email"
     t.datetime "created_at", null: false
