@@ -7,7 +7,11 @@
     </div>
 
 
-
+<% if policy(@menu).edit? %>
+  <%= link_to "Edit this menu", edit_menu_path(@menu) %> |
+<% end %>
+<!-- [...] -->
+<%= button_to "Destroy this menu", @menu, method: :delete if policy(@menu).destroy? %>
 
 
 
