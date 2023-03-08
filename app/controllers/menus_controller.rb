@@ -5,9 +5,12 @@ class MenusController < ApplicationController
     def index
       @menus = Menu.all
       @restaurants = current_user.restaurants
+      @menus = policy_scope(Menu)
+      authorize @menu
     end
 
     def show
+      authorize @menu
     end
 
 
@@ -16,9 +19,11 @@ class MenusController < ApplicationController
       @restaurant = Restaurant.find(params[:restaurant_id])
       @user = current_user
       @templates = Template.all
+      authorize @menu
     end
 
     def edit
+      authorize @menu
     end
 
     def create
@@ -35,17 +40,19 @@ class MenusController < ApplicationController
       else
         render :new, status: :unprocessable_entity
       end
-
+      authorize @menu
     end
 
     def update
       @menu.update(menu_params)
       redirect_to restaurant_path(@menu)
+      authorize @menu
     end
 
     def destroy
       @menu.destroy
       redirect_to restaurant_path(@menu.restaurant), status: :see_other
+      authorize @menu
     end
 
     private
