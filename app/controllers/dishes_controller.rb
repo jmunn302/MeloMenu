@@ -6,7 +6,7 @@ class DishesController < ApplicationController
     @dishes = Dish.all
     @menu = Menu.find(params[:menu_id])
     @dish = Dish.new
-    @dietary_types = ['Vegan', "Vegetarian", "Gluten-free", "Lactose-free"] 
+    @dietary_types = ['Vegan', "Vegetarian", "Gluten-free", "Lactose-free"]
   end
 
   def show
