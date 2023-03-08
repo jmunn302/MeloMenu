@@ -18,13 +18,11 @@ User.create!(first_name: 'Paul', last_name: 'Baker', email: Faker::Internet.emai
 
 User.create!(first_name: 'Anna', last_name: 'Jones', email: Faker::Internet.email, password: Faker::Internet.password(min_length: 8))
 
-
 @users = User.all
 ids = []
 @users.each do |user|
   ids << user.id
 end
-
 
 Restaurant.create!(user_id: ids.sample, name: 'Pizza Palace', cuisine: 'Italian', address: '123 Main St', phone_number: '5551234', website: 'https://pizzapalace.com', email: 'info@pizzapalace.com')
 
@@ -34,5 +32,32 @@ Restaurant.create!(user_id: ids.sample, name: 'Taco Time', cuisine: 'Mexican', a
 
 Restaurant.create!(user_id: ids.sample, name: 'Burger Joint', cuisine: 'American', address: '1010 Maple Ave', phone_number: '69841940', website: 'https://sushiworld.com', email: 'info@sushiworld.com')
 
+Template.create!(name: "Colourful Template")
+
+Template.create!(name: "Classic Template")
+
+Template.create!(name: "Modern Template")
+
+Template.create!(name: "Special Template")
+
+@templates = Template.all
+template_ids = []
+@templates.each do |template|
+  template_ids << template.id
+end
+
+@restaurants = Restaurant.all
+restaurant_ids = []
+@restaurants.each do |restaurant|
+  restaurant_ids << restaurant.id
+end
+
+Menu.create!(menu_name: "Dinner Menu", restaurant_id: restaurant_ids.sample, template_id: template_ids.sample)
+
+Menu.create!(menu_name: "Lunch Menu", restaurant_id: restaurant_ids.sample, template_id: template_ids.sample)
+
+Menu.create!(menu_name: "Summer Menu", restaurant_id: restaurant_ids.sample, template_id: template_ids.sample)
+
+Menu.create!(menu_name: "Classic Menu", restaurant_id: restaurant_ids.sample, template_id: template_ids.sample)
 
 puts "Yay you're done!"
