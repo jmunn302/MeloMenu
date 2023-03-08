@@ -1,5 +1,7 @@
 class MenuPolicy < ApplicationPolicy
 
+
+
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
 
@@ -13,11 +15,11 @@ class MenuPolicy < ApplicationPolicy
   end
 
   def create?
-    record.user == user
+    true
   end
 
   def new?
-    record.user == user
+    true
   end
 
   def update?

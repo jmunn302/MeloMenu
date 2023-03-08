@@ -6,7 +6,6 @@ class MenusController < ApplicationController
       @menus = Menu.all
       @restaurants = current_user.restaurants
       @menus = policy_scope(Menu)
-      authorize @menu
     end
 
     def show
