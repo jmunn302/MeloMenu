@@ -1,0 +1,7 @@
+<% @menus.each do | menu | %>
+<% if menu.restaurant_id = params[:restaurant_id]%>
+<ul>
+<li><%= menu.menu_name %></li>
+</ul>
+<% end %>
+<% end %>
