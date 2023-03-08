@@ -16,6 +16,7 @@ class MenusController < ApplicationController
       @restaurant = Restaurant.find(params[:restaurant_id])
       @user = current_user
       @templates = Template.all
+      authorize @menu
     end
 
     def edit
