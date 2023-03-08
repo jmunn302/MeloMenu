@@ -1,7 +1,12 @@
-<% @menus.each do | menu | %>
-<% if menu.restaurant_id = params[:restaurant_id]%>
-<ul>
-<li><%= menu.menu_name %></li>
-</ul>
+<div class=container>
+  <h1>Menus</h1>
+    <% @menus.each do | menu | %>
+    <% if menu.restaurant_id = params[:restaurant_id]%>
+      <ul>
+        <li><%= menu.menu_name %>
+          <%= link_to '<EDIT>', edit_user_restaurant_menu_path(@user, @restaurant, menu)%>
+        </li>
+      </ul>
+    <% end %>
 <% end %>
-<% end %>
+</div>
