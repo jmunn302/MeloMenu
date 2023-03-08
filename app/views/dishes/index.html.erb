@@ -1,10 +1,10 @@
 <h1>Add to <%= @menu.menu_name %> </h1>
 
 <%= form_with model: @dish, url: user_restaurant_menu_dishes_path, method: :post do |form| %>
+
   <% if @dish.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this menu from being saved:</h2>
-
       <ul>
         <% @dish.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -12,6 +12,7 @@
       </ul>
     </div>
   <% end %>
+
   <div class ="w-full">
     <div class="field">
       <%= form.label :category %>
@@ -19,22 +20,16 @@
     </div>
   </div>
 
-  <div class="d-flex">
+  <div class="d-flex align-items-center justify-items-around">
     <div class="field">
       <%= form.label :name %>
       <%= form.text_field :name %>
     </div>
 
     <div class="field">
-      <%= form.label :vegan %>
-      <%= form.check_box("dietary_type", {:multiple => true}, "Vegan", nil)  %>
-      <%= form.label :vegetarian %>
-      <%= form.check_box("dietary_type", {:multiple => true}, "Vegetarian", nil) %>
-      <%= form.label :gluten_free %>
-      <%= form.check_box("dietary_type", {:multiple => true}, "Gluten-free", nil) %>
-      <%= form.label :lactose_free %>
-      <%= form.check_box("dietary_type", {:multiple => true}, "Lactose-free", nil) %>
-
+    <p>Please label Vegan, Vegetarian, Gluten-Free or Lactose-Free
+      <%= form.label :dietary_type %>
+      <%= form.text_field :dietary_type %></p>
     </div>
   </div>
 
@@ -53,7 +48,6 @@
 
 
   <div class="actions">
-    <%= form.submit 'Create Menu' %>
-    <% user_restaurant_menu_dishes_path %>
+    <%= form.submit "Create Menu" %>
   </div>
 <% end %>

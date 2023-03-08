@@ -4,6 +4,7 @@ class MenusController < ApplicationController
 
     def index
       @menus = Menu.all
+      @restaurants = current_user.restaurants
     end
 
     def show
