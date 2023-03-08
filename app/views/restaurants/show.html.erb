@@ -10,6 +10,7 @@
 
 <p><strong>Email:</strong> <%= @restaurant.email %></p>
 
+
 <%= button_to 'Delete this Restaurant', user_restaurant_path(@restaurant.user, @restaurant), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <%= link_to "Edit Restaurant", edit_user_restaurant_path(@restaurant) %>

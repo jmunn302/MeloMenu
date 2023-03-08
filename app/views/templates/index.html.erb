@@ -1,8 +1,6 @@
 <h1> Templates </h1>
-<ol>
-<% @templates.each do |template| %>
-  <li> <%= template.name %> </li>
+<ul>
+  <% @templates.each do |template| %>
+   <li> <%= template.name %> </li>
   <% end %>
-  </ol>
-
-  <%= link_to "Create Menu", new_user_restaurant_menu_path %>
+</ul>

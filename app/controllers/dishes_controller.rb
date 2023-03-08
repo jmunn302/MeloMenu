@@ -4,6 +4,8 @@ class DishesController < ApplicationController
 
   def index
     @dishes = Dish.all
+    @menu = Menu.find(params[:menu_id])
+    @dish = Dish.new
   end
 
   def show
@@ -19,10 +21,11 @@ class DishesController < ApplicationController
 
   def create
     @dish = Dish.new(dish_params)
-
+    @dish.menu = Menu.find(params[:menu_id])
     if @dish.save
       redirect_to @dish.menu, notice: "Menu was successfully created."
     else
+      raise
       render :new, status: :unprocessable_entity
     end
   end
@@ -43,8 +46,10 @@ class DishesController < ApplicationController
       @dish = Dish.find(params[:id])
     end
 
+
+
   def dish_params
-    params.require(:dish).permit(:name, :description, :price, :dietary_type, :category)
+    params.require(:dish).permit(:name, :description, :price, :category, dietary_type: [])
   end
 
 end
