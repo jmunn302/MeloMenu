@@ -3,14 +3,17 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   def index
-    @restaurants = current_user.restaurants
+    # @restaurants = current_user.restaurants
+    @restaurants = policy_scope(Restaurant)
   end
 
   def show
+    authorize @restaurant
   end
 
   def new
     @restaurant = current_user.restaurants.build
+    authorize @restaurant
   end
 
   def create
@@ -20,9 +23,11 @@ class RestaurantsController < ApplicationController
     else
       render :new
     end
+    authorize @restaurant
   end
 
   def edit
+    authorize @restaurant
   end
 
   def update
@@ -33,12 +38,14 @@ class RestaurantsController < ApplicationController
     else
       render 'edit'
     end
+    authorize @restaurant
   end
 
   def destroy
     @restaurant = current_user.restaurants.find(params[:id])
     @restaurant.destroy
     redirect_to user_restaurants_path, notice: 'Restaurant was successfully deleted.'
+    authorize @restaurant
   end
 
   private

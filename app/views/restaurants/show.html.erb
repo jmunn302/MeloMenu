@@ -11,6 +11,7 @@
 <p><strong>Email:</strong> <%= @restaurant.email %></p>
 
 
-<%= button_to 'Delete this Restaurant', user_restaurant_path(@restaurant.user, @restaurant), method: :delete, data: { confirm: 'Are you sure?' } %>
-
-<%= link_to "Edit Restaurant", edit_user_restaurant_path(@restaurant) %>
+<% if policy(@restaurant).edit? %>
+  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
+  <%= button_to "Destroy this restaurant", @restaurant, method: :delete if policy(@restaurant).destroy? %>
+<% end %>

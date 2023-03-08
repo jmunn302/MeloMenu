@@ -19,3 +19,6 @@
 <% end %>
 
  <p class ="btn-primary" ><%= link_to 'Add Restaurant', new_user_restaurant_path %></p>
+
+
+<%= link_to "New restaurant", new_restaurant_path if policy(Restaurant).new? %>
