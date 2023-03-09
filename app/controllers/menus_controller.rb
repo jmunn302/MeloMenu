@@ -12,6 +12,8 @@ class MenusController < ApplicationController
 
   def show
     authorize @menu
+    @user = current_user
+    @restaurant = @menu.restaurant
   end
 
   def new
@@ -47,7 +49,7 @@ class MenusController < ApplicationController
 
   def update
     @menu.update(menu_params)
-    redirect_to restaurant_path(@menu)
+    redirect_to menu_path(@menu)
     authorize @menu
   end
 

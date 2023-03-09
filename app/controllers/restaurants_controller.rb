@@ -9,6 +9,9 @@ class RestaurantsController < ApplicationController
 
   def show
     authorize @restaurant
+    @restaurant = Restaurant.find(params[:id])
+    @user = User.find(params[:user_id])
+    @restaurants = Restaurant.all
   end
 
   def new

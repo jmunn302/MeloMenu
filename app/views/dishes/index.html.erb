@@ -1,6 +1,6 @@
+<div class="container">
 <h1>Add to <%= @menu.menu_name %> </h1>
 
-<%= form_with model: @dish, url: user_restaurant_menu_dishes_path, method: :post do |form| %>
 
   <% if @dish.errors.any? %>
     <div id="error_explanation">
@@ -12,42 +12,32 @@
       </ul>
     </div>
   <% end %>
+<div class="form-card d-flex align-items-start flex-column">
 
-  <div class ="w-full">
-    <div class="field">
-      <%= form.label :category %>
-      <%= form.text_field :category %>
-    </div>
-  </div>
-
-  <div class="d-flex align-items-center justify-items-around">
-    <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
-
-    <div class="field">
-    <p>Please label Vegan, Vegetarian, Gluten-Free or Lactose-Free
-      <%= form.label :dietary_type %>
-      <%= form.text_field :dietary_type %></p>
-    </div>
-  </div>
-
-  <div class="d-flex">
-
-    <div class="field">
-      <%= form.label :description %>
-      <%= form.text_field :description %>
-    </div>
-
-    <div class="field">
-      <%= form.label :price %>
-      <%= form.number_field :price %>
-    </div>
-  </div>
+<%= form_for(@menu) do |f| %>
+  <%= f.fields_for :dishes do |dish| %>
+    <p>
+    <%= f.label :category %>
+    <%= dish.text_field :category %><br>
+    <%= f.label :name %>
+    <%= dish.text_field :name %><br>
+    <%= f.label :description %>
+    <%= dish.text_field :description %><br>
+    <%= f.label :dietary_type %>
+    <%= dish.text_field :dietary_type %>
+    <%= f.label :price %>
+    <%= dish.number_field :price, step: :any %><br>
 
 
-  <div class="actions">
-    <%= form.submit "Create Menu" %>
-  </div>
+
+    </p>
+  <% end %>
+
+  <%= f.submit "Create Menu" %>
 <% end %>
+
+
+
+
+
+</div>

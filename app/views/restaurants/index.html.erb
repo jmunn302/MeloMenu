@@ -1,14 +1,17 @@
 <h1>My Restaurants</h1>
 <% if @restaurants.any? %>
   <ul>
+
     <% @restaurants.each do |restaurant| %>
+    <% if restaurant.user_id = current_user.id %>
       <li>
 
         <h3><%= restaurant.name %></h3>
 
-        <%= link_to 'Restaurant information', method: "patch", user_restaurant_path(restaurant.user, restaurant) %>
+        <%= link_to 'Restaurant information', user_restaurant_path(current_user, restaurant) %>
       </li>
     <% end %>
+        <% end %>
   </ul>
 <% else %>
   <p>You haven't added any restaurants yet.</p>
