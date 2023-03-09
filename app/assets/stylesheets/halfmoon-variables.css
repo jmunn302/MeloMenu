@@ -291,7 +291,7 @@ CSS variables (CSS custom properties)
     --text-color-on-yellow-color-bg: var(--lm-base-text-color);
 
     /* Orange */
-
+ 
     --orange-color: #ed8936; /* rgba(237, 137, 54, 1) */
     --orange-color-light: #f09f53;
     --orange-color-very-light: #fbe6d2;

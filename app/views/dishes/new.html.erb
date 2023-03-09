@@ -1,0 +1,43 @@
+<div class="container">
+<h1>Add to <%= @menu.menu_name %> </h1>
+
+
+  <% if @dish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this menu from being saved:</h2>
+      <ul>
+        <% @dish.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-card d-flex align-items-start flex-column">
+
+<%= form_with model: @dish, url: menu_path(@menu), method: :post do |f| %>
+  <%= f.fields_for :dishes do |dish| %>
+    <p>
+    <%= f.label :category %>
+    <%= dish.text_field :category %><br>
+    <%= f.label :name %>
+    <%= dish.text_field :name %><br>
+    <%= f.label :description %>
+    <%= dish.text_field :description %><br>
+    <%= f.label :dietary_type %>
+    <%= dish.text_field :dietary_type %>
+    <%= f.label :price %>
+    <%= dish.number_field :price, step: :any %><br>
+
+
+
+    </p>
+  <% end %>
+
+  <%= f.submit "Create Menu" %>
+<% end %>
+
+
+
+
+
+</div>

@@ -69,7 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_150110) do
     t.string "name"
     t.string "cuisine"
     t.string "address"
-    t.string "phone_number"
+    t.integer "phone_number"
     t.string "website"
     t.string "email"
     t.datetime "created_at", null: false
@@ -77,7 +77,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_150110) do
     t.index ["user_id"], name: "index_restaurants_on_user_id"
   end
 
-  create_table "support_requests", force: :cascade do |t|
+  create_table "support", force: :cascade do |t|
     t.string "name"
     t.text "issue"
     t.datetime "created_at", null: false

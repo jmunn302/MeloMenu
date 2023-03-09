@@ -6,6 +6,7 @@ class DishesController < ApplicationController
     @dishes = Dish.all
     @menu = Menu.find(params[:menu_id])
     @dish = Dish.new
+    5.times { @menu.dishes.build }
     @dietary_types = ['Vegan', "Vegetarian", "Gluten-free", "Lactose-free"]
     authorize @dish
     @dishes = policy_scope(Dish)
@@ -17,8 +18,12 @@ class DishesController < ApplicationController
 
 
   def new
+    @menu = Menu.find(params[:menu_id])
     @dish = Dish.new
+    5.times { @menu.dishes.build }
+    @dietary_types = ['Vegan', "Vegetarian", "Gluten-free", "Lactose-free"]
     authorize @dish
+    @dishes = policy_scope(Dish)
   end
 
   def edit
@@ -28,8 +33,11 @@ class DishesController < ApplicationController
   def create
     @dish = Dish.new(dish_params)
     @dish.menu = Menu.find(params[:menu_id])
+    @user = User.find(params[:user_id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
     if @dish.save
-      redirect_to user_restaurant_menus_path, notice: "Menu was successfully created."
+      raise
+      redirect_to edit_user_restaurant_menu_path(@dish.menu, @restaurant, @user), notice: "Menu was successfully created."
     else
       render :new, status: :unprocessable_entity
       raise
@@ -39,7 +47,7 @@ class DishesController < ApplicationController
 
   def update
     @dish.update(dish_params)
-    redirect_to menu_path(@dish)
+    redirect_to edit_user_restaurant_menu_path(@dish.menu, @restaurant, @user), notice: "Menu was successfully created."
     authorize @dish
   end
 
@@ -58,7 +66,7 @@ class DishesController < ApplicationController
 
 
   def dish_params
-    params.require(:dish).permit(:name, :description, :price, :category, :dietary_type)
+    params.require(:dish).permit(:name, :description, :price, :category, dietary_type: [])
   end
 
 end

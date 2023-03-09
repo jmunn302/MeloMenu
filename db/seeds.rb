@@ -7,6 +7,11 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "Deleting db"
+Dish.destroy_all
+Menu.destroy_all
+Template.destroy_all
+Restaurant.destroy_all
+User.destroy_all
 
 require "open-uri"
 

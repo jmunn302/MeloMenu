@@ -1,12 +1,26 @@
-<h1>Edit Menu</h1>
+<div class="container">
 
+<h1><%= @menu.menu_name %></h1>
+
+<h3>Edit Menu</h3>
 <%= form_for @menu, url: user_restaurant_menu_path(@menu), method: :patch do |f| %>
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :menu_name %>
   </div>
   <div class="actions">
     <%= f.submit "update"%>
   </div>
 <% end %>
+
+<h3>Dishes</h3>
+  <% @menu.dishes.each do | dish | %>
+  <ul>
+    <li> <%= dish.name%></li>
+    <li><%= dish.description%></li>
+    <li><%= dish.price%></li>
+    </ul>
+
+    <% end %>
+</div>

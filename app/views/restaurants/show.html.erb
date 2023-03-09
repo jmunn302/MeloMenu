@@ -12,6 +12,25 @@
 
 
 <% if policy(@restaurant).edit? %>
-  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
-  <%= button_to "Destroy this restaurant", @restaurant, method: :delete if policy(@restaurant).destroy? %>
+  <%= link_to "Edit this restaurant", edit_user_restaurant_path(@restaurant) %> |
+  <%= link_to "Add a Menu", new_user_restaurant_menu_path(current_user, @restaurant) %> |
+ <%= button_to "delete", {:controller => :restaurants,
+      :action => 'destroy' }, :method => :delete %>
 <% end %>
+
+<h1>Menus</h1>
+  <ul>
+   <% @restaurant.menus.each do |menu| %>
+     <li><h3> <%= link_to menu.menu_name, edit_user_restaurant_menu_path(@user, @restaurant, menu)%></h3></li>
+    <% end %>
+  </ul>
+
+
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
+ <p class ="btn-primary" ><%= link_to 'Add Restaurant', new_user_restaurant_path %></p>
+
+
+<%# <%= link_to "New restaurant", new_restaurant_path if policy(Restaurant).new? %>
