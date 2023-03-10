@@ -291,7 +291,7 @@ CSS variables (CSS custom properties)
     --text-color-on-yellow-color-bg: var(--lm-base-text-color);
 
     /* Orange */
- 
+
     --orange-color: #ed8936; /* rgba(237, 137, 54, 1) */
     --orange-color-light: #f09f53;
     --orange-color-very-light: #fbe6d2;
@@ -370,14 +370,14 @@ CSS variables (CSS custom properties)
 
     /* Danger colors */
 
-    --danger-color: var(--yellow-color);
-    --danger-color-light: var(--yellow-color-light);
-    --danger-color-very-light: var(--yellow-color-very-light);
-    --danger-color-dark: var(--yellow-color-dark);
-    --danger-color-very-dark: var(--yellow-color-very-dark);
-    --danger-box-shadow-color: var(--yellow-box-shadow-color);
-    --danger-box-shadow-color-darker: var(--yellow-box-shadow-color-darker);
-    --text-color-on-danger-color-bg: var(--text-color-on-yellow-color-bg);
+    --danger-color: var(--indigo-color);
+    --danger-color-light: var(--indigo-color-light);
+    --danger-color-very-light: var(--indigo-color-very-light);
+    --danger-color-dark: var(-indigo-color-dark);
+    --danger-color-very-dark: var(--indigo-color-very-dark);
+    --danger-box-shadow-color: var(--indigo-box-shadow-color);
+    --danger-box-shadow-color-darker: var(--indigobox-shadow-color-darker);
+    --text-color-on-danger-color-bg: var(--text-color-on-indigo-color-bg);
 
 
     /*

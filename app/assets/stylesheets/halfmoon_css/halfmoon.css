@@ -3057,34 +3057,34 @@ Notes:
 
 .btn.btn-danger {
     color: #ffffff;
-    background-color: #f5e663;
+    background-color: #306785;
     background-image: none;
-    border-color: #f5e663;
+    border-color: #306785;
     transition: .07s ease-in-out;
 
 }
 .btn.btn-danger:hover {
     color: #ffffff;
-    background-color: #f3e87e;
+    background-color: #448fb8;
     background-image: none;
-    border-color: #f3e87e;
+    border-color: #448fb8;
     transition: .07s ease-in-out;
 
 }
 .btn.btn-danger:focus {
     color: #ffffff;
-    background-color: #c4b42d;
+    background-color: #1f4356;
     background-image: none;
-    border-color: #c4b42d;
+    border-color: #1f4356;
     outline-color: transparent;
     transition: .07s ease-in-out;
 
 }
 .btn.btn-danger.active {
     color: #ffffff;
-    background-color: #f5e663;
+    background-color: #306785;
     background-image: none;
-    border-color: #f5e663;
+    border-color: #306785;
     outline-color: transparent;
     transition: .07s ease-in-out;
 
@@ -3095,7 +3095,7 @@ Notes:
     color, box shadow, and the outline of the focus selector is kept.
     */
     color: #ffffff;
-    background-color: #edc058;
+    background-color: #448fb8;
     background-image: none;
     transition: .07s ease-in-out;
 
@@ -3106,7 +3106,7 @@ Notes:
     color, box shadow, and the outline of the focus selector is kept.
     */
     color: #ffffff;
-    background-color: #edc058;
+    background-color: #1f4356;
     background-image: none;
     transition: .07s ease-in-out;
 
