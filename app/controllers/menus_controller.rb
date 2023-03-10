@@ -12,6 +12,15 @@ class MenusController < ApplicationController
 
   def show
     authorize @menu
+    @user = current_user
+    @restaurant = @menu.restaurant
+    @dishes = Dish.all
+    @starters = Dish.where("category = 'Starter'")
+    @dinners = Dish.where("category = 'Dinner'")
+    @lunches = Dish.where("category = 'Lunch'")
+    @desserts = Dish.where("category = 'Dessert'")
+    @sides = Dish.where("category = 'side'")
+    @breakfasts = Dish.where("category = 'Breakfast'")
   end
 
   def new
@@ -37,7 +46,7 @@ class MenusController < ApplicationController
     @user = current_user
     @dish = Dish.new
     if @menu.save
-      redirect_to user_restaurant_menu_dishes_path(@user, @restaurant, @menu)
+      redirect_to new_user_restaurant_menu_dish_path(@user, @restaurant, @menu)
       # raise
     else
       render :new, status: :unprocessable_entity
@@ -47,7 +56,7 @@ class MenusController < ApplicationController
 
   def update
     @menu.update(menu_params)
-    redirect_to restaurant_path(@menu)
+    redirect_to menu_path(@menu)
     authorize @menu
   end
 

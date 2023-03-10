@@ -2987,7 +2987,7 @@ Notes:
 
 .btn-secondary:after {
   content: "";
-  background-color: #b5d6ef;
+  background-color: #f7f0b3;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -7770,6 +7770,27 @@ Notes:
     padding-left: 2rem !important;
     padding-right: 2rem !important;
 }
+
+.px-25 {
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
+.px-30 {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+
+.px-35 {
+  padding-left: 3.5rem !important;
+  padding-right: 3.5rem !important;
+}
+
+.px-40 {
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
+}
+
 .py-0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;

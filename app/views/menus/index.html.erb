@@ -4,7 +4,7 @@
     <% if menu.restaurant_id = params[:restaurant_id]%>
       <ul>
         <li><%= menu.menu_name %>
-          <%= link_to '<EDIT>', edit_user_restaurant_menu_path(@user, @restaurant, menu)%>
+          <%= link_to 'Edit this Menu', edit_user_restaurant_menu_path(@user, @restaurant, menu)%>
         </li>
       </ul>
     <% end %>
