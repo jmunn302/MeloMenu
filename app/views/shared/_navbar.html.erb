@@ -5,21 +5,31 @@
       <%= cl_image_tag "Melo_logo_muj2f6" %>
     <% end %>
 
+      <div class="dropdown">
+        <button class="btn" data-toggle="dropdown" type="button" id="dropdown-toggle-btn-1" aria-haspopup="true" aria-expanded="false">
+        Click me <i class="fa fa-angle-down ml-5" aria-hidden="true"></i> <!-- ml-5 = margin-left: 0.5rem (5px) -->
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdown-toggle-btn-1">
+       <h6 class="dropdown-header">Header</h6>
+        <a href="#" class="dropdown-item">Link 1</a>
+        <a href="#" class="dropdown-item">Link 2</a>
+        <div class="dropdown-divider"></div>
+       <div class="dropdown-content">
+       <button class="btn btn-block" type="button">Button</button>
+      </div>
+  </div>
+</div>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <% if user_signed_in? %>
-            <li class="nav-item active d-flex align-items-center">
-              <%= link_to "", class: "btn" do %>
-                <i class="fa-solid fa-bars"></i>
-              <% end %>
-            </li>
-        <% else %>
-          <li class="nav-item active d-flex align-items-center">
-            <%= link_to "Login", new_user_session_path, class: "btn btn-success btn-rounded-sm" %>
-          </li>
-        <% end %>
+<!-- Requires halfmoon.js -->
+<script src="path/to/halfmoon.js"></script>
       </ul>
+
+
+</div>
+
+
+
+
     </div>
   </div>
   </div>
