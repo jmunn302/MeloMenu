@@ -1,12 +1,21 @@
 // Specific CSS for your home-page
 
-.dashboard-banner {
-  background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1678218674/banner_ebliox.png");
-  background-size: cover;
-  background-position: bottom;
-  height: 300px;
+.homepage-banner {
+  background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1678450424/homepage-banner_xverhz.png");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 650px;
 }
 
 .brand-img {
   width: 75%;
+}
+
+.homepage-text {
+  margin-left: 10%;
+  h1 {
+    font-size: 50px;
+    line-height: 1.5em;
+  }
 }

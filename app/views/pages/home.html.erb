@@ -1,5 +1,13 @@
+<div class="home-container">
+<div class="homepage-banner">
+<div class="d-flex align-items-center justify-content-start px-40 h-full homepage-text">
+<h1>Design Your Menus<br><span style="background-color: #b5d6ef; font-style: italic">Your Way</span></h1>
+</div>
+</div>
+
+
 <div class="container pt-20 mt-20">
-<h1>My <strong>Dashboard</strong></h1>
+<h1 style="text-align: center">My <strong>Dashboard</strong></h1>
 
 
 <div class="d-flex">
@@ -32,7 +40,7 @@
         <%= link_to new_user_restaurant_path(user_id = current_user.id) do %>
           <div class="d-flex flex-column align-items-center justify-content-center">
           <%= cl_image_tag "brand_images-02_sw3oqb", class: "brand-img" %>
-          <h4 class="mt-0">Create a New Restaurants</h4>
+          <h4 class="mt-0">Create a New Restaurant</h4>
           </div>
         <% end %>
     <% end %>
@@ -54,5 +62,6 @@
         <% end %>
       <% end %>
 
+</div>
 </div>
 </div>

@@ -1,3 +1,6 @@
+<div class="container">
+<div class="d-flex justify-content-around">
+<div class="d-flex flex-column">
 <h1><%= @restaurant.name %></h1>
 
 <p><strong>Cuisine:</strong> <%= @restaurant.cuisine %></p>
@@ -12,25 +15,24 @@
 
 
 <% if policy(@restaurant).edit? %>
-  <%= link_to "Edit this restaurant", edit_user_restaurant_path(@restaurant) %> |
-  <%= link_to "Add a Menu", new_user_restaurant_menu_path(current_user, @restaurant) %> |
- <%= button_to "delete", {:controller => :restaurants,
+
+  <p class ="btn-secondary" ><%= link_to "Edit this restaurant", edit_user_restaurant_path(@restaurant) %><p>
+ <%= button_to "Delete this Restaurant", {:controller => :restaurants,
       :action => 'destroy' }, :method => :delete %>
 <% end %>
-
-<h1>Menus</h1>
-  <ul>
+</div>
+<div class="d-flex flex-column">
+<h2 class="mt-30 mb-0">Menus</h2>
    <% @restaurant.menus.each do |menu| %>
-     <li><h3> <%= link_to menu.menu_name, edit_user_restaurant_menu_path(@user, @restaurant, menu)%></h3></li>
+     <h4> <%= link_to menu.menu_name, edit_user_restaurant_menu_path(@user, @restaurant, menu)%></h4>
     <% end %>
-  </ul>
+ <p class ="btn-primary" > <%= link_to "Add a Menu", new_user_restaurant_menu_path(current_user, @restaurant) %></p>
 
 
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
 <% end %>
-
- <p class ="btn-primary" ><%= link_to 'Add Restaurant', new_user_restaurant_path %></p>
-
-
+</div>
+</div>
+</div>
 <%# <%= link_to "New restaurant", new_restaurant_path if policy(Restaurant).new? %>

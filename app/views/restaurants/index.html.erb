@@ -1,15 +1,13 @@
+<div class="container">
 <h1>My Restaurants</h1>
 <% if @restaurants.any? %>
   <ul>
 
     <% @restaurants.each do |restaurant| %>
     <% if restaurant.user_id = current_user.id %>
-      <li>
 
-        <h3><%= restaurant.name %></h3>
+       <h4 class="my-0"> <%= link_to restaurant.name, user_restaurant_path(current_user, restaurant) %></h4>
 
-        <%= link_to 'Restaurant information', user_restaurant_path(current_user, restaurant) %>
-      </li>
     <% end %>
         <% end %>
   </ul>
@@ -25,3 +23,4 @@
 
 
 <%# <%= link_to "New restaurant", new_restaurant_path if policy(Restaurant).new? %>
+</div>
