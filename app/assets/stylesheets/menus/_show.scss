@@ -1,5 +1,8 @@
 
-
+h1, h2, h3, h4 {
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 0;
+}
 
 .menu-sidebar {
   height: 100vh;
@@ -28,33 +31,42 @@
   background-color: rgba(255, 255, 255, 0.5);
   padding: 3%;
   border-radius: 10%;
-
-    h2 {
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
 }
 .main-section {
   flex-grow: 3;
+  margin: 0 auto;
 }
-.section-two {
+.section-one {
   width: 70vw;
   background-color: #F8E6E5;
+  padding-left: 10%;
+
+}
+
+.section-two {
+  width: 70vw;
+  background-color: #fdf6cc;
+  padding-left: 10%;
+
 }
 
 .section-three {
   width: 70vw;
-  background-color: #FFFFFF;
+  background-color: #F8E6E5;
+  padding-left: 10%;
 
 }
 
 .section-four {
   width: 70vw;
-  background-color: #F8E6E5;
+  background-color: #fdf6cc;
+  padding-left: 10%;
 
 }
 
-.section-five {
-  width: 70vw;
-  background-color: #FFFFFF;
+.diet-icon {
+  width: 25px;
+  padding-top: 0;
+  margin-bottom: 25px;
 
 }

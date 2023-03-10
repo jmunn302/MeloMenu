@@ -14,24 +14,19 @@
   <% end %>
 <div class="form-card d-flex align-items-start flex-column">
 
-<%= form_with model: @dish, url: menu_path(@menu), method: :post do |f| %>
-  <%= f.fields_for :dishes do |dish| %>
+<%= form_with model: @dish, url: user_restaurant_menu_dishes_path(@user, @restaurant, @menu), method: :post do |f| %>
     <p>
     <%= f.label :category %>
-    <%= dish.text_field :category %><br>
+    <%= f.text_field :category %><br>
     <%= f.label :name %>
-    <%= dish.text_field :name %><br>
+    <%= f.text_field :name %><br>
     <%= f.label :description %>
-    <%= dish.text_field :description %><br>
+    <%= f.text_field :description %><br>
     <%= f.label :dietary_type %>
-    <%= dish.text_field :dietary_type %>
+    <%= f.text_field :dietary_type %>
     <%= f.label :price %>
-    <%= dish.number_field :price, step: :any %><br>
-
-
-
+    <%= f.number_field :price, step: :any %><br>
     </p>
-  <% end %>
 
   <%= f.submit "Create Menu" %>
 <% end %>
