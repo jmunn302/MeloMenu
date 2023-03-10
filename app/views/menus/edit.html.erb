@@ -10,7 +10,7 @@
     <%= f.text_field :menu_name %>
   </div>
   <div class="actions">
-    <%= f.submit "update"%>
+    <%= f.submit "update", class: "btn-primary" %>
   </div>
 <% end %>
 
@@ -23,4 +23,6 @@
     </ul>
 
     <% end %>
+    <p class="btn-primary"><%= link_to "Add Dishes", new_user_restaurant_menu_dish_path(@user, @restaurant, @menu) %></p>
+
 </div>
