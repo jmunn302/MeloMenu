@@ -19,11 +19,13 @@ class RestaurantsController < ApplicationController
   end
 
   def new
+
     @restaurant = current_user.restaurants.build
     authorize @restaurant
   end
 
   def create
+    
     @restaurant = current_user.restaurants.build(restaurant_params)
     @user = current_user
     @menu = Menu.new()

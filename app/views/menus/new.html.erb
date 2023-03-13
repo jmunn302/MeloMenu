@@ -18,16 +18,14 @@
       <%= form.text_field :menu_name %>
     </div>
 <br>
-    <div class="field">
-      <%= form.label :template_id %>
-      <%= radio_button_tag(:template_id, "33") %>
-      <%= label_tag(:template_1, "1") %>
-      <%= radio_button_tag(:template_id, "34") %>
-      <%= label_tag(:template_2, "2") %>
-      <%= radio_button_tag(:template_id, "35") %>
-      <%= label_tag(:template_3, "3") %>
-      <%= radio_button_tag(:template_id, "36") %>
-      <%= label_tag(:template_4, "4") %>
+  <div class="field">
+    <%= form.label :template_id %>
+    <% x = 0 %>
+    <% @templates.each do |template| %>
+      <%= radio_button_tag(:template_id, template.id) %>
+      <%= label_tag(:template_1, "#{x+1}") %>
+      <% x = x + 1 %>
+    <% end %>
 </div>
 <br>
       <div class="actions">
