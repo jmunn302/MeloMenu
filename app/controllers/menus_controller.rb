@@ -19,7 +19,7 @@ class MenusController < ApplicationController
     @dinners = Dish.where("category = 'Dinner'")
     @lunches = Dish.where("category = 'Lunch'")
     @desserts = Dish.where("category = 'Dessert'")
-    @sides = Dish.where("category = 'Side'")
+    @sides = Dish.where("category = 'side'")
     @breakfasts = Dish.where("category = 'Breakfast'")
 
   end

@@ -5,14 +5,59 @@
   }
 }
 
+.template-2 {
+  h1, h2, h3, h4 {
+    font-family: 'Amatic SC', cursive;
+    margin-bottom: 0;
+  }
+}
+
+.template-3 {
+  h1, h2, h3, h4 {
+    font-family: 'Walter Turncoat', cursive;
+    margin-bottom: 0;
+  }
+}
+
+.template-4 {
+  h1, h2, h3, h4 {
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 0;
+  }
+}
+
+
 .template1-bg {
   background-color: #e0ffd4;
 }
 
-.menu-sidebar {
+.template2-bg {
+  background-color: #DCD9BC;
+}
+
+.template3-bg {
+  background-color: #d4d4d4;
+}
+
+.template4-bg {
+  background-color: #F7F0E2;
+}
+
+.menu-sidebar-1 {
   height: 100vh;
-  width: 40vw;
   background-color: black;
+  flex-grow: 1;
+}
+
+.menu-sidebar-2 {
+  height: 100vh;
+  background-color: #AC5B2E;
+  flex-grow: 1;
+}
+
+.menu-sidebar-3 {
+  height: 100vh;
+  background-color: #393939;
   flex-grow: 1;
 }
 
@@ -30,6 +75,52 @@
 
 }
 
+.template-banner-2 {
+  width: 100vw;
+  height: 40vh;
+  background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1678717419/boho-banner_apevcl.png");
+  background-size: cover;
+  position: relative;
+  border-bottom: 10px solid #AC5B2E;
+
+    h1 {
+      color: #AC5B2E;
+      font-size: 75px;
+    }
+
+}
+
+.template-banner-3 {
+  width: 100vw;
+  height: 40vh;
+  background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1678722269/3126494_xtxorj.png");
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  border-bottom: 10px solid #393939;
+
+    h1 {
+      color: #393939;
+      font-size: 65px;
+    }
+
+}
+
+.template-banner-4 {
+  width: 100vw;
+  height: 40vh;
+  background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1678724639/sl_082320_34310_20_Converted_gxvwwp.png");
+  background-size: cover;
+  position: relative;
+  background-position: center;
+
+    h1 {
+      color: Black;
+      font-size: 65px;
+    }
+
+}
+
 .template-header {
   position: relative;
 }
@@ -43,7 +134,7 @@ hr.black {
 }
 
 
-.menu-name {
+.menu-name-1 {
   position: absolute;
   z-index: 100;
   top: 50%;
@@ -54,8 +145,17 @@ hr.black {
   border-radius: 10px;
 }
 
+.menu-name-2 {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3%;
+}
+
 .menu-text {
-  margin-right: 40%;
+  margin-right: 15%;
 }
 .main-section {
   flex-grow: 3;
@@ -72,7 +172,6 @@ hr.black {
 }
 
 .menu-section {
-  width: 70vw;
   padding-left: 10%;
 
 }
@@ -81,4 +180,126 @@ hr.black {
   width: 25px;
   padding-top: 0;
   margin-left: 25px;
+}
+
+.all-content {
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+  .template-header {
+    position: relative;
+    right: -10px;
+    left: 5px;
+  }
+
+  .template-banner-1 {
+    height: 250px;
+    border-bottom: 0;
+  }
+
+  .template-banner-2 {
+    height: 250px;
+    border-bottom: 0;
+  }
+
+  .template-banner-3 {
+    height: 250px;
+    border-bottom: 0;
+  }
+
+  .template-banner-4 {
+    height: 250px;
+    border-bottom: 0;
+  }
+
+  .menu-main-card {
+    width: 100%;
+  }
+
+  .template-1 {
+    h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
+
+  .template-2 {
+    h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
+
+  .template-3 {
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
+
+  .template-4 {
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
+
+  .main-section {
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+
+  .all-content {
+    flex-direction: column;
+  }
+
+  .menu-sidebar-1 {
+    height: 20vh;
+  }
+
+  .menu-sidebar-2 {
+    height: 20vh;
+  }
+
+  .menu-sidebar-3 {
+    height: 20vh;
+  }
+
+  .menu-sidebar-4 {
+    height: 20vh;
+  }
+
+
+  .menu-text {
+    margin-right: 0;
+  }
+
+  .diet-icon {
+    width: 18px;
+  }
 }
