@@ -1,6 +1,6 @@
 class DishesController < ApplicationController
 
-  before_action :set_dish, only: %i[ show edit update destroy]
+  before_action :set_dish, only: %i[show edit update destroy]
 
   def index
     @dishes = Dish.all
@@ -15,7 +15,6 @@ class DishesController < ApplicationController
   def show
     authorize @dish
   end
-
 
   def new
     @menu = Menu.find(params[:menu_id])
@@ -58,13 +57,19 @@ class DishesController < ApplicationController
 
   def update
     @dish.update(dish_params)
-    redirect_to edit_user_restaurant_menu_path(@dish.menu, @restaurant, @user), notice: "Menu was successfully created."
+    @user = current_user
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @menu = Menu.find(params[:menu_id])
+    redirect_to edit_user_restaurant_menu_path(@user, @restaurant, @menu), notice: "Successfully updated"
     authorize @dish
   end
 
   def destroy
     @dish.destroy
-    redirect_to menu_path(@dish.menu), status: :see_other
+    @user = current_user
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @menu = Menu.find(params[:menu_id])
+    redirect_to edit_user_restaurant_menu_path(@user, @restaurant, @menu), notice: "Successfully deleted"
     authorize @dish
   end
 
