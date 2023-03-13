@@ -10,8 +10,11 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body><%= render "shared/navbar" %>
+  <body>
+  <% unless current_page?(root_path) %>
+    <%= render "shared/navbar" %>
 <%= render "shared/flashes" %>
+    <% end %>
 
     <%= yield %>
     <script src="../../javascript/halfmoon_js/halfmoon.js"></script>
