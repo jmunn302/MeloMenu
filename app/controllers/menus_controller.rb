@@ -19,8 +19,9 @@ class MenusController < ApplicationController
     @dinners = Dish.where("category = 'Dinner'")
     @lunches = Dish.where("category = 'Lunch'")
     @desserts = Dish.where("category = 'Dessert'")
-    @sides = Dish.where("category = 'side'")
+    @sides = Dish.where("category = 'Side'")
     @breakfasts = Dish.where("category = 'Breakfast'")
+
   end
 
   def new
@@ -47,7 +48,6 @@ class MenusController < ApplicationController
     @dish = Dish.new
     if @menu.save
       redirect_to new_user_restaurant_menu_dish_path(@user, @restaurant, @menu)
-      # raise
     else
       render :new, status: :unprocessable_entity
     end

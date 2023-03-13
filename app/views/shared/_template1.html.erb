@@ -1,101 +1,96 @@
 
+  <div class="template1-bg">
   <div class="template-header template-1">
 
       <div class="d-flex justify-content-center align-content-center">
         <div class="mx-20">
-          <% if @menu.restaurant.user = current_user %>
+          <% if @menu.restaurant.user == current_user %>
           <p class="btn-primary"><%= link_to "Add Dishes", new_user_restaurant_menu_dish_path(@user, @restaurant, @menu) %></p>
           <% end %>
         </div>
 
         <div class="mx-20">
-          <% if @menu.restaurant.user = current_user %>
+          <% if @menu.restaurant.user == current_user %>
           <p class="btn-secondary"><%= link_to 'Edit Menu', edit_user_restaurant_menu_path(@user, @restaurant, @menu)%></p>
           <% end %>
         </div>
       </div>
 
-    <%= cl_image_tag "TemplateBanner1_v1s44h", class: "template-banner" %>
+    <div class= "template-banner-1" >
     <div class="menu-name">
       <h1> <%= @menu.menu_name %> </h1>
     </div>
   </div>
+  <div class="menu-main-card">
+
 <div class="container template-1">
   <div class="d-flex">
       <div class="d-flex px-40 pt-20 flex-column menu-sidebar">
 
-          <h3 class="text-white">Starters</h3>
-
-        <% @starters.each do |starter| %>
-
+      <h3 class="text-light pt-20 ">Starters</h3>
+          <% @starters.each do |starter| %>
           <% if starter.menu_id == @menu.id %>
-              <p class="text-white"><strong><%= starter.name %>.....$<%= starter.price %><br></strong>
-              <%= starter.description%></p>
-
-              <% if starter.dietary_type.include?("Vegan") %>
-                    <%= cl_image_tag "vegan-lt", class: "diet-icon" %>
+          <div class="menu-text">
+                    <div class="d-flex justify-content-between">
+              <p class="text-dark"><strong class="d-flex align-items-center"><%= starter.name %>
+                      <% if starter.dietary_type.include?("Vegan") %>
+                    <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
               <% end %>
-
-              <% if starter.dietary_type.include?("Vegetarian") %>
-                    <%= cl_image_tag "veg-lt", class: "diet-icon" %>
+                 <% if starter.dietary_type.include?("Vegetarian") %>
+                    <%= cl_image_tag "veg-dk", class: "diet-icon" %>
               <% end %>
-
-              <% if starter.dietary_type.include?("Gluten-free") %>
-                    <%= cl_image_tag "gf-lt", class: "diet-icon" %>
+                   <% if starter.dietary_type.include?("Gluten-free") %>
+                    <%= cl_image_tag "gf-dk", class: "diet-icon" %>
               <% end %>
-
               <% if starter.dietary_type.include?("Lactose-free") %>
-                    <%= cl_image_tag "lf-lt", class: "diet-icon" %>
-              <% end %>
-
-
-
+                    <%= cl_image_tag "lf-dk", class: "diet-icon" %>
+              <% end %></p>
+              <p>$<%= starter.price %></strong></p>
+              </div>
+                  <p><%= starter.description%></p>
          <% end %>
-            <% end %>
-
-    </div>
+      <% end %>
+  </div>
 
 
     <div class="main-section">
 
-      <div class="d-flex flex-column section-two justify-content-center ">
-        <h3 class="text-dark pt-20 ">Breakfast</h3>
+       <div class="d-flex flex-column menu-section justify-content-center ">
+      <h3 class="text-dark pt-20 ">Breakfast</h3>
           <% @breakfasts.each do |breakfast| %>
-
           <% if breakfast.menu_id == @menu.id %>
-              <p class="text-dark"><strong><%= breakfast.name %>.....$<%= breakfast.price %><br></strong>
-              <%= breakfast.description%></p>
-
-            <% if breakfast.dietary_type.include?("Vegan") %>
-              <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
-            <% end %>
-
-            <% if breakfast.dietary_type.include?("Vegetarian") %>
-              <%= cl_image_tag "veg-dk", class: "diet-icon" %>
-            <% end %>
-
-            <% if breakfast.dietary_type.include?("Gluten-free") %>
-              <%= cl_image_tag "gf-dk", class: "diet-icon" %>
-            <% end %>
-
-              <% if breakfast.dietary_type.include?("Lactose-free") %>
-                <%= cl_image_tag "lf-dk", class: "diet-icon" %>
+          <div class="menu-text">
+                    <div class="d-flex justify-content-between">
+              <p class="text-dark"><strong class="d-flex align-items-center"><%= breakfast.name %>
+                      <% if breakfast.dietary_type.include?("Vegan") %>
+                    <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
               <% end %>
-
-        <% end %>
+                 <% if breakfast.dietary_type.include?("Vegetarian") %>
+                    <%= cl_image_tag "veg-dk", class: "diet-icon" %>
+              <% end %>
+                   <% if breakfast.dietary_type.include?("Gluten-free") %>
+                    <%= cl_image_tag "gf-dk", class: "diet-icon" %>
+              <% end %>
+              <% if breakfast.dietary_type.include?("Lactose-free") %>
+                    <%= cl_image_tag "lf-dk", class: "diet-icon" %>
+              <% end %></p>
+              <p>$<%= breakfast.price %></strong></p>
+              </div>
+                  <p><%= breakfast.description%></p>
+         <% end %>
       <% end %>
-      </div>
+  </div>
 
 
-      <div class="d-flex flex-column section-three justify-content-center">
+      <div class="d-flex flex-column menu-section justify-content-center">
       <h3 class="text-dark pt-20 ">Lunch</h3>
           <% @lunches.each do |lunch| %>
 
           <% if lunch.menu_id == @menu.id %>
-              <p class="text-dark"><strong><%= lunch.name %>.....$<%= lunch.price %><br></strong>
-                <%= lunch.description%></p>
-
-            <% if lunch.dietary_type.include?("Vegan") %>
+          <div class="menu-text">
+            <div class="d-flex justify-content-between">
+              <p class="text-dark"><strong class="d-flex align-items-center"><%= lunch.name %>
+                  <% if lunch.dietary_type.include?("Vegan") %>
                   <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
               <% end %>
 
@@ -107,19 +102,22 @@
               <% end %>
               <% if lunch.dietary_type.include?("Lactose-free") %>
                     <%= cl_image_tag "lf-dk", class: "diet-icon" %>
-              <% end %>
-
+              <% end %><p>
+              <p>$<%= lunch.price %></p></strong>
+              </div>
+                <p><%= lunch.description%></p>
               <% end %>
       <% end %>
-      </div>
+</div>
 
-      <div class="d-flex flex-column section-four justify-content-center ">
+      <div class="d-flex flex-column menu-section justify-content-center ">
       <h3 class="text-dark pt-20 ">Dinner</h3>
           <% @dinners.each do |dinner| %>
           <% if dinner.menu_id == @menu.id %>
-              <p class="text-dark"><strong><%= dinner.name %>.....$<%= dinner.price %><br></strong>
-                  <%= dinner.description%></p>
-                     <% if dinner.dietary_type.include?("Vegan") %>
+          <div class="menu-text">
+                    <div class="d-flex justify-content-between">
+              <p class="text-dark"><strong class="d-flex align-items-center"><%= dinner.name %>
+                      <% if dinner.dietary_type.include?("Vegan") %>
                     <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
               <% end %>
                  <% if dinner.dietary_type.include?("Vegetarian") %>
@@ -130,20 +128,22 @@
               <% end %>
               <% if dinner.dietary_type.include?("Lactose-free") %>
                     <%= cl_image_tag "lf-dk", class: "diet-icon" %>
-              <% end %>
-
+              <% end %></p>
+              <p>$<%= dinner.price %></strong></p>
+              </div>
+                  <p><%= dinner.description%></p>
          <% end %>
       <% end %>
-      </div>
-
-
-      <div class="d-flex flex-column section-one justify-content-center ">
+  </div>
+</div>
+      <div class="d-flex flex-column menu-section justify-content-center ">
       <h3 class="text-dark pt-20 ">Sides</h3>
           <% @sides.each do |side| %>
           <% if side.menu_id == @menu.id %>
-              <p class="text-dark"><strong><%= side.name %>.....$<%= side.price %><br></strong>
-              <%= side.description%></p>
-              <% if side.dietary_type.include?("Vegan") %>
+          <div class="menu-text">
+                    <div class="d-flex justify-content-between">
+              <p class="text-dark"><strong class="d-flex align-items-center"><%= side.name %>
+                      <% if side.dietary_type.include?("Vegan") %>
                     <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
               <% end %>
                  <% if side.dietary_type.include?("Vegetarian") %>
@@ -154,42 +154,42 @@
               <% end %>
               <% if side.dietary_type.include?("Lactose-free") %>
                     <%= cl_image_tag "lf-dk", class: "diet-icon" %>
-              <% end %>
-
-          <% end %>
+              <% end %></p>
+              <p>$<%= side.price %></strong></p>
+              </div>
+                  <p><%= side.description%></p>
+         <% end %>
       <% end %>
-      </div>
+  </div>
 
-
-      <div class="d-flex flex-column section-two justify-content-center">
-      <h3 class="text-dark pt-20 ">Dessert</h3>
+      <div class="d-flex flex-column menu-section justify-content-center ">
+      <h3 class="text-dark pt-20 ">Desserts</h3>
           <% @desserts.each do |dessert| %>
-
           <% if dessert.menu_id == @menu.id %>
-              <p class="text-dark"><strong><%= dessert.name %>.....$<%= dessert.price %><br></strong>
-              <%= dessert.description%></p>
-
-              <% if dessert.dietary_type.include?("Vegan") %>
+          <div class="menu-text">
+                    <div class="d-flex justify-content-between">
+              <p class="text-dark"><strong class="d-flex align-items-center"><%= dessert.name %>
+                      <% if dessert.dietary_type.include?("Vegan") %>
                     <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
               <% end %>
-
-              <% if dessert.dietary_type.include?("Vegetarian") %>
+                 <% if dessert.dietary_type.include?("Vegetarian") %>
                     <%= cl_image_tag "veg-dk", class: "diet-icon" %>
               <% end %>
-
-              <% if dessert.dietary_type.include?("Gluten-Free") %>
+                   <% if dessert.dietary_type.include?("Gluten-free") %>
                     <%= cl_image_tag "gf-dk", class: "diet-icon" %>
               <% end %>
-
-              <% if dessert.dietary_type.include?("Lactose-Free") %>
+              <% if dessert.dietary_type.include?("Lactose-free") %>
                     <%= cl_image_tag "lf-dk", class: "diet-icon" %>
-              <% end %>
-
-              <% end %>
+              <% end %></p>
+              <p>$<%= dessert.price %></strong></p>
+              </div>
+                  <p><%= dessert.description%></p>
+         <% end %>
       <% end %>
-      </div>
+  </div>
 
-
+</div>
+</div>
 </div>
 </div>
 </div>
