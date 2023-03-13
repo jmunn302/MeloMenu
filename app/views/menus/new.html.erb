@@ -1,4 +1,4 @@
-<div class="container p-20">
+<div class="container p-20"; style="margin-bottom: 50px;">
   <h1>Create a New Menu</h1>
 
   <%= form_with model: @menu, url: user_restaurant_menus_path, method: :post do |form| %>
@@ -13,32 +13,132 @@
       </div>
     <% end %>
 
-    <div class="field">
+   <div class="field">
       <%= form.label :menu_name %>
       <%= form.text_field :menu_name %>
     </div>
-<br>
-  <div class="field">
-    <%= form.label :template_id %>
-    <% x = 0 %>
-    <% @templates.each do |template| %>
-      <%= radio_button_tag(:template_id, template.id) %>
-      <%= label_tag(:template_1, "#{x+1}") %>
-      <% x = x + 1 %>
-    <% end %>
-</div>
-<br>
-      <div class="actions">
-        <%= form.submit 'Save', class: "btn-primary" %>
+    <br>
+    <div class="field">
+      <%= form.label :template_id %>
+      <div class="d-flex flex-wrap justify-content-between">
+        <% @templates.each do |template| %>
+          <div class="mr-4 mb-4">
+            <%= radio_button_tag(:template_id, template.id) %>
+            <label><%= template.name %></label>
+          </div>
+        <% end %>
       </div>
-<br>
-    <div class="d-flex justify-content-around">
-      <% i = 0 %>
-      <% @templates.each do | template | %>
-        <p> <%= i + 1 %>.)
-        <% i = i + 1 %>
-        <%= template.name %> </p>
-      <% end %>
     </div>
-  <%end%>
+    <br>
+        <div class="actions">
+          <%= form.submit 'Save', class: "btn-primary" %>
+         </div>
+    <br>
+  <% end %>
+
+
+<div class="d-flex justify-content-around">
+  <div>
+    <p>1. Colourful Template </p>
+    <div class="modal" id="modal-4" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-content-media w-900 h-800">
+      <a href="#" class="close" role="button" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </a>
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid" alt="modal-img">
+    </div>
+  </div>
+</div>
+<!-- Page wrapper -->
+<div class="page-wrapper">
+  <!-- Modal toggle inside the content wrapper -->
+  <div class="content-wrapper">
+    <a href="#modal-4">
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid rounded" width="200" height="300" alt="modal-img-thumbnail">
+    </a>
+  </div>
+</div>
+
+
+  </div>
+  <div>
+    <p>2. Boho Template </p>
+    <div class="modal" id="modal-4" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-content-media w-900 h-800">
+      <a href="#" class="close" role="button" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </a>
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid" alt="modal-img">
+    </div>
+  </div>
+</div>
+<!-- Page wrapper -->
+<div class="page-wrapper">
+  <!-- Modal toggle inside the content wrapper -->
+  <div class="content-wrapper">
+    <a href="#modal-4">
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid rounded" width="200" height="300" alt="modal-img-thumbnail">
+    </a>
+
+  </div>
+</div>
+
+
+  </div>
+  <div>
+    <p>3. Classic Template </p>
+    <div class="modal" id="modal-4" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-content-media w-900 h-800">
+      <a href="#" class="close" role="button" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </a>
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid" alt="modal-img">
+    </div>
+  </div>
+</div>
+
+<!-- Page wrapper -->
+<div class="page-wrapper">
+  <!-- Modal toggle inside the content wrapper -->
+  <div class="content-wrapper">
+
+    <a href="#modal-4">
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid rounded" width="200" height="300" alt="modal-img-thumbnail">
+    </a>
+
+  </div>
+</div>
+  </div>
+
+
+  <div>
+    <p>4. Cute Cafe Template </p>
+    <div class="modal" id="modal-4" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-content-media w-900 h-800">
+      <a href="#" class="close" role="button" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </a>
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid" alt="modal-img">
+    </div>
+  </div>
+</div>
+
+<!-- Page wrapper -->
+<div class="page-wrapper">
+  <!-- Modal toggle inside the content wrapper -->
+  <div class="content-wrapper">
+
+    <a href="#modal-4">
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid rounded" width="200" height="300" alt="modal-img-thumbnail">
+    </a>
+
+  </div>
+</div>
+
+  </div>
+
 </div>
