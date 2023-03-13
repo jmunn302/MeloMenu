@@ -1,26 +1,43 @@
-<div class="container">
-<h1>My Restaurants</h1>
+<div class="bg-container">
+<div class="container main-card d-flex flex-column align-items-center justify-content-start card-content">
+
+<h1 class="pb-30">My Menus</h1>
+
+<p class="pb-30">Choose the restaurant your menu is associated with, or add a new restaurant.</p>
+ <p class ="btn-secondary" ><%= link_to 'Add a New Restaurant', new_user_restaurant_path %></p>
+
 <% if @restaurants.any? %>
-  <ul>
-
+<nav class="menu pt-20">
+  <ol>
     <% @restaurants.each do |restaurant| %>
-    <% if restaurant.user_id = current_user.id %>
+        <% if restaurant.user_id = current_user.id %>
 
-       <h4 class="my-0"> <%= link_to restaurant.name, user_restaurant_path(current_user, restaurant) %></h4>
-
-    <% end %>
+    <li class="menu-item">
+      <%= link_to restaurant.name, user_restaurant_path(current_user, restaurant) %>
+      <ol class="sub-menu">
+        <% restaurant.menus.each do |menu|%>
+        <li class="menu-item"><%= link_to menu.menu_name, edit_user_restaurant_menu_path(@user, restaurant, menu)%></li>
         <% end %>
-  </ul>
+      </ol>
+</li>
+
+<% end %>
+
+  <% end %>
+
+
 <% else %>
   <p>You haven't added any restaurants yet.</p>
 <% end %>
-
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
 <% end %>
+</ol>
+</nav>
+</div>
 
- <p class ="btn-primary" ><%= link_to 'Add Restaurant', new_user_restaurant_path %></p>
+</div>
 
+</div>
 
-<%# <%= link_to "New restaurant", new_restaurant_path if policy(Restaurant).new? %>
 </div>

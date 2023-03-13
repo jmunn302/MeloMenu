@@ -1,13 +1,12 @@
-<div class="home-container">
 <div class="homepage-banner">
-<div class="d-flex align-items-center justify-content-start px-40 h-full homepage-text">
+<div class="d-flex align-items-center justify-content-start px-40 my-0 h-full homepage-text">
 <h1>Design Your Menus<br><span style="background-color: #b5d6ef; font-style: italic">Your Way</span></h1>
 </div>
 </div>
 
+<div class="home-container pb-40">
 
-<div class="container pt-20 mt-20">
-<h1 style="text-align: center">My <strong>Dashboard</strong></h1>
+<div class="container pt-20">
 
 
 <div class="d-flex">
@@ -15,15 +14,15 @@
     <% if current_user.nil? %>
         <%= link_to new_user_session_path do  %>
           <div class="d-flex flex-column align-items-center justify-content-center">
-          <%= cl_image_tag "brand_images-01_qcsvff", class: "brand-img" %>
-          <h4 class="mt-0">View My Restaurants</h4>
+          <%= cl_image_tag "brand_images-01_qcsvff", class: "brand-img mb-0" %>
+          <h4 class="mt-0">View My Menus</h4>
           </div>
           <% end %>
       <% else %>
         <%= link_to user_restaurants_path(user_id = current_user.id) do %>
           <div class="d-flex flex-column align-items-center justify-content-center">
           <%= cl_image_tag "brand_images-01_qcsvff", class: "brand-img" %>
-          <h4 class="mt-0">View My Restaurants</h4>
+          <h4 class="mt-0">View My Menus</h4>
           </div>
         <% end %>
     <% end %>
@@ -33,14 +32,14 @@
         <%= link_to new_user_session_path do  %>
           <div class="d-flex flex-column align-items-center justify-content-center">
           <%= cl_image_tag "brand_images-02_sw3oqb", class: "brand-img" %>
-          <h4 class="mt-0">Create a New Restaurants</h4>
+          <h4 class="mt-0">Create a New Menu</h4>
           </div>
            <% end %>
       <% else %>
         <%= link_to new_user_restaurant_path(user_id = current_user.id) do %>
           <div class="d-flex flex-column align-items-center justify-content-center">
           <%= cl_image_tag "brand_images-02_sw3oqb", class: "brand-img" %>
-          <h4 class="mt-0">Create a New Restaurant</h4>
+          <h4 class="mt-0">Create a New Menu</h4>
           </div>
         <% end %>
     <% end %>

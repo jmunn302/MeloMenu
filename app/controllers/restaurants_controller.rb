@@ -5,6 +5,8 @@ class RestaurantsController < ApplicationController
   def index
     # @restaurants = current_user.restaurants
     @restaurants = policy_scope(Restaurant)
+    @menus = Menu.all
+    @user = User.find(params[:user_id])
   end
 
   def show
@@ -12,6 +14,8 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     @user = User.find(params[:user_id])
     @restaurants = Restaurant.all
+    @menus = Menu.all
+    @images = ["https://res.cloudinary.com/dobohmdlf/image/upload/v1678647629/6574597-02_k56olg.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678647628/6574597-01_gy5egh.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678647628/6574597-03_pdijez.png" ]
   end
 
   def new

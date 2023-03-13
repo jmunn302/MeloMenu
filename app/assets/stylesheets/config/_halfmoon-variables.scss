@@ -229,7 +229,7 @@ CSS variables (CSS custom properties)
     --blue-color-light: #448fb8;
     --blue-color-very-light: #b5d6ef;
     --blue-color-dark: #1f4356;
-    --blue-color-very-dark: rgb(16, 39, 51);
+    --blue-color-very-dark: #102733;
     --blue-box-shadow-color: rgba(16, 39, 51, 0.3);
     --blue-box-shadow-color-darker: rgba(7, 16, 20, 0.6);
     --text-color-on-blue-color-bg: #ffffff;
@@ -1862,7 +1862,7 @@ CSS variables (CSS custom properties)
 
     --navbar-container-horizontal-padding: calc(var(--content-and-card-spacing) - var(--navbar-horizontal-padding));
     --navbar-container-horizontal-padding-xs: calc(var(--content-and-card-spacing-xs) - var(--navbar-horizontal-padding));
-    --navbar-content-horizontal-margin: 1.5rem;
+    --navbar-content-horizontal-margin: 2.5rem;
 
     --lm-navbar-text-color: var(--lm-base-text-color-light);
 
@@ -1892,7 +1892,7 @@ CSS variables (CSS custom properties)
 
     --navbar-brand-font-size: 2rem;
     --navbar-brand-font-weight: 500;
-    --navbar-brand-image-height: 2.2rem;
+    --navbar-brand-image-height: 4.5rem;
     --navbar-brand-image-margin-right: 1rem;
 
     --lm-navbar-brand-text-color: var(--lm-base-text-color);

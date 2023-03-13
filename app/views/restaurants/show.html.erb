@@ -1,38 +1,45 @@
-<div class="container">
-<div class="d-flex justify-content-around">
-<div class="d-flex flex-column">
-<h1><%= @restaurant.name %></h1>
+<div class="bg-container">
+  <div class="container main-card d-flex flex-column align-items-stretch card-content">
+    <div class="d-flex justify-content-around">
+    <div class="d-flex flex-column">
+      <div class="w-full my-0" style="text-align:left"><h1 class="my-0">Menus for <strong><%= @restaurant.name %></strong></h1></div>
+      <p class="mt-10"><strong>Cuisine: <%= @restaurant.cuisine %></strong></p>
+        <div class="d-flex justify-content-between">
+        <div class="mt-10">
+        <p> <%= @restaurant.address %></p>
+        <p> <%= @restaurant.phone_number %></p>
+        </div>
+        <div class="mt-10">
+        <ul>
+        <li class="my-0 info-list"> <%= link_to @restaurant.website, @restaurant.website %></li>
+        <li class="my-0 info-list"> <%= @restaurant.email %></li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div>
+          <% if policy(@restaurant).edit? %>
 
-<p><strong>Cuisine:</strong> <%= @restaurant.cuisine %></p>
-
-<p><strong>Address:</strong> <%= @restaurant.address %></p>
-
-<p><strong>Phone number:</strong> <%= @restaurant.phone_number %></p>
-
-<p><strong>Website:</strong> <%= link_to @restaurant.website, @restaurant.website %></p>
-
-<p><strong>Email:</strong> <%= @restaurant.email %></p>
-
-
-<% if policy(@restaurant).edit? %>
-
-  <p class ="btn-secondary" ><%= link_to "Edit this restaurant", edit_user_restaurant_path(@restaurant) %><p>
- <%= button_to "Delete this Restaurant", {:controller => :restaurants,
-      :action => 'destroy' }, :method => :delete %>
-<% end %>
+            <p class ="btn-secondary-cards my-20" ><%= link_to "Edit this restaurant", edit_user_restaurant_path(@restaurant) %><p>
+          <%= button_to "Delete this Restaurant", {:controller => :restaurants,
+                :action => 'destroy' }, class: "btn-secondary-gray", :method => :delete %>
+          <% end %>
 </div>
-<div class="d-flex flex-column">
-<h2 class="mt-30 mb-0">Menus</h2>
+</div>
+<div class="d-flex flex-column align-items-stretch card-content">
    <% @restaurant.menus.each do |menu| %>
+     <div class="menu-img mx-auto"> <%= image_tag("#{@images.sample}")%></div>
      <h4> <%= link_to menu.menu_name, edit_user_restaurant_menu_path(@user, @restaurant, menu)%></h4>
     <% end %>
- <p class ="btn-primary" > <%= link_to "Add a Menu", new_user_restaurant_menu_path(current_user, @restaurant) %></p>
+ <p class ="btn-primary-cards" > <%= link_to "Add a Menu", new_user_restaurant_menu_path(current_user, @restaurant) %></p>
 
 
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
 <% end %>
+
 </div>
+  </div>
+
+
 </div>
-</div>
-<%# <%= link_to "New restaurant", new_restaurant_path if policy(Restaurant).new? %>

@@ -1,21 +1,38 @@
 // Specific CSS for your home-page
 
 .homepage-banner {
-  background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1678450424/homepage-banner_xverhz.png");
+  background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1678462910/homepage-banner_lmrbnb.png");
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
   height: 650px;
+  margin: 0 0;
 }
 
 .brand-img {
   width: 75%;
+  transition: .07s ease-in-out;
+  object-position: bottom;
+  opacity: 1;
+}
+
+.brand-img:hover {
+  opacity: .8;
+  transition: .07s ease-in-out;
+
+
 }
 
 .homepage-text {
   margin-left: 10%;
   h1 {
-    font-size: 50px;
+    font-size: 80px;
     line-height: 1.5em;
   }
+}
+
+.home-container {
+  background-color: #B5D6EE;
+  margin: 0 0;
+  box-shadow: inset 1px 11px 26px -3px rgba(0,0,0,0.28);
 }
