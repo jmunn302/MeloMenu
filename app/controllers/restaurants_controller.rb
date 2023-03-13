@@ -25,8 +25,10 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = current_user.restaurants.build(restaurant_params)
+    @user = current_user
+    @menu = Menu.new()
     if @restaurant.save
-      redirect_to user_restaurants_path, notice: 'Restaurant was successfully created.'
+      redirect_to new_user_restaurant_menu_path(@user, @restaurant, @menu), notice: 'Restaurant was successfully created.'
     else
       render :new
     end
