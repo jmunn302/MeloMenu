@@ -2924,6 +2924,8 @@ Notes:
 
 /* Primary button */
 
+
+
 .btn-primary {
   font-family: Oswald, sans-serif;
   font-size: 16px;
@@ -2940,6 +2942,84 @@ Notes:
   touch-action: manipulation;
   text-transform: uppercase;
   width: fit-content;
+}
+
+.btn-primary-cards {
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: #d2efee;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-transform: uppercase;
+  width: fit-content;
+  transition: background-color 0.5s ease;
+}
+
+.btn-primary-cards:hover {
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: #5fc0bd;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-transform: uppercase;
+  width: fit-content;
+  transition: background-color 0.5s ease;
+
+}
+
+.btn-secondary-cards {
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: #f7f0b3;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-transform: uppercase;
+  width: fit-content;
+  transition: background-color 0.5s ease;
+}
+
+.btn-secondary-cards:hover {
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: #f3e87e;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-transform: uppercase;
+  width: fit-content;
+  transition: background-color 0.5s ease;
+
 }
 
 .btn-primary:after {
@@ -2975,9 +3055,10 @@ Notes:
   padding: 13px 20px 13px;
   outline: 0;
   border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0);
+  background-blend-mode: multiply;
   cursor: pointer;
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -2989,17 +3070,18 @@ Notes:
   content: "";
   background-color: #f7f0b3;
   width: 100%;
-  z-index: -1;
   position: absolute;
   height: 100%;
   top: 7px;
   left: 7px;
   transition: 0.2s;
+  z-index: -1;
 }
 
 .btn-secondary:hover:after {
   top: 0px;
   left: 0px;
+
 }
 
 @media (min-width: 768px) {
@@ -3007,6 +3089,7 @@ Notes:
     padding: 13px 50px 13px;
   }
 }
+
 
 /* Secondary-gray button */
 
@@ -6283,6 +6366,7 @@ select.form-control[multiple] > option:disabled {
     -ms-flex-align: center;
     align-items: center;
     min-width: 0;
+    margin-left: 7%;
 }
 .navbar-brand:not(:first-child) {
     margin-left: 1.5rem;
@@ -7840,6 +7924,18 @@ Notes:
 }
 .pb-20 {
     padding-bottom: 2rem !important;
+}
+.pb-25 {
+  padding-bottom: 2.5rem !important;
+}
+.pb-30 {
+  padding-bottom: 3rem !important;
+}
+.pb-35 {
+  padding-bottom: 3.5rem !important;
+}
+.pb-40 {
+  padding-bottom: 4rem !important;
 }
 .pl-0 {
     padding-left: 0 !important;

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container p-20">
   <h1>Create a New Menu</h1>
 
   <%= form_with model: @menu, url: user_restaurant_menus_path, method: :post do |form| %>
@@ -17,7 +17,7 @@
       <%= form.label :menu_name %>
       <%= form.text_field :menu_name %>
     </div>
-
+<br>
     <div class="field">
       <%= form.label :template_id %>
       <%= radio_button_tag(:template_id, "33") %>
@@ -28,12 +28,12 @@
       <%= label_tag(:template_3, "3") %>
       <%= radio_button_tag(:template_id, "36") %>
       <%= label_tag(:template_4, "4") %>
-
+</div>
+<br>
       <div class="actions">
-        <%= form.submit 'Save' %>
+        <%= form.submit 'Save', class: "btn-primary" %>
       </div>
-    </div>
-
+<br>
     <div class="d-flex justify-content-around">
       <% i = 0 %>
       <% @templates.each do | template | %>

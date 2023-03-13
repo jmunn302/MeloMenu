@@ -1,3 +1,4 @@
+<div class="container">
 <h1>New Restaurant</h1>
 <h4>Fill out your Restaurant information</h4>
 
@@ -43,8 +44,9 @@
     <%= form.label :email %>
     <%= form.text_field :email %>
   </div>
-
+<br>
   <div class="actions">
-    <%= form.submit 'Create Restaurant' %>
+    <%= form.submit 'Create Restaurant', class: "btn-primary" %>
   </div>
 <% end %>
+</div>
