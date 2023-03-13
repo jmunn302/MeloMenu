@@ -13,7 +13,7 @@
   height: 100vh;
   width: 40vw;
   background-color: black;
-  flex-grow: 2;
+  flex-grow: 1;
 }
 
 .template-banner-1 {
@@ -58,8 +58,9 @@ hr.black {
   margin-right: 40%;
 }
 .main-section {
-  flex-grow: 2;
+  flex-grow: 3;
   margin: 0 auto;
+  background-color: white;
 }
 
 .menu-main-card {

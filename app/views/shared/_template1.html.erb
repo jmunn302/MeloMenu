@@ -31,25 +31,26 @@
           <% @starters.each do |starter| %>
           <% if starter.menu_id == @menu.id %>
           <div class="menu-text">
-                    <div class="d-flex justify-content-between">
-              <p class="text-dark"><strong class="d-flex align-items-center"><%= starter.name %>
+            <div class="d-flex justify-content-between">
+              <p class="text-light"><strong class="d-flex align-items-center"><%= starter.name %>
                       <% if starter.dietary_type.include?("Vegan") %>
-                    <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
+                    <%= cl_image_tag "vegan-lt", class: "diet-icon" %>
               <% end %>
                  <% if starter.dietary_type.include?("Vegetarian") %>
-                    <%= cl_image_tag "veg-dk", class: "diet-icon" %>
+                    <%= cl_image_tag "veg-lt", class: "diet-icon" %>
               <% end %>
                    <% if starter.dietary_type.include?("Gluten-free") %>
-                    <%= cl_image_tag "gf-dk", class: "diet-icon" %>
+                    <%= cl_image_tag "gf-lt", class: "diet-icon" %>
               <% end %>
               <% if starter.dietary_type.include?("Lactose-free") %>
-                    <%= cl_image_tag "lf-dk", class: "diet-icon" %>
+                    <%= cl_image_tag "lf-lt", class: "diet-icon" %>
               <% end %></p>
-              <p>$<%= starter.price %></strong></p>
-              </div>
-                  <p><%= starter.description%></p>
+              <p class="text-light">$<%= starter.price %></strong></p>
+            </div>
+                  <p class="text-light"><%= starter.description%></p>
          <% end %>
       <% end %>
+  </div>
   </div>
 
 
