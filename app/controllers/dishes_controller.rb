@@ -26,6 +26,16 @@ class DishesController < ApplicationController
     # @dietary_types = ['Vegan', "Vegetarian", "Gluten-free", "Lactose-free"]
     authorize @dish
     @dishes = policy_scope(Dish)
+    authorize @menu
+    @user = current_user
+    @restaurant = @menu.restaurant
+    @dishes = Dish.all
+    @starters = Dish.where("category = 'Starter'")
+    @dinners = Dish.where("category = 'Dinner'")
+    @lunches = Dish.where("category = 'Lunch'")
+    @desserts = Dish.where("category = 'Dessert'")
+    @sides = Dish.where("category = 'side'")
+    @breakfasts = Dish.where("category = 'Breakfast'")
   end
 
   def edit

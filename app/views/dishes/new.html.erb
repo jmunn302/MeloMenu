@@ -1,5 +1,56 @@
 <div class="container my-20">
 <h1>Add to <%= @menu.menu_name %> </h1>
+<h3>Add to Starters </h3>
+
+  <% if @dish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this menu from being saved:</h2>
+      <ul>
+        <% @dish.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-card d-flex align-items-start justify-content-around px-40">
+
+<%= form_with model: @dish, url: user_restaurant_menu_dishes_path(@user, @restaurant, @menu), html: {class: "form-card"}, method: :post do |f| %>
+
+    <%= f.text_field :category, value: "Starter", style: "display: none;"  %></p>
+    <p><%= f.label :dish_name %>
+    <%= f.text_field :name %></p>
+    <p><%= f.label :description %>
+    <%= f.text_field :description %></p>
+    <p><%= f.label :dietary_type %>
+    <%= f.text_field :dietary_type %></p>
+    <p><%= f.label :price %>
+    <%= f.number_field :price, step: :any %></p>
+
+
+  <%= f.submit "Add to Menu" %>
+<% end %>
+
+
+<div class="d-flex flex-column align-items-start justify-content-around">
+  <h4>Dishes on <%= @menu.menu_name %> </h4>
+    <% @starters.each do | starter | %>
+    <% if starter.menu_id == @menu.id %>
+    <p class="my-0"><%= starter.name %>........$<%= starter.price %>0</p>
+    <% end %>
+    <% end %>
+</div>
+
+</div>
+</div>
+
+
+
+</div>
+
+
+
+<div class="container my-20">
+<h3>Add to Main Courses</h3>
 
 
   <% if @dish.errors.any? %>
@@ -16,8 +67,8 @@
 
 <%= form_with model: @dish, url: user_restaurant_menu_dishes_path(@user, @restaurant, @menu), html: {class: "form-card"}, method: :post do |f| %>
 
-    <p><%= f.label :category %>
-    <%= f.text_field :category %></p>
+
+    <%= f.text_field :category, value: "Dinner", style: "display: none;"  %></p>
     <p><%= f.label :dish_name %>
     <%= f.text_field :name %></p>
     <p><%= f.label :description %>
@@ -31,18 +82,211 @@
   <%= f.submit "Add to Menu" %>
 <% end %>
 
+
 <div class="d-flex flex-column align-items-start justify-content-around">
   <h4>Dishes on <%= @menu.menu_name %> </h4>
-    <% @dishes.each do | dish | %>
-    <% if dish.menu_id == @menu.id %>
-    <p class="my-0"><%= dish.name %>........$<%= dish.price %>0</p>
+    <% @dinners.each do | dinner | %>
+    <% if dinner.menu_id == @menu.id %>
+    <p class="my-0"><%= dinner.name %>........$<%= dinner.price %>0</p>
     <% end %>
     <% end %>
 </div>
-<%= link_to 'Create Menu', menu_path(@menu), class: "btn btn-danger text-white my-20 align-self-end" %>
+
 </div>
 </div>
 
+</div>
 
+
+<div class="container my-20">
+<h3>Add to Side Dishes</h3>
+
+
+  <% if @dish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this menu from being saved:</h2>
+      <ul>
+        <% @dish.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-card d-flex align-items-start justify-content-around px-40">
+
+<%= form_with model: @dish, url: user_restaurant_menu_dishes_path(@user, @restaurant, @menu), html: {class: "form-card"}, method: :post do |f| %>
+
+    <%= f.text_field :category, value: "side", style: "display: none;"  %></p>
+    <p><%= f.label :dish_name %>
+    <%= f.text_field :name %></p>
+    <p><%= f.label :description %>
+    <%= f.text_field :description %></p>
+    <p><%= f.label :dietary_type %>
+    <%= f.text_field :dietary_type %></p>
+    <p><%= f.label :price %>
+    <%= f.number_field :price, step: :any %></p>
+
+
+  <%= f.submit "Add to Menu" %>
+<% end %>
+
+
+<div class="d-flex flex-column align-items-start justify-content-around">
+  <h4>Dishes on <%= @menu.menu_name %> </h4>
+    <% @sides.each do | side | %>
+    <% if side.menu_id == @menu.id %>
+    <p class="my-0"><%= side.name %>........$<%= side.price %>0</p>
+    <% end %>
+    <% end %>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="container my-20">
+<h3>Add to Dessert </h3>
+
+
+  <% if @dish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this menu from being saved:</h2>
+      <ul>
+        <% @dish.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-card d-flex align-items-start justify-content-around px-40">
+
+<%= form_with model: @dish, url: user_restaurant_menu_dishes_path(@user, @restaurant, @menu), html: {class: "form-card"}, method: :post do |f| %>
+
+    <%= f.text_field :category, value: "Dessert", style: "display: none;"  %></p>
+    <p><%= f.label :dish_name %>
+    <%= f.text_field :name %></p>
+    <p><%= f.label :description %>
+    <%= f.text_field :description %></p>
+    <p><%= f.label :dietary_type %>
+    <%= f.text_field :dietary_type %></p>
+    <p><%= f.label :price %>
+    <%= f.number_field :price, step: :any %></p>
+
+
+  <%= f.submit "Add to Menu" %>
+<% end %>
+
+
+<div class="d-flex flex-column align-items-start justify-content-around">
+  <h4>Dishes on <%= @menu.menu_name %> </h4>
+    <% @desserts.each do | dessert | %>
+    <% if dessert.menu_id == @menu.id %>
+    <p class="my-0"><%= dessert.name %>........$<%= dessert.price %>0</p>
+    <% end %>
+    <% end %>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="container my-20">
+<h3>Add to Breakfast</h3>
+
+
+  <% if @dish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this menu from being saved:</h2>
+      <ul>
+        <% @dish.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-card d-flex align-items-start justify-content-around px-40">
+
+<%= form_with model: @dish, url: user_restaurant_menu_dishes_path(@user, @restaurant, @menu), html: {class: "form-card"}, method: :post do |f| %>
+
+    <%= f.text_field :category, value: "Breakfast", style: "display: none;"  %></p>
+    <p><%= f.label :dish_name %>
+    <%= f.text_field :name %></p>
+    <p><%= f.label :description %>
+    <%= f.text_field :description %></p>
+    <p><%= f.label :dietary_type %>
+    <%= f.text_field :dietary_type %></p>
+    <p><%= f.label :price %>
+    <%= f.number_field :price, step: :any %></p>
+
+
+  <%= f.submit "Add to Menu" %>
+<% end %>
+
+
+<div class="d-flex flex-column align-items-start justify-content-around">
+  <h4>Dishes on <%= @menu.menu_name %> </h4>
+    <% @breakfasts.each do | breakfast | %>
+    <% if breakfast.menu_id == @menu.id %>
+    <p class="my-0"><%= breakfast.name %>........$<%= breakfast.price %>0</p>
+    <% end %>
+    <% end %>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="container my-20">
+<h3>Add to Lunch</h3>
+
+
+  <% if @dish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this menu from being saved:</h2>
+      <ul>
+        <% @dish.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-card d-flex align-items-start justify-content-around px-40">
+
+<%= form_with model: @dish, url: user_restaurant_menu_dishes_path(@user, @restaurant, @menu), html: {class: "form-card"}, method: :post do |f| %>
+
+    <%= f.text_field :category, value: "Lunch", style: "display: none;"  %></p>
+    <p><%= f.label :dish_name %>
+    <%= f.text_field :name %></p>
+    <p><%= f.label :description %>
+    <%= f.text_field :description %></p>
+    <p><%= f.label :dietary_type %>
+    <%= f.text_field :dietary_type %></p>
+    <p><%= f.label :price %>
+    <%= f.number_field :price, step: :any %></p>
+
+
+  <%= f.submit "Add to Menu" %>
+<% end %>
+
+
+<div class="d-flex flex-column align-items-start justify-content-around">
+  <h4>Dishes on <%= @menu.menu_name %> </h4>
+    <% @lunches.each do | lunch | %>
+    <% if lunch.menu_id == @menu.id %>
+    <p class="my-0"><%= lunch.name %>........$<%= lunch.price %>0</p>
+    <% end %>
+    <% end %>
+</div>
+</div>
+<div>
+<%= link_to 'Create Menu', menu_path(@menu), class: "btn btn-danger text-white my-20 align-self-end float-right" %>
+
+</div>
 
 </div>
