@@ -16,7 +16,6 @@ class DishesController < ApplicationController
     authorize @dish
   end
 
-
   def new
     @menu = Menu.find(params[:menu_id])
     @dish = Dish.new
