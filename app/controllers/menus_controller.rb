@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-
+  before_action :generate_qr_code, only: [:create]
   before_action :set_menu, only: %i[show edit update destroy]
 
   def index
@@ -21,7 +21,8 @@ class MenusController < ApplicationController
     @desserts = Dish.where("category = 'Dessert'")
     @sides = Dish.where("category = 'side'")
     @breakfasts = Dish.where("category = 'Breakfast'")
-
+    @qr_code = RQRCode::QRCode.new(@menu.qr_code)
+    @svg = @qr_code.as_svg
   end
 
   def new
@@ -68,12 +69,16 @@ class MenusController < ApplicationController
 
   private
 
+  def generate_qr_code
+    @qr_code = RQRCode::QRCode.new(params[:qr_code].to_s)
+  end
+
   def set_menu
     @menu = Menu.find(params[:id])
   end
 
   def menu_params
-    params.require(:menu).permit(:menu_name, :id)
+    params.require(:menu).permit(:menu_name, :id, :qr_code)
   end
 
 end
