@@ -24,10 +24,8 @@
                 <li><%= dish.description%></li>
                 <li><%= dish.price%></li>
 
-
-
-                <%= link_to " | -> Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, dish) %>
-                <%= link_to " |  X Delete Dish", dish_path(dish),
+                <%= link_to " |  Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, dish) %>
+                <%= link_to " |  Delete Dish", dish_path(dish),
                 data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
                 %>
                 <% end %>
@@ -43,8 +41,7 @@
 
 
     </div>
-
+      <p class="btn-primary"><%= link_to "View Menu", menu_path(@menu) %></p>
   </div>
-
 
 </div>
