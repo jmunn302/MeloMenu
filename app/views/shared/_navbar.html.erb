@@ -7,9 +7,9 @@
 <div class="dropdown">
   <button class="dropbtn">Account</button>
   <div class="dropdown-content">
-    <a href="#">My Menus</a>
-    <a href="#">Contact Us</a>
-    <a href="#">Sign Out</a>
+    <a href="<%= user_restaurants_path(user_id = current_user.id) %> ">My Menus</a>
+    <a href="<%= new_support_request_path %>">Contact Us</a>
+    <a href="<%= new_user_session_path %>">Sign Out</a>
   </div>
 </div>
 <% end %>
