@@ -6,15 +6,7 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-  cloudinary:
-  service: Cloudinary
-  folder: <%= Rails.env %>
-
-production:
-  service: Disk
-  root: <%= Rails.root.join("storage") %>
-
-  cloudinary:
+cloudinary:
   service: Cloudinary
   folder: <%= Rails.env %>
 
