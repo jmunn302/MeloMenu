@@ -18,12 +18,14 @@
           <div class="menu-text">
             <div class="d-flex justify-content-between">
               <p class="text-light"><strong class="d-flex align-items-center"><%= dish.name %>
-                <ul>
-                <li> <%= dish.category%> </li>
+
+                <%= dish.category%>
                 <li> <%= dish.name%> </li>
                 <li><%= dish.description%></li>
                 <li><%= dish.price%></li>
-                </ul>
+
+
+
                 <%= link_to " | -> Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, dish) %>
                 <%= link_to " |  X Delete Dish", dish_path(dish),
                 data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
