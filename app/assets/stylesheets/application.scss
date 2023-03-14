@@ -20,6 +20,10 @@
 @import "dishes/index";
 
 
+body {
+  font-family: "Cardo";
+}
+
 h1, h2, h3, h4 {
   font-family: 'Bebas Neue', sans-serif;
 
@@ -96,43 +100,39 @@ a:hover {
 }
 
 .menu {
+  margin-top: 15%;
+
 	ol {
 		list-style: none;
 		padding: 0;
 		margin: 0;
     background-color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     z-index: 500;
 
 		&:first-child {
-			width: 100%;
+			width: 75%;
 			max-width: 80vw;
-			margin: 1rem auto 0 auto;
-			display: grid;
-			grid-template-columns: repeat(5, 1fr);
 			align-items: center;
+      font-family: 'Bebas Neue', sans-serif;
+
 		}
 	}
 
 	&-item {
-		display: flex;
 		align-items: center;
 		justify-content: center;
-		border-top: 2px solid #1a4769;
 		position: relative;
 		transition: background 0.3s ease-in-out;
-    font-size: 1.8rem;
-    font-family: 'Bebas Neue', sans-serif;
-    margin-top: 25%;
+    font-size: 2.5rem;
 
 
 
 		@for $i from 1 through 5 {
 			&:nth-child(#{$i}) > a::before {
         font-family: 'Bebas Neue', sans-serif;
-				font-size: 1.8rem;
+				font-size: 2.5rem;
 				display: block;
-				margin-bottom: 1rem;
 				font-weight: 900;
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
@@ -140,11 +140,10 @@ a:hover {
 				font-style: normal;
 				font-variant: normal;
 				text-rendering: auto;
-				line-height: 1;
 				color: #1a4769;
 
 				@media (min-width: 768px) {
-					font-size: 1.8rem;
+					font-size: 2.5rem;
 				}
 			}
 		}
@@ -153,6 +152,13 @@ a:hover {
 			color: black;
 
 		}
+
+    .triangle {
+      text-align: center;
+      margin-top: -6px;
+      color: #306785;
+      font-family: 'Nanum Gothic', sans-serif;
+    }
 
 
 		.sub-menu {
@@ -165,6 +171,8 @@ a:hover {
 			background-color: #ebf4f8;
       text-align: center;
       z-index: 600;
+      display: flex;
+      flex-direction: column;
 
 
 			.menu-item {
@@ -180,8 +188,10 @@ a:hover {
 				}
 
         a {
-          font-size: 1.8rem;
-          font-family: 'Bebas Neue', sans-serif;
+          font-family: "Cardo";
+          font-size: 1.3rem;
+          text-transform: none;
+          margin: 0 auto;
         }
 			}
 		}
@@ -200,8 +210,12 @@ a:hover {
 			transform: rotateX(0deg);
 		}
 
+    &:hover .triangle {
+      transform:rotate(90deg)
+    }
+
 		a {
-			font-size: 2rem;
+			font-size: 2.5rem;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -209,15 +223,16 @@ a:hover {
 			text-decoration: none;
 			text-transform: uppercase;
 			height: 100%;
-			width: 100%;
-			padding: 1em 1em;
+			width: 60%;
+      padding: 0;
 
 			@media (min-width: 768px) {
-				font-size: 1.8rem;
+				font-size: 2.5rem;
 			}
 		}
 	}
 }
+
 
 
 .main-card {
@@ -248,4 +263,10 @@ a:hover {
 .flex-container {
   display: flex;
   justify-content: center;
+}
+
+.header-rule {
+  border-bottom: 2px solid #448fb8;
+  margin-bottom: 30px;
+  text-align: center;
 }

@@ -1,22 +1,23 @@
 <div class="bg-container">
 <div class="container main-card d-flex flex-column align-items-center justify-content-start card-content">
 
-<h1 class="pb-30">My Menus</h1>
+<h1 class="header-rule w-full">My Menus</h1>
+<hr class="full">
 
 <p class="pb-30">Choose the restaurant your menu is associated with, or add a new restaurant.</p>
- <p class ="btn-secondary" ><%= link_to 'Add a New Restaurant', new_user_restaurant_path %></p>
+ <p class ="btn-secondary-cards" ><%= link_to 'Add a New Restaurant', new_user_restaurant_path %></p>
 
 <% if @restaurants.any? %>
-<nav class="menu pt-20">
-  <ol>
+<nav class="menu w-three-quarter">
+  <ol class="d-flex align-items-center justify-content-around w-full">
     <% @restaurants.each do |restaurant| %>
         <% if restaurant.user_id = current_user.id %>
 
-    <li class="menu-item">
-      <%= link_to restaurant.name, user_restaurant_path(current_user, restaurant) %>
-      <ol class="sub-menu">
+    <li class="menu-item d-flex align-items-center w-half">
+      <%= link_to restaurant.name, user_restaurant_path(current_user, restaurant) %><p class="triangle">></p>
+      <ol class="sub-menu align-items-center justify-content-center">
         <% restaurant.menus.each do |menu|%>
-        <li class="menu-item"><%= link_to menu.menu_name, edit_user_restaurant_menu_path(@user, restaurant, menu)%></li>
+        <li class="menu-item w-full mx-auto"><%= link_to menu.menu_name, edit_user_restaurant_menu_path(@user, restaurant, menu)%></li>
         <% end %>
       </ol>
 </li>
@@ -29,9 +30,7 @@
 <% else %>
   <p>You haven't added any restaurants yet.</p>
 <% end %>
-<% if flash[:notice] %>
-  <p><%= flash[:notice] %></p>
-<% end %>
+
 </ol>
 </nav>
 </div>

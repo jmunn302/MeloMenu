@@ -47,7 +47,7 @@ class MenusController < ApplicationController
     @user = current_user
     @dish = Dish.new
     if @menu.save
-      redirect_to  new_user_restaurant_menu_path(@user, @restaurant, @menu)
+      redirect_to new_user_restaurant_menu_dish_path(@user, @restaurant, @menu)
     else
       render :new, status: :unprocessable_entity
     end
