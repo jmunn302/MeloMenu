@@ -1,5 +1,6 @@
 <div class="bg-container">
 
+
   <div class="container main-card-wide d-flex flex-column align-items-stretch card-content">
   <h1>Create a New Menu</h1>
 
@@ -15,30 +16,30 @@
       </div>
     <% end %>
 
-   <div class="field">
-      <%= form.label :menu_name %>
-      <%= form.text_field :menu_name %>
-    </div>
-    <%= form.label :qr_code %>
-    <%= form.text_field :qr_code %>
-    <br>
-    <div class="field">
-      <%= form.label :template_id %>
-      <div class="d-flex flex-wrap justify-content-between">
-        <% @templates.each do |template| %>
-          <div class="mr-4 mb-4">
-            <%= radio_button_tag(:template_id, template.id) %>
-            <label><%= template.name %></label>
+      <div class="field">
+          <%= form.label :menu_name %>
+          <%= form.text_field :menu_name %>
+        </div>
+           <%= form.label :qr_code %>
+        <%= form.text_field :qr_code %>
+        <br>
+        <div class="field">
+          <%= form.label :template_id %>
+          <div class="d-flex flex-wrap justify-content-between">
+            <% @templates.each do |template| %>
+              <div class="mr-4 mb-4">
+                <%= radio_button_tag(:template_id, template.id) %>
+                <label><%= template.name %></label>
+              </div>
+            <% end %>
           </div>
-        <% end %>
-      </div>
-    </div>
-    <br>
-        <div class="actions">
-          <%= form.submit 'Save', class: "btn-primary" %>
-         </div>
-    <br>
-  <% end %>
+        </div>
+        <br>
+            <div class="actions">
+              <%= form.submit 'Save', class: "btn-primary" %>
+            </div>
+        <br>
+      <% end %>
 
 
 <div class="d-flex justify-content-between">
