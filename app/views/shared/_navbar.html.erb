@@ -4,14 +4,20 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= cl_image_tag "Melo_logo_muj2f6" %>
 
+<% if current_user.nil? %>
+        <%= link_to 'sign in', new_user_session_path   %>
+        <% else %>
+
 <div class="dropdown">
-  <button class="dropbtn">Account</button>
+  <button class="dropbtn" style="font-family: Bebas Neue;">Account</button>
   <div class="dropdown-content">
+
     <a href="<%= user_restaurants_path(user_id = current_user.id) %> ">My Menus</a>
     <a href="<%= new_support_request_path %>">Contact Us</a>
     <a href="<%= new_user_session_path %>">Sign Out</a>
   </div>
 </div>
+<% end %>
 <% end %>
 
     </div>
