@@ -48,7 +48,7 @@ class DishesController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @dish.menu = @menu
     if @dish.save
-      redirect_to new_user_restaurant_menu_dish_path(@user, @restaurant, @menu), notice: "Menu was successfully created."
+      redirect_to new_user_restaurant_menu_dish_path(@user, @restaurant, @menu), notice: "Dish was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
