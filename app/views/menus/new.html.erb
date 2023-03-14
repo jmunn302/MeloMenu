@@ -1,4 +1,6 @@
-<div class="container p-20"; style="margin-bottom: 50px;">
+<div class="bg-container">
+
+  <div class="container main-card-wide d-flex flex-column align-items-stretch card-content">
   <h1>Create a New Menu</h1>
 
   <%= form_with model: @menu, url: user_restaurant_menus_path, method: :post do |form| %>
@@ -37,17 +39,70 @@
   <% end %>
 
 
-<div class="d-flex justify-content-around">
-  <div>
-    <p>1. Colourful Template </p>
-    <div class="modal" id="modal-6" tabindex="-1" role="dialog">
+<div class="d-flex justify-content-between">
+
+  <div class="template-container">
+    <p>1. Colourful Template</p>
+    <div class="modal" id="modal-3" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-content-media w-900 h-800">
       <a href="#" class="close" role="button" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </a>
             <h5 class="modal-title text-white">Colourful Template</h5>
-      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid" alt="modal-img">
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807223/Colourful_Menu_zyhxuv.png" class="img-fluid" alt="modal-img">
+    </div>
+  </div>
+</div>
+<!-- Page wrapper -->
+<div class="page-wrapper">
+  <!-- Modal toggle inside the content wrapper -->
+  <div class="content-wrapper">
+        <div data-toggle="modal" data-target="modal-3">
+        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807223/Colourful_Menu_zyhxuv.png"; style="width: 200px">
+      </div>
+  </div>
+</div>
+
+  </div>
+
+
+  <div>
+    <p>2. Boho Template</p>
+    <div class="modal" id="modal-4" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-content-media w-900 h-800">
+      <a href="#" class="close" role="button" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </a>
+            <h5 class="modal-title text-white">Boho Template</h5>
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807223/Boho_Menu_apkotv.png" class="img-fluid" alt="modal-img">
+
+    </div>
+  </div>
+</div>
+<!-- Page wrapper -->
+<div class="page-wrapper">
+  <!-- Modal toggle inside the content wrapper -->
+  <div class="content-wrapper">
+        <div data-toggle="modal" data-target="modal-4">
+        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807223/Boho_Menu_apkotv.png"; style="width: 200px">
+      </div>
+  </div>
+</div>
+  </div>
+
+
+  <div>
+    <p>3. Classic Template </p>
+    <div class="modal" id="modal-6" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-content-media w-900 h-800">
+      <a href="#" class="close" role="button" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </a>
+            <h5 class="modal-title text-white">Classic Template</h5>
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807225/Classic_Menu_w4lvjp.png" class="img-fluid" alt="modal-img">
 
     </div>
   </div>
@@ -57,60 +112,8 @@
   <!-- Modal toggle inside the content wrapper -->
   <div class="content-wrapper">
         <div data-toggle="modal" data-target="modal-6">
-        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png"; style="width: 200px">
+        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807225/Classic_Menu_w4lvjp.png"; style="width: 200px">
       </div>
-  </div>
-</div>
-
-
-  </div>
-  <div>
-    <p>2. Boho Template </p>
-    <div class="modal" id="modal-2" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content modal-content-media w-900 h-800">
-      <a href="#" class="close" role="button" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </a>
-      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid" alt="modal-img">
-    </div>
-  </div>
-</div>
-<!-- Page wrapper -->
-<div class="page-wrapper">
-  <!-- Modal toggle inside the content wrapper -->
-  <div class="content-wrapper">
-    <a href="#modal-2">
-      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid rounded" width="200" height="300" alt="modal-img-thumbnail">
-    </a>
-
-  </div>
-</div>
-
-
-  </div>
-  <div>
-    <p>3. Classic Template </p>
-    <div class="modal" id="modal-3" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content modal-content-media w-900 h-800">
-      <a href="#" class="close" role="button" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </a>
-      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid" alt="modal-img">
-    </div>
-  </div>
-</div>
-
-<!-- Page wrapper -->
-<div class="page-wrapper">
-  <!-- Modal toggle inside the content wrapper -->
-  <div class="content-wrapper">
-
-    <a href="#modal-3">
-      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid rounded" width="200" height="300" alt="modal-img-thumbnail">
-    </a>
-
   </div>
 </div>
   </div>
@@ -118,29 +121,27 @@
 
   <div>
     <p>4. Cute Cafe Template </p>
-    <div class="modal" id="modal-4" tabindex="-1" role="dialog">
+    <div class="modal" id="modal-5" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-content-media w-900 h-800">
       <a href="#" class="close" role="button" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </a>
-      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid" alt="modal-img">
+            <h5 class="modal-title text-white">Cute Cafe Template</h5>
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807231/Cafe_menu_wtb0lz.png" class="img-fluid" alt="modal-img">
+
     </div>
   </div>
 </div>
-
 <!-- Page wrapper -->
 <div class="page-wrapper">
   <!-- Modal toggle inside the content wrapper -->
   <div class="content-wrapper">
-
-    <a href="#modal-4">
-      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678707233/screencapture-localhost-3000-menus-100-2023-03-13-12_19_25_yeihxy.png" class="img-fluid rounded" width="200" height="300" alt="modal-img-thumbnail">
-    </a>
-
+        <div data-toggle="modal" data-target="modal-5">
+        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807231/Cafe_menu_wtb0lz.png"; style="width: 200px">
+      </div>
   </div>
 </div>
-
   </div>
-
+</div>
 </div>
