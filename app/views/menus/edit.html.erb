@@ -1,31 +1,48 @@
-<div class="container">
+<div class="bg-container">
+  <div class="container main-card d-flex flex-column align-items-stretch card-content">
+    <div class="d-flex justify-content-around">
+      <div class="d-flex flex-column">
+        <div class="w-full my-0" style="text-align:left"><h1><%= @menu.menu_name %></h1>
+          <%# <h3>Edit Menu</h3> %>
+        <%= form_for @menu, url: user_restaurant_menu_path(@menu), method: :patch do |f| %>
 
-<h1><%= @menu.menu_name %></h1>
+        <div class="field">
+          <%= f.label :name %>
+          <%= f.text_field :menu_name %>
+          <%= f.submit "update", class: "btn btn-link" %>
 
-<h3>Edit Menu</h3>
-<%= form_for @menu, url: user_restaurant_menu_path(@menu), method: :patch do |f| %>
+        <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :menu_name %>
+        <h3>Dishes</h3>
+        <% @menu.dishes.each do | dish | %>
+          <div class="menu-text">
+            <div class="d-flex justify-content-between">
+              <p class="text-light"><strong class="d-flex align-items-center"><%= dish.name %>
+                <ul>
+                <li> <%= dish.category%> </li>
+                <li> <%= dish.name%> </li>
+                <li><%= dish.description%></li>
+                <li><%= dish.price%></li>
+                </ul>
+                <%= link_to " | -> Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, dish) %>
+                <%= link_to " |  X Delete Dish", dish_path(dish),
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+                %>
+                <% end %>
+
+            </div>
+            <p class="btn-primary"><%= link_to "Add Dishes", new_user_restaurant_menu_dish_path(@user, @restaurant, @menu) %></p>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
   </div>
-  <div class="actions">
-    <%= f.submit "update", class: "btn-primary" %>
-  </div>
-<% end %>
 
-<h3>Dishes</h3>
-  <% @menu.dishes.each do | dish | %>
-    <ul>
-    <li> <%= dish.name%> </li>
-    <li><%= dish.description%></li>
-    <li><%= dish.price%></li>
-    </ul>
-    <%= link_to " | -> Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, dish) %>
-    <%= link_to " |  X Delete Dish", dish_path(dish),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
-  <% end %>
-  <p class="btn-primary"><%= link_to "Add Dishes", new_user_restaurant_menu_dish_path(@user, @restaurant, @menu) %></p>
 
 </div>
