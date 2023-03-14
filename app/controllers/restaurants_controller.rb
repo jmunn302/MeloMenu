@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
     @user = User.find(params[:user_id])
     @restaurants = Restaurant.all
     @menus = Menu.all
-    @images = ["https://res.cloudinary.com/dobohmdlf/image/upload/v1678647629/6574597-02_k56olg.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678647628/6574597-01_gy5egh.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678647628/6574597-03_pdijez.png" ]
+    @images = ["https://res.cloudinary.com/dobohmdlf/image/upload/v1678647629/6574597-02_k56olg.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678647628/6574597-01_gy5egh.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678647628/6574597-03_pdijez.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678734089/6574597-05_s7ozav.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678734088/6574597-04_r6olc6.png" ]
   end
 
   def new
@@ -25,7 +25,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    
+
     @restaurant = current_user.restaurants.build(restaurant_params)
     @user = current_user
     @menu = Menu.new()
