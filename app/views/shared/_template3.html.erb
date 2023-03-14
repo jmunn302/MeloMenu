@@ -24,15 +24,14 @@
   <div class="menu-main-card">
 
 <div class="container template-3">
-
   <div class="d-flex all-content">
-
-    <div class="d-flex px-40 flex-column menu-sidebar-3">
+      <div class="d-flex px-40 flex-column menu-sidebar-3">
 
       <h3 class="text-light pt-20 ">Starters</h3>
+                <div class="menu-text">
+
           <% @starters.each do |starter| %>
           <% if starter.menu_id == @menu.id %>
-          <div class="menu-text w-full">
             <div class="d-flex justify-content-between">
               <p class="text-light"><strong class="d-flex align-items-center"><%= starter.name %>
                       <% if starter.dietary_type.include?("Vegan") %>
@@ -50,20 +49,22 @@
               <p class="text-light">$<%= starter.price %></strong></p>
             </div>
                   <p class="text-light"><%= starter.description%></p>
-                <% end %>
-              <% end %>
-          </div>
+         <% end %>
+      <% end %>
+  </div>
   </div>
 
-
-
     <div class="main-section">
+    <div class="d-flex align-items-center justify-content-end" style="background-color: lightgray;">
+    <p class="icon-key"><%= cl_image_tag "vegan-dk", class: "diet-icon" %> Vegan <%= cl_image_tag "veg-dk", class: "diet-icon" %> Vegetarian <%= cl_image_tag "gf-dk", class: "diet-icon" %> Gluten-Free <%= cl_image_tag "lf-dk", class: "diet-icon" %> Lactose-Free</p>
+    </div>
 
        <div class="d-flex flex-column menu-section justify-content-center ">
       <h3 class="text-dark pt-20 ">Breakfast</h3>
+                <div class="menu-text w-full">
+
           <% @breakfasts.each do |breakfast| %>
           <% if breakfast.menu_id == @menu.id %>
-          <div class="menu-text">
                     <div class="d-flex justify-content-between">
               <p class="text-dark"><strong class="d-flex align-items-center"><%= breakfast.name %>
                       <% if breakfast.dietary_type.include?("Vegan") %>
@@ -89,10 +90,11 @@
 
       <div class="d-flex flex-column menu-section justify-content-center">
       <h3 class="text-dark pt-20 ">Lunch</h3>
+                <div class="menu-text w-full">
+
           <% @lunches.each do |lunch| %>
 
           <% if lunch.menu_id == @menu.id %>
-          <div class="menu-text">
             <div class="d-flex justify-content-between">
               <p class="text-dark"><strong class="d-flex align-items-center"><%= lunch.name %>
                   <% if lunch.dietary_type.include?("Vegan") %>
@@ -116,12 +118,11 @@
 </div>
 </div>
 
-
       <div class="d-flex flex-column menu-section justify-content-center ">
       <h3 class="text-dark pt-20 ">Dinner</h3>
+        <div class="menu-text w-full">
           <% @dinners.each do |dinner| %>
           <% if dinner.menu_id == @menu.id %>
-          <div class="menu-text">
                     <div class="d-flex justify-content-between">
               <p class="text-dark"><strong class="d-flex align-items-center"><%= dinner.name %>
                       <% if dinner.dietary_type.include?("Vegan") %>
@@ -145,9 +146,9 @@
 </div>
       <div class="d-flex flex-column menu-section justify-content-center ">
       <h3 class="text-dark pt-20 ">Sides</h3>
+                <div class="menu-text w-full">
           <% @sides.each do |side| %>
           <% if side.menu_id == @menu.id %>
-          <div class="menu-text">
                     <div class="d-flex justify-content-between">
               <p class="text-dark"><strong class="d-flex align-items-center"><%= side.name %>
                       <% if side.dietary_type.include?("Vegan") %>
@@ -171,9 +172,9 @@
 </div>
       <div class="d-flex flex-column menu-section justify-content-center ">
       <h3 class="text-dark pt-20 ">Desserts</h3>
+                <div class="menu-text w-full">
           <% @desserts.each do |dessert| %>
           <% if dessert.menu_id == @menu.id %>
-          <div class="menu-text">
                     <div class="d-flex justify-content-between">
               <p class="text-dark"><strong class="d-flex align-items-center"><%= dessert.name %>
                       <% if dessert.dietary_type.include?("Vegan") %>
