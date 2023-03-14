@@ -1,4 +1,5 @@
 <div class="bg-container">
+
   <div class="container main-card d-flex flex-column align-items-stretch card-content">
     <div class="d-flex justify-content-around">
     <div class="d-flex flex-column">
@@ -18,6 +19,7 @@
       </div>
     </div>
     <div>
+
           <% if policy(@restaurant).edit? %>
 
             <p class ="btn-secondary-cards my-20" ><%= link_to "Edit this restaurant", edit_user_restaurant_path(@restaurant) %><p>
@@ -26,6 +28,7 @@
           <% end %>
 </div>
 </div>
+<div class="d-flex">
 <div class="d-flex flex-column align-items-stretch card-content">
    <% @restaurant.menus.each do |menu| %>
      <div class="menu-img mx-auto"> <%= image_tag("#{@images.sample}")%></div>
@@ -37,7 +40,7 @@
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
 <% end %>
-
+</div>
 </div>
   </div>
 

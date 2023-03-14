@@ -44,21 +44,24 @@
 }
 
 .menu-sidebar-1 {
-  height: 100vh;
+  height: 130vh;
   background-color: black;
   flex-grow: 1;
+  width: 25%;
 }
 
 .menu-sidebar-2 {
-  height: 100vh;
+  height: 130vh;
   background-color: #AC5B2E;
   flex-grow: 1;
+  width: 25%;
 }
 
 .menu-sidebar-3 {
-  height: 100vh;
+  height: 130vh;
   background-color: #393939;
   flex-grow: 1;
+  width: 25%;
 }
 
 .template-banner-1 {
@@ -173,13 +176,33 @@ hr.black {
 
 .menu-section {
   padding-left: 10%;
+  padding-right: 15%;
 
 }
 
+.icon-key-container-full {
+  display: flex;
+}
+
+.icon-key-container-mobile {
+  display: none
+}
+
 .diet-icon {
-  width: 25px;
+  height: 15px;
   padding-top: 0;
   margin-left: 25px;
+}
+
+.icon-key {
+  font-size: 12px;
+  height: auto;
+  padding: 10px;
+  padding-right: 15%;
+
+  img {
+    padding-top: 2px;
+  }
 }
 
 .all-content {
@@ -270,8 +293,9 @@ hr.black {
   }
 
   .main-section {
-    margin-right: 30px;
-    margin-bottom: 20px;
+    margin: 0;
+    padding-right: 30px;
+    padding-bottom: 20px;
   }
 
   .all-content {
@@ -279,19 +303,23 @@ hr.black {
   }
 
   .menu-sidebar-1 {
-    height: 20vh;
+    height: auto;
+    width: 100%;
   }
 
   .menu-sidebar-2 {
-    height: 20vh;
+    height: auto;
+    width: 100%;
   }
 
   .menu-sidebar-3 {
-    height: 20vh;
+    height: auto;
+    width: 100%;
   }
 
   .menu-sidebar-4 {
-    height: 20vh;
+    height: auto;
+    width: 100%;
   }
 
 
@@ -301,5 +329,17 @@ hr.black {
 
   .diet-icon {
     width: 18px;
+  }
+
+  .icon-key-container-full {
+    display: none;
+  }
+
+  .icon-key-container-mobile {
+    display: flex
+  }
+
+  .menu-name-2 {
+    top: 40%;
   }
 }

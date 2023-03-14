@@ -1,15 +1,15 @@
-<% if @menu.template_id == 41%>
+<% if @menu.template.name == "Colourful Template"%>
 <%= render "shared/template1" %>
 <% end %>
 
-<% if @menu.template_id == 42%>
+<% if @menu.template.name == "Modern Template"%>
 <%= render "shared/template2" %>
 <% end %>
 
-<% if @menu.template_id == 43%>
+<% if @menu.template.name == "Special Template"%>
 <%= render "shared/template3" %>
 <% end %>
 
-<% if @menu.template_id == 44%>
+<% if @menu.template.name == "Classic Template"%>
 <%= render "shared/template4" %>
 <% end %>
