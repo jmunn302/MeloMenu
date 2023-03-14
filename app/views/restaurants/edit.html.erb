@@ -1,43 +1,46 @@
 <div class="bg-container">
   <div class="container main-card d-flex flex-column align-items-stretch card-content">
-    <h1>Edit Restaurant</h1>
+    <div class="container p-20"; style="margin-bottom: 50px;">
+      <h1>Edit Restaurant</h1>
 
-    <%= form_for @restaurant, url: user_restaurant_path(@restaurant), method: :patch do |f| %>
+      <%= form_for @restaurant, url: user_restaurant_path(@restaurant), method: :patch do |f| %>
 
-      <p>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-      </p>
+        <p>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </p>
 
-      <p>
-        <%= f.label  :cuisine %>
-        <%= f.text_field :cuisine %>
-      </p>
+        <p>
+          <%= f.label  :cuisine %>
+          <%= f.text_field :cuisine %>
+        </p>
 
-      <p>
-        <%= f.label :address %>
-        <%= f.text_field :address %>
-      </p>
+        <p>
+          <%= f.label :address %>
+          <%= f.text_field :address %>
+        </p>
 
-      <p>
-        <%= f.label :phone_number %>
-        <%= f.text_field :phone_number %>
-      </p>
+        <p>
+          <%= f.label :phone_number %>
+          <%= f.text_field :phone_number %>
+        </p>
 
-      <p>
-        <%= f.label :website %>
-        <%= f.text_field :website %>
-      </p>
+        <p>
+          <%= f.label :website %>
+          <%= f.text_field :website %>
+        </p>
 
-      <p>
-        <%= f.label :email %>
-        <%= f.text_field :email %>
-      </p>
+        <p>
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+        </p>
 
-      <p>
-        <%= f.submit %>
-      </p>
-    <% end %>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    </div>
+
   </div>
 
 </div>
