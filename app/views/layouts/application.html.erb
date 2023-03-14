@@ -6,6 +6,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="app/assets/stylesheets/halfmoon-variables.css" rel="stylesheet" />
+    <link href="app/assets/stylesheets/halfmoon_css/halfmoon.css" rel="stylesheet" />
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
@@ -17,7 +19,8 @@
     <% end %>
 
     <%= yield %>
-    <script src="../../javascript/halfmoon_js/halfmoon.js"></script>
+
+    <script type="text/javascript" src="https://cdn.tutorialjinni.com/Halfmoon/1.1.1/js/halfmoon.js"></script>
 
   </body>
 </html>

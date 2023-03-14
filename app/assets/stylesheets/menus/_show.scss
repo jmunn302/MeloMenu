@@ -44,21 +44,24 @@
 }
 
 .menu-sidebar-1 {
-  height: 120vh;
+  height: 130vh;
   background-color: black;
   flex-grow: 1;
+  width: 25%;
 }
 
 .menu-sidebar-2 {
-  height: 120vh;
+  height: 130vh;
   background-color: #AC5B2E;
   flex-grow: 1;
+  width: 25%;
 }
 
 .menu-sidebar-3 {
-  height: 120vh;
+  height: 130vh;
   background-color: #393939;
   flex-grow: 1;
+  width: 25%;
 }
 
 .template-banner-1 {
@@ -301,18 +304,22 @@ hr.black {
 
   .menu-sidebar-1 {
     height: auto;
+    width: 100%;
   }
 
   .menu-sidebar-2 {
     height: auto;
+    width: 100%;
   }
 
   .menu-sidebar-3 {
     height: auto;
+    width: 100%;
   }
 
   .menu-sidebar-4 {
     height: auto;
+    width: 100%;
   }
 
 
@@ -330,5 +337,9 @@ hr.black {
 
   .icon-key-container-mobile {
     display: flex
+  }
+
+  .menu-name-2 {
+    top: 40%;
   }
 }
