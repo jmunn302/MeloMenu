@@ -16,12 +16,14 @@
   <body>
   <% unless current_page?(root_path) %>
     <%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
-    <% end %>
+    <%= render "shared/flashes" %>
+  <% end %>
 
-    <%= yield %>
-
-    <script type="text/javascript" src="https://cdn.tutorialjinni.com/Halfmoon/1.1.1/js/halfmoon.js"></script>
+  <%= yield %>
+  <% unless current_page?(root_path) %>
+    <%= render "shared/footer" %>
+  <% end %>
+  <script type="text/javascript" src="https://cdn.tutorialjinni.com/Halfmoon/1.1.1/js/halfmoon.js"></script>
 
   </body>
 </html>
