@@ -37,15 +37,7 @@
     <% end %>
  <p class ="btn-primary-cards" > <%= link_to "Add a Menu", new_user_restaurant_menu_path(current_user, @restaurant) %></p>
 
-<div class="d-flex flex-column align-items- card-content">
 
-          <% if policy(@restaurant).edit? %>
-
-            <p class ="btn-secondary-cards my-20" ><%= link_to "Edit this restaurant", edit_user_restaurant_path(@restaurant) %><p>
-          <%= button_to "Delete this Restaurant", {:controller => :restaurants,
-                :action => 'destroy' }, class: "btn-secondary-cards", :method => :delete %>
-          <% end %>
-</div>
 
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
