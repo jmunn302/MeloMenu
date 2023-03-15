@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_14_144044) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_15_091813) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -70,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_144044) do
     t.string "name"
     t.string "cuisine"
     t.string "address"
-    t.integer "phone_number"
+    t.string "phone_number"
     t.string "website"
     t.string "email"
     t.datetime "created_at", null: false
@@ -78,7 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_144044) do
     t.index ["user_id"], name: "index_restaurants_on_user_id"
   end
 
-  create_table "support", force: :cascade do |t|
+  create_table "support_requests", force: :cascade do |t|
     t.string "name"
     t.text "issue"
     t.datetime "created_at", null: false
