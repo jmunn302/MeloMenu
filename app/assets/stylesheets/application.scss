@@ -4,7 +4,7 @@
 @import "config/halfmoon-variables";
 
 // @import "config/bootstrap_variables";
-
+@import "font-awesome";
 
 // External libraries
 // @import "bootstrap/scss/bootstrap";
@@ -292,4 +292,10 @@ a:hover {
   border-bottom: 2px solid #448fb8;
   margin-bottom: 30px;
   text-align: center;
+}
+footer {
+  text-align: center;
+  color: rgb(219, 220, 227);
+  padding-top: 2%;
+  background-color: #476783ff;
 }
