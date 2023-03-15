@@ -28,4 +28,8 @@ class MenuPolicy < ApplicationPolicy
     true
   end
 
+  def qr_show?
+   true
+  end
+
 end

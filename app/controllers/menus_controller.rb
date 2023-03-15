@@ -1,6 +1,5 @@
 class MenusController < ApplicationController
-  before_action :generate_qr_code, only: [:create]
-  before_action :set_menu, only: %i[show edit update destroy]
+  before_action :set_menu, only: %i[show edit update destroy qr_show]
 
   def index
     @menus = Menu.all
@@ -21,8 +20,6 @@ class MenusController < ApplicationController
     @desserts = Dish.where("category = 'Dessert'")
     @sides = Dish.where("category = 'side'")
     @breakfasts = Dish.where("category = 'Breakfast'")
-    @qr_code = RQRCode::QRCode.new(@menu.qr_code)
-    @svg = @qr_code.as_svg
   end
 
   def new
@@ -34,6 +31,10 @@ class MenusController < ApplicationController
   end
 
   def edit
+    @qr_code = RQRCode::QRCode.new("http://www.melomenu.online/menus/#{@menu.id}")
+    @svg = @qr_code.as_svg(
+      module_size: 4
+    )
     @user = current_user
     @restaurant = Restaurant.find(params[:restaurant_id])
     authorize @menu
@@ -54,6 +55,7 @@ class MenusController < ApplicationController
     @user = current_user
     @dish = Dish.new
     if @menu.save
+      @menu.qr_code = RQRCode::QRCode.new("http://www.melomenu.online/menus/#{@menu.id}")
       redirect_to new_user_restaurant_menu_dish_path(@user, @restaurant, @menu)
     else
       render :new, status: :unprocessable_entity
@@ -71,6 +73,12 @@ class MenusController < ApplicationController
     @menu.destroy
     redirect_to restaurant_path(@menu.restaurant), status: :see_other
     authorize @menu
+  end
+
+  def qr_show
+    authorize @menu
+    @qr_code = RQRCode::QRCode.new("http://www.melomenu.online/menus/#{@menu.id}")
+    @svg = @qr_code.as_svg
   end
 
   private
