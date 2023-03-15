@@ -1,0 +1,20 @@
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+/Users/juliemunn/.rbenv/versions/3.1.2/bin/ruby -I /Users/juliemunn/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-hnpho4 sitelibdir\=./.gem.20230315-24266-hnpho4 clean
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-hnpho4 sitelibdir\=./.gem.20230315-24266-hnpho4
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-hnpho4 sitelibdir\=./.gem.20230315-24266-hnpho4 install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20230315-24266-hnpho4/racc
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-hnpho4 sitelibdir\=./.gem.20230315-24266-hnpho4 clean

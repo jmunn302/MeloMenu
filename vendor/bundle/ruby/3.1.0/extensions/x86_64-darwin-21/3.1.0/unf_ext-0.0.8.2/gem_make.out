@@ -1,0 +1,19 @@
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+/Users/juliemunn/.rbenv/versions/3.1.2/bin/ruby -I /Users/juliemunn/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-er9shu sitelibdir\=./.gem.20230315-24266-er9shu clean
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-er9shu sitelibdir\=./.gem.20230315-24266-er9shu
+compiling unf.cc
+linking shared-object unf_ext.bundle
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-er9shu sitelibdir\=./.gem.20230315-24266-er9shu install
+/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20230315-24266-er9shu
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-er9shu sitelibdir\=./.gem.20230315-24266-er9shu clean

@@ -1,0 +1,18 @@
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/juliemunn/.rbenv/versions/3.1.2/bin/ruby -I /Users/juliemunn/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-380qsu sitelibdir\=./.gem.20230315-24266-380qsu clean
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-380qsu sitelibdir\=./.gem.20230315-24266-380qsu
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-380qsu sitelibdir\=./.gem.20230315-24266-380qsu install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20230315-24266-380qsu
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-380qsu sitelibdir\=./.gem.20230315-24266-380qsu clean
