@@ -1,15 +1,16 @@
 <div class="bg-container-full">
 
-<div class="container main-card d-flex flex-column align-items-center justify-content-start card-content">
+<div class="container main-card-index d-flex flex-column align-items-start justify-content-start card-content">
+<img class="corner-img" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678881148/corner_image_menoet.png">
 
-<h1 class="header-rule w-full">My Menus</h1>
+<h1 class="w-full all-content">My Menus</h1>
 <hr class="full">
 
 <p class="pb-30">Choose the restaurant your menu is associated with, or add a new restaurant.</p>
- <p class ="btn-secondary-cards" ><%= link_to 'Add a New Restaurant', new_user_restaurant_path %></p>
+ <p class ="btn-primary-cards" ><%= link_to 'Add a New Restaurant', new_user_restaurant_path %></p>
 
 <% if @restaurants.any? %>
-<nav class="menu w-three-quarter">
+<nav class="menu w-full">
   <ol class="d-flex align-items-center justify-content-around w-full">
     <% @restaurants.each do |restaurant| %>
         <% if restaurant.user_id = current_user.id %>

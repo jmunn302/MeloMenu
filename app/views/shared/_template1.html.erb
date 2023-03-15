@@ -7,12 +7,14 @@
           <% if @menu.restaurant.user == current_user %>
           <p class="btn-primary"><%= link_to "Add Dishes", new_user_restaurant_menu_dish_path(@user, @restaurant, @menu) %></p>
           <% end %>
+
         </div>
 
         <div class="mx-20">
           <% if @menu.restaurant.user == current_user %>
           <p class="btn-secondary"><%= link_to 'Edit Menu', edit_user_restaurant_menu_path(@user, @restaurant, @menu)%></p>
           <% end %>
+
         </div>
       </div>
 

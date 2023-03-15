@@ -84,7 +84,7 @@
                       <p><strong>$<%= breakfast.price %></strong></p></div>
                       <p><%= breakfast.description%></p>
 
-                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, breakfast) %>
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, breakfast) %>
                 <%= link_to " |  Delete Dish", dish_path(breakfast), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 
                 <% end %>
@@ -93,30 +93,30 @@
               </div>
 
                <div class="column-container d-flex flex-column mt-20">
-        <h4 class="mb-0 mt-20" id="lunch">Lunch</h4>
-            <div class="dish-full">
-              <div class="menu-text">
-                <% @lunches.each do |lunch| %>
-                  <% if lunch.menu_id == @menu.id %>
-                    <div class="d-flex align-items-center mt-20">
-                      <p class="w-full d-flex align-items-center justify-content-start"><strong><%= lunch.name %></strong>
-                        <% if lunch.dietary_type.include?("Vegan") %>
-                          <%= cl_image_tag "vegan-dk", class: "diet-icon-column" %>
-                        <% end %>
-                        <% if lunch.dietary_type.include?("Vegetarian") %>
-                          <%= cl_image_tag "veg-dk", class: "diet-icon-column" %>
-                        <% end %>
-                        <% if lunch.dietary_type.include?("Gluten-free") %>
-                            <%= cl_image_tag "gf-dk", class: "diet-icon-column" %>
-                        <% end %>
-                        <% if lunch.dietary_type.include?("Lactose-free") %>
-                            <%= cl_image_tag "lf-dk", class: "diet-icon-column" %>
-                        <% end %></p>
+                <h4 class="mb-0 mt-20" id="lunch">Lunch</h4>
+                  <div class="dish-full">
+                    <div class="menu-text">
+                      <% @lunches.each do |lunch| %>
+                      <% if lunch.menu_id == @menu.id %>
+                        <div class="d-flex align-items-center mt-20">
+                          <p class="w-full d-flex align-items-center justify-content-start"><strong><%= lunch.name %></strong>
+                            <% if lunch.dietary_type.include?("Vegan") %>
+                              <%= cl_image_tag "vegan-dk", class: "diet-icon-column" %>
+                            <% end %>
+                            <% if lunch.dietary_type.include?("Vegetarian") %>
+                              <%= cl_image_tag "veg-dk", class: "diet-icon-column" %>
+                            <% end %>
+                            <% if lunch.dietary_type.include?("Gluten-free") %>
+                                <%= cl_image_tag "gf-dk", class: "diet-icon-column" %>
+                            <% end %>
+                            <% if lunch.dietary_type.include?("Lactose-free") %>
+                                <%= cl_image_tag "lf-dk", class: "diet-icon-column" %>
+                            <% end %></p>
 
-                      <p><strong>$<%= lunch.price %></strong></p></div>
-                      <p><%= lunch.description%></p>
+                              <p><strong>$<%= lunch.price %></strong></p></div>
+                              <p><%= lunch.description%></p>
 
-                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, lunch) %>
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, lunch) %>
                 <%= link_to " |  Delete Dish", dish_path(lunch), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 
                 <% end %>
@@ -149,7 +149,7 @@
                       <p><strong>$<%= dinner.price %></strong></p></div>
                       <p><%= dinner.description%></p>
 
-                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, dinner) %>
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, dinner) %>
                 <%= link_to " |  Delete Dish", dish_path(dinner), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 
                 <% end %>
@@ -182,7 +182,7 @@
                       <p><strong>$<%= side.price %></strong></p></div>
                       <p><%= side.description%></p>
 
-                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, side) %>
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, side) %>
                 <%= link_to " |  Delete Dish", dish_path(side), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 
                 <% end %>
@@ -215,7 +215,7 @@
                       <p><strong>$<%= dessert.price %></strong></p></div>
                       <p><%= dessert.description%></p>
 
-                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, dessert) %>
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, dessert) %>
                 <%= link_to " |  Delete Dish", dish_path(dessert), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 
                 <% end %>

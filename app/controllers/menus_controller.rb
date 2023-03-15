@@ -1,5 +1,6 @@
 class MenusController < ApplicationController
   before_action :set_menu, only: %i[show edit update destroy qr_show]
+  skip_before_action :authenticate_user!, only: [:show]
 
   def index
     @menus = Menu.all
@@ -20,6 +21,7 @@ class MenusController < ApplicationController
     @desserts = Dish.where("category = 'Dessert'")
     @sides = Dish.where("category = 'side'")
     @breakfasts = Dish.where("category = 'Breakfast'")
+    @menus = policy_scope(Menu)
   end
 
   def new

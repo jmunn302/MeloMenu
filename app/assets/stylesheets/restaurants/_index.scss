@@ -1,0 +1,22 @@
+.all-content {
+  margin-top: 15%;
+}
+
+.corner-img {
+  object-fit: contain;
+    height: 250px;
+    object-position: left;
+    position: absolute;
+    left: 0px;
+}
+
+.main-card-index {
+  background-color: white;
+  width: 75%;
+  height: 100%;
+  box-shadow: 0px 0px 27px 6px rgba(0,0,0,0.18);
+  padding: 0 10%;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  position: relative;
+}
