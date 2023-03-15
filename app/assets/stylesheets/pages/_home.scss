@@ -1,8 +1,8 @@
 // Specific CSS for your home-page
 
 .homepage-banner {
-  background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1678733214/v960-ni-43_wojbhk.png");
-  background-size: contain;
+  background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1678880235/banner_new_rtjto3.png");
+  background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
   height: 650px;
@@ -35,4 +35,8 @@
   background-color: #B5D6EE;
   margin: 0 0;
   box-shadow: inset 1px 11px 26px -3px rgba(0,0,0,0.28);
+}
+
+.melo-logo {
+  width: 250px;
 }

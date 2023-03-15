@@ -18,6 +18,7 @@
 @import "pages/index";
 @import "menus/show";
 @import "menus/edit";
+@import "restaurants/index";
 @import "menus/qrshow";
 @import "dishes/index";
 
@@ -263,6 +264,8 @@ a:hover {
   background-size: 30%;
   background-repeat: repeat;
   padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .bg-container-full {
@@ -270,6 +273,8 @@ a:hover {
   background-size: 30%;
   background-repeat: repeat;
   height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 

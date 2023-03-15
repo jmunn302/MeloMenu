@@ -26,6 +26,14 @@
   }
 }
 
+.template-5 {
+  h1, h2, h3, h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+}
+
 
 .template1-bg {
   background-color: #e0ffd4;
@@ -41,6 +49,10 @@
 
 .template4-bg {
   background-color: #F7F0E2;
+}
+
+.template5-bg {
+  background-color: #FFFFFF;
 }
 
 .menu-sidebar-1 {
@@ -60,6 +72,13 @@
 .menu-sidebar-3 {
   height: 130vh;
   background-color: #393939;
+  flex-grow: 1;
+  width: 25%;
+}
+
+.menu-sidebar-5 {
+  height: 130vh;
+  background-color: #6992C0;
   flex-grow: 1;
   width: 25%;
 }
@@ -120,6 +139,20 @@
     h1 {
       color: Black;
       font-size: 65px;
+    }
+
+}
+
+.template-banner-5 {
+  width: 100vw;
+  height: 40vh;
+  background-color: #6992C0;
+  position: relative;
+  border-bottom: 10px solid #FFF;
+
+    h1 {
+      color: white;
+      font-size: 85px;
     }
 
 }
@@ -236,6 +269,18 @@ hr.black {
     border-bottom: 0;
   }
 
+  .template-banner-5 {
+    height: 150px;
+    border-bottom: 0;
+    background-color: white;
+    h1 {
+      color: black;
+    }
+    hr.white {
+      border-top: 1px solid black;
+    }
+  }
+
   .menu-main-card {
     width: 100%;
   }
@@ -292,6 +337,18 @@ hr.black {
     }
   }
 
+  .template-5 {
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
   .main-section {
     margin: 0;
     padding-right: 30px;
@@ -320,6 +377,12 @@ hr.black {
   .menu-sidebar-4 {
     height: auto;
     width: 100%;
+  }
+
+  .menu-sidebar-5 {
+    height: auto;
+    width: 100%;
+
   }
 
 

@@ -3,14 +3,18 @@
 <%= render "shared/template1" %>
 <% end %>
 
-<% if @menu.template.name == "Modern Template"%>
+<% if @menu.template.name == "Boho Template"%>
 <%= render "shared/template2" %>
 <% end %>
 
-<% if @menu.template.name == "Special Template"%>
+<% if @menu.template.name == "Cute Cafe Template"%>
 <%= render "shared/template3" %>
 <% end %>
 
 <% if @menu.template.name == "Classic Template"%>
 <%= render "shared/template4" %>
+<% end %>
+
+<% if @menu.template.name == "Simple Template"%>
+<%= render "shared/template5" %>
 <% end %>
