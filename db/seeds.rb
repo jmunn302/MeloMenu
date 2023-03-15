@@ -15,11 +15,6 @@ User.destroy_all
 
 require "open-uri"
 
-User.create!(first_name: 'John', last_name: 'Doe', email: Faker::Internet.email, password: Faker::Internet.password(min_length: 8))
-
-User.create!(first_name: 'Alice', last_name: 'Smith', email: Faker::Internet.email, password: Faker::Internet.password(min_length: 8))
-
-User.create!(first_name: 'Paul', last_name: 'Baker', email: Faker::Internet.email, password: Faker::Internet.password(min_length: 8))
 
 User.create!(first_name: 'Anna', last_name: 'Jones', email: Faker::Internet.email, password: Faker::Internet.password(min_length: 8))
 
@@ -29,21 +24,20 @@ ids = []
   ids << user.id
 end
 
-Restaurant.create!(user_id: ids.sample, name: 'Pizza Palace', cuisine: 'Italian', address: '123 Main St', phone_number: '5551234', website: 'https://pizzapalace.com', email: 'info@pizzapalace.com')
+Restaurant.create!(user_id: ids.sample, name: 'Ginos', cuisine: 'Italian', address: 'C. del Dr. Esquerdo 66', phone_number: '+34 912759861', website: 'www.ginos.es', email: 'info@ginos.com')
 
-Restaurant.create!(user_id: ids.sample, name: 'Sushi World', cuisine: 'Japanese', address: '456 Oak Ave', phone_number: '15655678', website: 'https://sushiworld.com', email: 'info@sushiworld.com')
+Restaurant.create!(user_id: ids.sample, name: 'Zen Bamboo', cuisine: 'Chinese', address: 'C. del Dr. Esquerdo 70', phone_number: '+34 914008126', website: 'www.zenbamboo.es', email: 'info@zenbamboo.com')
 
-Restaurant.create!(user_id: ids.sample, name: 'Taco Time', cuisine: 'Mexican', address: '789 Elm St', phone_number: '4275683', website: 'https://tacotime.com', email: 'info@pizzapalace.com')
+Restaurant.create!(user_id: ids.sample, name: 'Taco Time', cuisine: 'Mexican', address: 'c. de sta. Isabel 5', phone_number: '+34 427568335', website: 'www.tacotime.es', email: 'info@tacotime.com')
 
-Restaurant.create!(user_id: ids.sample, name: 'Burger Joint', cuisine: 'American', address: '1010 Maple Ave', phone_number: '69841940', website: 'https://sushiworld.com', email: 'info@sushiworld.com')
 
 Template.create!(name: "Colourful Template")
 
 Template.create!(name: "Classic Template")
 
-Template.create!(name: "Modern Template")
+Template.create!(name: "Boho Template")
 
-Template.create!(name: "Special Template")
+Template.create!(name: "Cute Cafe Template")
 
 @templates = Template.all
 template_ids = []
@@ -56,13 +50,5 @@ restaurant_ids = []
 @restaurants.each do |restaurant|
   restaurant_ids << restaurant.id
 end
-
-Menu.create!(menu_name: "Dinner Menu", restaurant_id: restaurant_ids.sample, template_id: template_ids.sample)
-
-Menu.create!(menu_name: "Lunch Menu", restaurant_id: restaurant_ids.sample, template_id: template_ids.sample)
-
-Menu.create!(menu_name: "Summer Menu", restaurant_id: restaurant_ids.sample, template_id: template_ids.sample)
-
-Menu.create!(menu_name: "Classic Menu", restaurant_id: restaurant_ids.sample, template_id: template_ids.sample)
 
 puts "Yay you're done!"
