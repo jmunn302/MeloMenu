@@ -1,27 +1,33 @@
-<h1>Email us!</h1>
+<div class="bg-container-full">
+  <div class="container main-card d-flex flex-column align-items-stretch card-content">
+    <div class="container p-20"; style="margin-bottom: 50px;">
+      <h1>Email us!</h1>
 
-<%= form_tag '/support', method: :post do  %>
+      <%= form_tag '/support', method: :post do  %>
 
-<div class="form-group">
-  <%= label_tag :name, 'Your Name:' %>
-  <%= text_field_tag :name %>
+      <div class="form-group">
+        <%= label_tag :name, 'Your Name:' %>
+        <%= text_field_tag :name %>
+      </div>
+
+      <div class="form-group">
+      <%= label_tag :name, 'Restaurant Name:' %>
+        <%= text_field_tag :name %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag :name, 'Your email:' %>
+        <%= text_field_tag :name %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag :issue, 'What seems to be the issue?' %>
+        <%= text_area_tag :issue %>
+      </div>
+
+        <%= link_to 'submit', root_path, class: "btn-secondary-cards" %>
+
+      <% end %>
+    </div>
+  </div>
 </div>
-
-<div class="form-group">
-<%= label_tag :name, 'Restaurant Name:' %>
-  <%= text_field_tag :name %>
-</div>
-
-<div class="form-group">
-  <%= label_tag :name, 'Your email:' %>
-  <%= text_field_tag :name %>
-</div>
-
-<div class="form-group">
-  <%= label_tag :issue, 'What seems to be the issue?' %>
-  <%= text_area_tag :issue %>
-</div>
-
-  <%= link_to 'submit', root_path, class: "btn-primary" %>
-
-<% end %>
