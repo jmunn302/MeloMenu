@@ -39,16 +39,16 @@
             <div class="d-flex justify-content-between">
               <p class="text-light"><strong class="d-flex align-items-center"><%= starter.name %>
                       <% if starter.dietary_type.include?("Vegan") %>
-                    <%= cl_image_tag "vegan-lt", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678387058/vegan-lt.png" class="diet-icon" >
               <% end %>
                  <% if starter.dietary_type.include?("Vegetarian") %>
-                    <%= cl_image_tag "veg-lt", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678387057/veg-lt.png" class="diet-icon">
               <% end %>
                    <% if starter.dietary_type.include?("Gluten-free") %>
-                    <%= cl_image_tag "gf-lt", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678387058/gf-lt.png" class="diet-icon">
               <% end %>
               <% if starter.dietary_type.include?("Lactose-free") %>
-                    <%= cl_image_tag "lf-lt", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678387057/lf-lt.png" class="diet-icon">
               <% end %></p>
               <p class="text-light">$<%= starter.price %></strong></p>
             </div>
@@ -72,16 +72,17 @@
                     <div class="d-flex justify-content-between">
               <p class="text-dark"><strong class="d-flex align-items-center"><%= breakfast.name %>
                       <% if breakfast.dietary_type.include?("Vegan") %>
-                    <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/vegan-dk.png" class="diet-icon" >
               <% end %>
                  <% if breakfast.dietary_type.include?("Vegetarian") %>
-                    <%= cl_image_tag "veg-dk", class: "diet-icon" %>
+        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/veg-dk.png" class="diet-icon">
+
               <% end %>
                    <% if breakfast.dietary_type.include?("Gluten-free") %>
-                    <%= cl_image_tag "gf-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/gf-dk.png" class="diet-icon">
               <% end %>
               <% if breakfast.dietary_type.include?("Lactose-free") %>
-                    <%= cl_image_tag "lf-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/lf-dk.png" class="diet-icon" %>
               <% end %></p>
               <p>$<%= breakfast.price %></strong></p>
               </div>
@@ -102,17 +103,18 @@
             <div class="d-flex justify-content-between">
               <p class="text-dark"><strong class="d-flex align-items-center"><%= lunch.name %>
                   <% if lunch.dietary_type.include?("Vegan") %>
-                  <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/vegan-dk.png" class="diet-icon" >
               <% end %>
 
               <% if lunch.dietary_type.include?("Vegetarian") %>
-                  <%= cl_image_tag "veg-dk", class: "diet-icon" %>
+         <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/veg-dk.png" class="diet-icon">
+
               <% end %>
                    <% if lunch.dietary_type.include?("Gluten-free") %>
-                    <%= cl_image_tag "gf-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/gf-dk.png" class="diet-icon">
               <% end %>
               <% if lunch.dietary_type.include?("Lactose-free") %>
-                    <%= cl_image_tag "lf-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/lf-dk.png" class="diet-icon" %>
               <% end %><p>
               <p>$<%= lunch.price %></p></strong>
               </div>
@@ -130,16 +132,17 @@
                     <div class="d-flex justify-content-between">
               <p class="text-dark"><strong class="d-flex align-items-center"><%= dinner.name %>
                       <% if dinner.dietary_type.include?("Vegan") %>
-                    <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/vegan-dk.png" class="diet-icon" >
               <% end %>
                  <% if dinner.dietary_type.include?("Vegetarian") %>
-                    <%= cl_image_tag "veg-dk", class: "diet-icon" %>
+          <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/veg-dk.png" class="diet-icon">
+
               <% end %>
                    <% if dinner.dietary_type.include?("Gluten-free") %>
-                    <%= cl_image_tag "gf-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/gf-dk.png" class="diet-icon">
               <% end %>
               <% if dinner.dietary_type.include?("Lactose-free") %>
-                    <%= cl_image_tag "lf-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/lf-dk.png" class="diet-icon" %>
               <% end %></p>
               <p>$<%= dinner.price %></strong></p>
               </div>
@@ -156,16 +159,17 @@
                     <div class="d-flex justify-content-between">
               <p class="text-dark"><strong class="d-flex align-items-center"><%= side.name %>
                       <% if side.dietary_type.include?("Vegan") %>
-                    <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/vegan-dk.png" class="diet-icon" >
               <% end %>
                  <% if side.dietary_type.include?("Vegetarian") %>
-                    <%= cl_image_tag "veg-dk", class: "diet-icon" %>
+    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/veg-dk.png" class="diet-icon">
+
               <% end %>
                    <% if side.dietary_type.include?("Gluten-free") %>
-                    <%= cl_image_tag "gf-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/gf-dk.png" class="diet-icon">
               <% end %>
               <% if side.dietary_type.include?("Lactose-free") %>
-                    <%= cl_image_tag "lf-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/lf-dk.png" class="diet-icon" %>
               <% end %></p>
               <p>$<%= side.price %></strong></p>
               </div>
@@ -182,16 +186,17 @@
                     <div class="d-flex justify-content-between">
               <p class="text-dark"><strong class="d-flex align-items-center"><%= dessert.name %>
                       <% if dessert.dietary_type.include?("Vegan") %>
-                    <%= cl_image_tag "vegan-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/vegan-dk.png" class="diet-icon" >
               <% end %>
                  <% if dessert.dietary_type.include?("Vegetarian") %>
-                    <%= cl_image_tag "veg-dk", class: "diet-icon" %>
+            <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/veg-dk.png" class="diet-icon">
+
               <% end %>
                    <% if dessert.dietary_type.include?("Gluten-free") %>
-                    <%= cl_image_tag "gf-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/gf-dk.png" class="diet-icon">
               <% end %>
               <% if dessert.dietary_type.include?("Lactose-free") %>
-                    <%= cl_image_tag "lf-dk", class: "diet-icon" %>
+                    <img src="https://res.cloudinary.com/dobohmdlf/image/upload/e_blackwhite/v1678387057/lf-dk.png" class="diet-icon" %>
               <% end %></p>
               <p>$<%= dessert.price %></strong></p>
               </div>

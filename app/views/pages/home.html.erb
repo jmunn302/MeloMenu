@@ -15,14 +15,14 @@
     <% if current_user.nil? %>
         <%= link_to new_user_session_path do  %>
           <div class="d-flex flex-column align-items-center justify-content-center">
-          <%= cl_image_tag "brand_images-01_qcsvff", class: "brand-img mb-0" %>
+          <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678185376/brand_images-01_qcsvff.png" class="brand-img mb-0">
           <h4 class="mt-0">View My Menus</h4>
           </div>
           <% end %>
       <% else %>
         <%= link_to user_restaurants_path(user_id = current_user.id) do %>
           <div class="d-flex flex-column align-items-center justify-content-center">
-          <%= cl_image_tag "brand_images-01_qcsvff", class: "brand-img" %>
+          <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678185376/brand_images-01_qcsvff.png" class="brand-img mb-0">
           <h4 class="mt-0">View My Menus</h4>
           </div>
         <% end %>
@@ -32,14 +32,14 @@
     <% if current_user.nil? %>
         <%= link_to new_user_session_path do  %>
           <div class="d-flex flex-column align-items-center justify-content-center">
-          <%= cl_image_tag "brand_images-02_sw3oqb", class: "brand-img" %>
+          <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678185376/brand_images-02_sw3oqb.png" class="brand-img">
           <h4 class="mt-0">Create a New Menu</h4>
           </div>
            <% end %>
       <% else %>
         <%= link_to new_user_restaurant_path(user_id = current_user.id) do %>
           <div class="d-flex flex-column align-items-center justify-content-center">
-          <%= cl_image_tag "brand_images-02_sw3oqb", class: "brand-img" %>
+          <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678185376/brand_images-02_sw3oqb.png" class="brand-img">
           <h4 class="mt-0">Create a New Restaurant</h4>
           </div>
         <% end %>
@@ -49,14 +49,14 @@
     <% if current_user.nil? %>
         <%= link_to new_user_session_path do  %>
           <div class="d-flex flex-column align-items-center justify-content-center">
-          <%= cl_image_tag "brand_images-03_hqpedg", class: "brand-img" %>
+          <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678185376/brand_images-03_hqpedg.png" class="brand-img">
           <h4 class="mt-0">Contact Us</h4>
           </div>
            <% end %>
       <% else %>
         <%= link_to new_support_request_path do %>
           <div class="d-flex flex-column align-items-center justify-content-center">
-          <%= cl_image_tag "brand_images-03_hqpedg", class: "brand-img" %>
+          <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678185376/brand_images-03_hqpedg.png" class="brand-img">
           <h4 class="mt-0">Contact Us</h4>
           </div>
         <% end %>
