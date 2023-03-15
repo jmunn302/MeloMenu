@@ -21,14 +21,16 @@
               </div>
             <% end %>
           </div>
+          <a href="#" download>
           <%= @svg.html_safe %>
+          </a>
         </div>
       </div>
 
         <div class="d-flex align-items-center justify-content-between"><h3 class="mt-20">Dishes on <%= @menu.menu_name %></h3>
         <p class="column-container">Jump to: <a href="#starters">Starters</a> | <a href="#breakfast">Breakfast</a> | <a href="#lunch">Lunch</a> | <a href="#dinner">Main Courses</a> | <a href="#sides">Sides</a> | <a href="#dessert">Dessert</a>
         </div>
-                <div class="column-container d-flex flex-column">
+      <div class="column-container d-flex flex-column">
         <h4 class="mb-0" id="starters">Starters</h4>
             <div class="dish-full">
               <div class="menu-text">
@@ -57,6 +59,7 @@
 
                 <% end %>
                 <% end %>
+                </div>
                 </div>
                 </div>
 
@@ -91,6 +94,7 @@
                 <% end %>
               </div>
               </div>
+              </div>
 
                <div class="column-container d-flex flex-column mt-20">
                 <h4 class="mb-0 mt-20" id="lunch">Lunch</h4>
@@ -123,7 +127,7 @@
                 <% end %>
               </div>
               </div>
-
+              </div>
 
    <div class="column-container d-flex flex-column mt-20">
         <h4 class="mb-0 mt-20" id="dinner">Main Courses</h4>
@@ -156,7 +160,7 @@
                 <% end %>
               </div>
               </div>
-
+              </div>
 
    <div class="column-container d-flex flex-column mt-20">
         <h4 class="mb-0 mt-20" id="sides">Sides</h4>
@@ -189,7 +193,7 @@
                 <% end %>
               </div>
               </div>
-
+              </div>
 
    <div class="column-container d-flex flex-column mt-20">
         <h4 class="mb-0 mt-20" id="dessert">Desserts</h4>
@@ -222,7 +226,8 @@
                 <% end %>
               </div>
               </div>
-
+              </div>
+</div>
 
 
 
@@ -237,4 +242,3 @@
 
         </div>
       </div>
-    </div>
