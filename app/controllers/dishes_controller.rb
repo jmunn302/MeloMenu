@@ -39,6 +39,7 @@ class DishesController < ApplicationController
 
   def edit
     authorize @dish
+    @menu = Menu.find(params[:menu_id])
   end
 
   def create
