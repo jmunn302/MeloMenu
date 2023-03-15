@@ -1,0 +1,18 @@
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+/Users/juliemunn/.rbenv/versions/3.1.2/bin/ruby -I /Users/juliemunn/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-btf58 sitelibdir\=./.gem.20230315-24266-btf58 clean
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-btf58 sitelibdir\=./.gem.20230315-24266-btf58
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-btf58 sitelibdir\=./.gem.20230315-24266-btf58 install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20230315-24266-btf58/bootsnap
+
+current directory: /Users/juliemunn/code/MeloMenu/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230315-24266-btf58 sitelibdir\=./.gem.20230315-24266-btf58 clean

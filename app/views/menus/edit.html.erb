@@ -21,7 +21,7 @@
               </div>
             <% end %>
           </div>
-          <a href="#" download>
+          <a href=<%="/menus/#{@menu.id}/qr_code"%> >
           <%= @svg.html_safe %>
           </a>
         </div>
