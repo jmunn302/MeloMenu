@@ -7,6 +7,8 @@ class RestaurantsController < ApplicationController
     @restaurants = policy_scope(Restaurant)
     @menus = Menu.all
     @user = User.find(params[:user_id])
+    @images = ["https://res.cloudinary.com/dobohmdlf/image/upload/v1678647629/6574597-02_k56olg.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678647628/6574597-01_gy5egh.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678647628/6574597-03_pdijez.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678734089/6574597-05_s7ozav.png", "https://res.cloudinary.com/dobohmdlf/image/upload/v1678734088/6574597-04_r6olc6.png" ]
+
   end
 
   def show

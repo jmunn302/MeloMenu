@@ -1,17 +1,19 @@
 <body style="height: 100%">
 <div class="bg-container-full">
 
-  <div class="container main-card d-flex flex-column align-items-stretch card-content">
-    <div class="d-flex justify-content-around">
+  <div class="container main-card-index d-flex flex-column align-items-stretch card-content px-10">
+  <img class="corner-img" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678881148/corner_image_menoet.png">
+
+    <div class="d-flex justify-content-around mt-20 pt-20">
     <div class="d-flex flex-column">
       <div class="w-full my-0 mt-20" style="text-align:left"><h1 class="my-0">Menus for <strong><%= @restaurant.name %></strong></h1></div>
 
 
-        <p class="mt-10"><strong>Cuisine: <%= @restaurant.cuisine %></strong></p>
-        <p class="mt-10"><strong>Address: <%= @restaurant.address %></p>
-        <p class="mt-10"><strong>Phone Number: <%= @restaurant.phone_number %></p>
-        <p class="mt-10"><strong>Website: <%= @restaurant.website %></p>
-        <p class="mt-10"><strong>Email: <%= @restaurant.email %></p>
+        <p class="mt-10"><strong>Cuisine: </strong><%= @restaurant.cuisine %></p>
+        <p class="mt-10"><strong>Address: </strong><%= @restaurant.address %></p>
+        <p class="mt-10"><strong>Phone Number:</strong> <%= @restaurant.phone_number %></p>
+        <p class="mt-10"><strong>Website: </strong><%= @restaurant.website %></p>
+        <p class="mt-10"><strong>Email:</strong> <%= @restaurant.email %></p>
 
     </div>
     <div>

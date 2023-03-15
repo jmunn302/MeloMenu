@@ -1,8 +1,12 @@
 <body style="height: 100%">
+
 <div class="bg-container-full">
-  <div class="container main-card d-flex flex-column align-items-stretch card-content">
+  <div class="container main-card-index d-flex flex-column align-items-stretch card-content">
+  <img class="corner-img" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678881148/corner_image_menoet.png">
+  <img class="sidebar-full" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678898291/sidebar_food2_jappzs.png">
+
     <div class="container p-20"; style="margin-bottom: 50px;">
-      <h1>Edit Restaurant</h1>
+      <h1 class="w-full all-content">Edit Restaurant</h1>
 
       <%= form_for @restaurant, url: user_restaurant_path(@restaurant), method: :patch do |f| %>
 
@@ -43,5 +47,5 @@
     </div>
 
   </div>
-
+</div>
 </div>
