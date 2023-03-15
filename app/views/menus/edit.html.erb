@@ -9,7 +9,8 @@
       </div>
 
       <div class="w-full my-0" style="text-align:left">
-        <h1 class="pb-20"><%= @menu.menu_name %></h1>
+        <h1 class ="my-0"><%= @menu.menu_name %></h1>
+        <p class="pb-20"><strong> <%= @menu.restaurant.name %>: <%= @menu.restaurant.cuisine %></strong></p>
 
         <%= form_for @menu, url: user_restaurant_menu_path(@menu), method: :patch do |f| %>
 
