@@ -1,51 +1,236 @@
 <div class="bg-container">
-  <div class="container main-card d-flex flex-column align-items-stretch card-content">
-    <div class="d-flex justify-content-around">
-      <div class="d-flex flex-column">
-        <div class="w-full my-0" style="text-align:left"><h1><%= @menu.menu_name %></h1>
-          <%# <h3>Edit Menu</h3> %>
-        <%= form_for @menu, url: user_restaurant_menu_path(@menu), method: :patch do |f| %>
 
-        <div class="field">
-          <%= f.label :name %>
-          <%= f.text_field :menu_name %>
-          <%= f.submit "update", class: "btn btn-link" %>
-
-        <% end %>
-
-        <h3>Dishes</h3>
-        <% @menu.dishes.each do | dish | %>
-          <div class="menu-text">
-            <div class="d-flex justify-content-between">
-              <p class="text-light"><strong class="d-flex align-items-center"><%= dish.name %>
-                <div>
-                   <p><%= dish.category%></p>
-                   <p><%= dish.name%></p>
-                   <p><%= dish.description%></p>
-                   <p><%= dish.price%> €</p>
-
-                </div>
+  <div class="container main-card h-full d-flex flex-column align-items-stretch card-content justify-content-start">
 
 
-                <%= link_to " |  Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, dish) %>
-                <%= link_to " |  Delete Dish", dish_path(dish),
-
-                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-                %>
-                <% end %>
-
-            </div>
-            <p class="btn-primary"><%= link_to "Add Dishes", new_user_restaurant_menu_dish_path(@user, @restaurant, @menu) %></p>
-          </div>
-
-        </div>
-
-
+      <div class="d-flex justify-content-end w-full mt-20">
+      <p class="btn-primary-cards mx-10"><%= link_to "Add Dishes", new_user_restaurant_menu_dish_path(@user, @restaurant, @menu) %></p>
+      <p class="btn-secondary-cards mx-10"><%= link_to "View Menu", menu_path(@menu) %></p>
       </div>
 
+      <div class="w-full my-0" style="text-align:left">
+        <h1 class="pb-20"><%= @menu.menu_name %></h1>
 
+        <%= form_for @menu, url: user_restaurant_menu_path(@menu), method: :patch do |f| %>
+
+            <div class="field">
+              <%= f.label :name %>
+              <%= f.text_field :menu_name %>
+              <%= f.submit "Update", style: "font-size: 12px" %>
+              <% end %>
+              </div>
+      </div>
+
+        <div class="d-flex align-items-center justify-content-between"><h3 class="mt-20">Dishes on <%= @menu.menu_name %></h3>
+        <p class="column-container">Jump to: <a href="#starters">Starters</a> | <a href="#breakfast">Breakfast</a> | <a href="#lunch">Lunch</a> | <a href="#dinner">Main Courses</a> | <a href="#sides">Sides</a> | <a href="#dessert">Dessert</a>
+        </div>
+                <div class="column-container d-flex flex-column">
+        <h4 class="mb-0" id="starters">Starters</h4>
+            <div class="dish-full">
+              <div class="menu-text">
+                <% @starters.each do |starter| %>
+                  <% if starter.menu_id == @menu.id %>
+                    <div class="d-flex align-items-center mt-20">
+                      <p class="w-full d-flex align-items-center justify-content-start"><strong><%= starter.name %></strong>
+                        <% if starter.dietary_type.include?("Vegan") %>
+                          <%= cl_image_tag "vegan-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if starter.dietary_type.include?("Vegetarian") %>
+                          <%= cl_image_tag "veg-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if starter.dietary_type.include?("Gluten-free") %>
+                            <%= cl_image_tag "gf-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if starter.dietary_type.include?("Lactose-free") %>
+                            <%= cl_image_tag "lf-dk", class: "diet-icon-column" %>
+                        <% end %></p>
+
+                      <p><strong>$<%= starter.price %></strong></p></div>
+                      <p><%= starter.description%></p>
+
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, @menu, starter) %>
+                <%= link_to " |  Delete Dish", dish_path(starter), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+                <% end %>
+                <% end %>
+                </div>
+                </div>
+
+                <div class="column-container d-flex flex-column mt-20">
+        <h4 class="mb-0 mt-20" id="breakfast">Breakfast</h4>
+            <div class="dish-full">
+              <div class="menu-text">
+                <% @breakfasts.each do |breakfast| %>
+                  <% if breakfast.menu_id == @menu.id %>
+                    <div class="d-flex align-items-center mt-20">
+                      <p class="w-full d-flex align-items-center justify-content-start"><strong><%= breakfast.name %></strong>
+                        <% if breakfast.dietary_type.include?("Vegan") %>
+                          <%= cl_image_tag "vegan-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if breakfast.dietary_type.include?("Vegetarian") %>
+                          <%= cl_image_tag "veg-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if breakfast.dietary_type.include?("Gluten-free") %>
+                            <%= cl_image_tag "gf-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if breakfast.dietary_type.include?("Lactose-free") %>
+                            <%= cl_image_tag "lf-dk", class: "diet-icon-column" %>
+                        <% end %></p>
+
+                      <p><strong>$<%= breakfast.price %></strong></p></div>
+                      <p><%= breakfast.description%></p>
+
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, breakfast) %>
+                <%= link_to " |  Delete Dish", dish_path(breakfast), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+                <% end %>
+                <% end %>
+              </div>
+              </div>
+
+               <div class="column-container d-flex flex-column mt-20">
+        <h4 class="mb-0 mt-20" id="lunch">Lunch</h4>
+            <div class="dish-full">
+              <div class="menu-text">
+                <% @lunches.each do |lunch| %>
+                  <% if lunch.menu_id == @menu.id %>
+                    <div class="d-flex align-items-center mt-20">
+                      <p class="w-full d-flex align-items-center justify-content-start"><strong><%= lunch.name %></strong>
+                        <% if lunch.dietary_type.include?("Vegan") %>
+                          <%= cl_image_tag "vegan-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if lunch.dietary_type.include?("Vegetarian") %>
+                          <%= cl_image_tag "veg-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if lunch.dietary_type.include?("Gluten-free") %>
+                            <%= cl_image_tag "gf-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if lunch.dietary_type.include?("Lactose-free") %>
+                            <%= cl_image_tag "lf-dk", class: "diet-icon-column" %>
+                        <% end %></p>
+
+                      <p><strong>$<%= lunch.price %></strong></p></div>
+                      <p><%= lunch.description%></p>
+
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, lunch) %>
+                <%= link_to " |  Delete Dish", dish_path(lunch), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+                <% end %>
+                <% end %>
+              </div>
+              </div>
+
+
+   <div class="column-container d-flex flex-column mt-20">
+        <h4 class="mb-0 mt-20" id="dinner">Main Courses</h4>
+            <div class="dish-full">
+              <div class="menu-text">
+                <% @dinners.each do |dinner| %>
+                  <% if dinner.menu_id == @menu.id %>
+                    <div class="d-flex align-items-center mt-20">
+                      <p class="w-full d-flex align-items-center justify-content-start"><strong><%= dinner.name %></strong>
+                        <% if dinner.dietary_type.include?("Vegan") %>
+                          <%= cl_image_tag "vegan-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if dinner.dietary_type.include?("Vegetarian") %>
+                          <%= cl_image_tag "veg-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if dinner.dietary_type.include?("Gluten-free") %>
+                            <%= cl_image_tag "gf-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if dinner.dietary_type.include?("Lactose-free") %>
+                            <%= cl_image_tag "lf-dk", class: "diet-icon-column" %>
+                        <% end %></p>
+
+                      <p><strong>$<%= dinner.price %></strong></p></div>
+                      <p><%= dinner.description%></p>
+
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, dinner) %>
+                <%= link_to " |  Delete Dish", dish_path(dinner), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+                <% end %>
+                <% end %>
+              </div>
+              </div>
+
+
+   <div class="column-container d-flex flex-column mt-20">
+        <h4 class="mb-0 mt-20" id="sides">Sides</h4>
+            <div class="dish-full">
+              <div class="menu-text">
+                <% @sides.each do |side| %>
+                  <% if side.menu_id == @menu.id %>
+                    <div class="d-flex align-items-center mt-20">
+                      <p class="w-full d-flex align-items-center justify-content-start"><strong><%= side.name %></strong>
+                        <% if side.dietary_type.include?("Vegan") %>
+                          <%= cl_image_tag "vegan-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if side.dietary_type.include?("Vegetarian") %>
+                          <%= cl_image_tag "veg-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if side.dietary_type.include?("Gluten-free") %>
+                            <%= cl_image_tag "gf-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if side.dietary_type.include?("Lactose-free") %>
+                            <%= cl_image_tag "lf-dk", class: "diet-icon-column" %>
+                        <% end %></p>
+
+                      <p><strong>$<%= side.price %></strong></p></div>
+                      <p><%= side.description%></p>
+
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, side) %>
+                <%= link_to " |  Delete Dish", dish_path(side), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+                <% end %>
+                <% end %>
+              </div>
+              </div>
+
+
+   <div class="column-container d-flex flex-column mt-20">
+        <h4 class="mb-0 mt-20" id="dessert">Desserts</h4>
+            <div class="dish-full">
+              <div class="menu-text">
+                <% @desserts.each do |dessert| %>
+                  <% if dessert.menu_id == @menu.id %>
+                    <div class="d-flex align-items-center mt-20">
+                      <p class="w-full d-flex align-items-center justify-content-start"><strong><%= dessert.name %></strong>
+                        <% if dessert.dietary_type.include?("Vegan") %>
+                          <%= cl_image_tag "vegan-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if dessert.dietary_type.include?("Vegetarian") %>
+                          <%= cl_image_tag "veg-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if dessert.dietary_type.include?("Gluten-free") %>
+                            <%= cl_image_tag "gf-dk", class: "diet-icon-column" %>
+                        <% end %>
+                        <% if dessert.dietary_type.include?("Lactose-free") %>
+                            <%= cl_image_tag "lf-dk", class: "diet-icon-column" %>
+                        <% end %></p>
+
+                      <p><strong>$<%= dessert.price %></strong></p></div>
+                      <p><%= dessert.description%></p>
+
+                <%= link_to " Edit Dish", edit_user_restaurant_menu_dish_path(@user, @restaurant, dessert) %>
+                <%= link_to " |  Delete Dish", dish_path(dessert), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+                <% end %>
+                <% end %>
+              </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
     </div>
-      <p class="btn-primary"><%= link_to "View Menu", menu_path(@menu) %></p>
-  </div>
-
-</div>

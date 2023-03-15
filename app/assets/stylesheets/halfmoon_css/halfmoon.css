@@ -2926,7 +2926,7 @@ Notes:
 
 
 
-.btn-primary {
+/* .btn-primary {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 16px;
   font-weight: 200;
@@ -2942,153 +2942,91 @@ Notes:
   touch-action: manipulation;
   text-transform: uppercase;
   width: fit-content;
-}
+} */
 
 .btn-primary-cards {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  outline: 0;
-  border: 1px solid black;
+  background-color: #b5d6ef;
+  border: 2px solid #302D31;
+  border-radius: 30px;
+  box-shadow: #302D31 4px 4px 0 0;
+  color: #302D31;
   cursor: pointer;
-  position: relative;
-  background-color: #d2efee;
+  display: inline-block;
+  font-family: "Oswald";
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 0 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  text-transform: uppercase;
-  width: fit-content;
   transition: background-color 0.5s ease;
+
 }
 
 .btn-primary-cards:hover {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  outline: 0;
-  border: 1px solid black;
-  cursor: pointer;
-  position: relative;
-  background-color: #5fc0bd;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  text-transform: uppercase;
-  width: fit-content;
+  background-color: #94c6ec;
   transition: background-color 0.5s ease;
 
+}
+
+.btn-primary-cards:active {
+  box-shadow: #302D31 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .btn-primary-cards {
+    min-width: 120px;
+    padding: 0 25px;
+  }
 }
 
 .btn-secondary-cards {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  outline: 0;
-  border: 1px solid black;
-  cursor: pointer;
-  position: relative;
   background-color: #f7f0b3;
+  border: 2px solid #302D31;
+  border-radius: 30px;
+  box-shadow: #302D31 4px 4px 0 0;
+  color: #302D31;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Oswald";
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 0 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  text-transform: uppercase;
-  width: fit-content;
   transition: background-color 0.5s ease;
+
 }
 
 .btn-secondary-cards:hover {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  outline: 0;
-  border: 1px solid black;
-  cursor: pointer;
-  position: relative;
   background-color: #f3e87e;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  text-transform: uppercase;
-  width: fit-content;
   transition: background-color 0.5s ease;
 
 }
 
-.btn-primary:after {
-  content: "";
-  background-color: #b5d6ef;
-  width: 100%;
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-  top: 7px;
-  left: 7px;
-  transition: 0.2s;
-}
-
-.btn-primary:hover:after {
-  top: 0px;
-  left: 0px;
+.btn-secondary-cards:active {
+  box-shadow: #302D31 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
 
 @media (min-width: 768px) {
-  .btn-primary {
-    padding: 13px 50px 13px;
+  .btn-secondary-cards {
+    min-width: 120px;
+    padding: 0 25px;
   }
 }
 
-/* Secondary button */
 
-.btn-secondary {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  outline: 0;
-  border: 1px solid black;
-  background-color: rgba(0, 0, 0, 0);
-  background-blend-mode: multiply;
-  cursor: pointer;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  text-transform: uppercase;
-  width: fit-content;
-}
-
-.btn-secondary:after {
-  content: "";
-  background-color: #f7f0b3;
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  top: 7px;
-  left: 7px;
-  transition: 0.2s;
-  z-index: -1;
-}
-
-.btn-secondary:hover:after {
-  top: 0px;
-  left: 0px;
-
-}
-
-@media (min-width: 768px) {
-  .btn-secondary {
-    padding: 13px 50px 13px;
-  }
-}
 
 
 /* Secondary-gray button */

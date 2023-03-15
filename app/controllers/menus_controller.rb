@@ -37,6 +37,12 @@ class MenusController < ApplicationController
     @user = current_user
     @restaurant = Restaurant.find(params[:restaurant_id])
     authorize @menu
+    @starters = Dish.where("category = 'Starter'")
+    @dinners = Dish.where("category = 'Dinner'")
+    @lunches = Dish.where("category = 'Lunch'")
+    @desserts = Dish.where("category = 'Dessert'")
+    @sides = Dish.where("category = 'side'")
+    @breakfasts = Dish.where("category = 'Breakfast'")
   end
 
   def create
