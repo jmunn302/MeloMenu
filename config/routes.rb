@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :dishes, only: [:destroy]
   resources :menus, only: [:show]
+  get "menus/:id/qr_code", to: "menus#qr_show"
   resources :templates, only: [:index, :show]
   resources :support_requests, only: [:new, :create]
   resources :users do

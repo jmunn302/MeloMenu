@@ -10,16 +10,19 @@
 
       <div class="w-full my-0" style="text-align:left">
         <h1 class ="my-0"><%= @menu.menu_name %></h1>
-        <p class="pb-20"><strong> <%= @menu.restaurant.name %>: <%= @menu.restaurant.cuisine %></strong></p>
-
-        <%= form_for @menu, url: user_restaurant_menu_path(@menu), method: :patch do |f| %>
-
-            <div class="field">
-              <%= f.label :name %>
-              <%= f.text_field :menu_name %>
-              <%= f.submit "Update", style: "font-size: 12px" %>
-              <% end %>
+        <div class="edit-box">
+          <div>
+            <p class="pb-20"><strong> <%= @menu.restaurant.name %>: <%= @menu.restaurant.cuisine %></strong></p>
+            <%= form_for @menu, url: user_restaurant_menu_path(@menu), method: :patch do |f| %>
+              <div class="field">
+                <%= f.label :name %>
+                <%= f.text_field :menu_name %>
+                <%= f.submit "Update", style: "font-size: 12px" %>
               </div>
+            <% end %>
+          </div>
+          <%= @svg.html_safe %>
+        </div>
       </div>
 
         <div class="d-flex align-items-center justify-content-between"><h3 class="mt-20">Dishes on <%= @menu.menu_name %></h3>
