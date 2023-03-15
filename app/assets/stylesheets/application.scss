@@ -25,6 +25,7 @@
 
 body {
   font-family: "Cardo";
+  height: fit-content;
 }
 
 h1, h2, h3, h4 {
@@ -284,7 +285,7 @@ a:hover {
 }
 
 .menu-img img {
-  width: 20%;
+  width: 50%;
   margin-top: 5%;
 }
 
@@ -303,4 +304,11 @@ footer {
   color: rgb(219, 220, 227);
   padding-top: 2%;
   background-color: #476783ff;
+}
+
+.sidebar-full {
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  opacity: 0.7;
 }

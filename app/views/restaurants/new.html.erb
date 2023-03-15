@@ -1,7 +1,9 @@
 <div class="bg-container-full">
-  <div class="container main-card d-flex flex-column align-items-stretch card-content">
+  <div class="container main-card-index d-flex flex-column align-items-stretch card-content">
+  <img class="corner-img" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678881148/corner_image_menoet.png">
+  <img class="sidebar-full" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678891956/sidebar_cooking_lgruev.png">
     <div class="container p-20"; style="margin-bottom: 50px;">
-      <h1>New Restaurant</h1>
+      <h1 class="w-full all-content">New Restaurant</h1>
       <h4>Fill out your Restaurant information</h4>
 
       <%= form_with model: @restaurant, url: user_restaurants_path do |form| %>
@@ -17,32 +19,32 @@
           </div>
         <% end %>
 
-        <div class="field">
+        <div class="field mb-10">
           <%= form.label :name %>
           <%= form.text_field :name %>
         </div>
 
-        <div class="field">
+        <div class="field mb-10">
           <%= form.label :cuisine %>
           <%= form.text_field :cuisine %>
         </div>
 
-        <div class="field">
+        <div class="field mb-10">
           <%= form.label :address %>
           <%= form.text_field :address %>
         </div>
 
-        <div class="field">
+        <div class="field mb-10">
           <%= form.label :phone_number %>
           <%= form.text_field :phone_number %>
         </div>
 
-        <div class="field">
+        <div class="field mb-10">
           <%= form.label :website %>
           <%= form.text_field :website %>
         </div>
 
-        <div class="field">
+        <div class="field mb-10">
           <%= form.label :email %>
           <%= form.text_field :email %>
         </div>

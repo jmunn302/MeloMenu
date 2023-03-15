@@ -1,36 +1,37 @@
-<div class="bg-container">
+<body style="height: 100%">
+<div class="bg-container-full">
   <div class="container main-card d-flex flex-column align-items-stretch card-content">
     <div class="container p-20"; style="margin-bottom: 50px;">
       <h1>Edit Restaurant</h1>
 
       <%= form_for @restaurant, url: user_restaurant_path(@restaurant), method: :patch do |f| %>
 
-        <p>
+        <p class="mb-10">
           <%= f.label :name %>
           <%= f.text_field :name %>
         </p>
 
-        <p>
+        <p class="mb-10">
           <%= f.label  :cuisine %>
           <%= f.text_field :cuisine %>
         </p>
 
-        <p>
+        <p class="mb-10">
           <%= f.label :address %>
           <%= f.text_field :address %>
         </p>
 
-        <p>
+        <p class="mb-10">
           <%= f.label :phone_number %>
           <%= f.text_field :phone_number %>
         </p>
 
-        <p>
+        <p class="mb-10">
           <%= f.label :website %>
           <%= f.text_field :website %>
         </p>
 
-        <p>
+        <p class="mb-10">
           <%= f.label :email %>
           <%= f.text_field :email %>
         </p>

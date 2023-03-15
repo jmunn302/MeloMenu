@@ -43,9 +43,9 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find(params[:id])
-
+    @user = current_user
     if @restaurant.update(restaurant_params)
-      redirect_to user_restaurant_path(@restaurant)
+      redirect_to user_restaurant_path(@user, @restaurant)
     else
       render 'edit'
     end
