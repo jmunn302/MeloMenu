@@ -15,7 +15,6 @@ User.destroy_all
 
 require "open-uri"
 
-
 User.create!(first_name: 'Anna', last_name: 'Jones', email: Faker::Internet.email, password: Faker::Internet.password(min_length: 8))
 
 @users = User.all
@@ -33,11 +32,14 @@ Restaurant.create!(user_id: ids.sample, name: 'Taco Time', cuisine: 'Mexican', a
 
 Template.create!(name: "Colourful Template")
 
-Template.create!(name: "Classic Template")
-
 Template.create!(name: "Boho Template")
 
+Template.create!(name: "Classic Template")
+
 Template.create!(name: "Cute Cafe Template")
+
+Template.create!(name: "Simple Template")
+
 
 @templates = Template.all
 template_ids = []
