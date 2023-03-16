@@ -238,7 +238,7 @@ hr.black {
   }
 }
 
-.all-content {
+.all-content-templates {
   flex-direction: row;
 }
 
@@ -355,7 +355,7 @@ hr.black {
     padding-bottom: 20px;
   }
 
-  .all-content {
+  .all-content-templates {
     flex-direction: column;
   }
 
@@ -404,5 +404,13 @@ hr.black {
 
   .menu-name-2 {
     top: 40%;
+  }
+
+  .btn-primary-cards {
+    line-height: 25px;
+  }
+
+  .btn-secondary-cards {
+    line-height: 25px;
   }
 }

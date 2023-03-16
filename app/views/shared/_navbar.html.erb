@@ -13,7 +13,7 @@
   <div class="dropdown-content">
 
     <a href="<%= user_restaurants_path(user_id = current_user.id) %> ">My Menus</a>
-    <a href="<%= new_support_request_path %>">About Us</a>
+    <a href="<%= support_requests_path %>">About Us</a>
     <%= link_to "Sign Out", destroy_user_session_path, data: {turbo_method: :delete} %>
   </div>
 </div>

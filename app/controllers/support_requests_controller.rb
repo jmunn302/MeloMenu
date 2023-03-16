@@ -1,19 +1,11 @@
 class SupportRequestsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
+
 
   def index
-    @support_requests = policy_scope(SupportRequest)
-  end
+    @support_request = policy_scope(SupportRequest)
 
-  def new
-    @support_request = SupportRequest.new
-    authorize @support_request
   end
 
 
-
-  private
-
-  def support_request_params
-    params.require(:support_request).permit(:name, :issue)
-  end
 end
