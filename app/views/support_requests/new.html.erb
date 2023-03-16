@@ -2,33 +2,12 @@
 <div class="bg-container-full">
   <div class="container main-card d-flex flex-column align-items-stretch card-content">
     <div class="container p-20"; style="margin-bottom: 50px;">
-      <h1>Email us!</h1>
+      <h1>About Us!</h1>
 
-      <%= form_tag '/support', method: :post do  %>
+<img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678963313/LW_HS-18_kghvm0.jpg" class="group-photo" >
+        <%# <%= link_to 'submit', root_path, class: "btn-secondary-cards" %>
 
-      <div class="form-group">
-        <%= label_tag :name, 'Your Name:' %>
-        <%= text_field_tag :name %>
-      </div>
 
-      <div class="form-group">
-      <%= label_tag :name, 'Restaurant Name:' %>
-        <%= text_field_tag :name %>
-      </div>
-
-      <div class="form-group">
-        <%= label_tag :name, 'Your email:' %>
-        <%= text_field_tag :name %>
-      </div>
-
-      <div class="form-group">
-        <%= label_tag :issue, 'What seems to be the issue?' %>
-        <%= text_area_tag :issue %>
-      </div>
-
-        <%= link_to 'submit', root_path, class: "btn-secondary-cards" %>
-
-      <% end %>
     </div>
   </div>
 </div>
