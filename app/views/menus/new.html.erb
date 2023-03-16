@@ -2,7 +2,7 @@
 <div class="bg-container-full">
 
 
-  <div class="container main-card-wide d-flex flex-column align-items-stretch card-content">
+  <div class="container main-card-wider d-flex flex-column align-items-stretch card-content">
   <h1>Create a New Menu</h1>
 
   <%= form_with model: @menu, url: user_restaurant_menus_path, method: :post do |form| %>
@@ -16,35 +16,35 @@
         </ul>
       </div>
     <% end %>
-
+<div class="d-flex flex-column w-full">
       <div class="field">
-          <%= form.label :menu_name %>
+         <strong> <%= form.label :menu_name %>:</strong>
           <%= form.text_field :menu_name %>
         </div>
         <br>
-        <div class="field">
-          <%= form.label :template_id %>
-          <div class="d-flex flex-wrap justify-content-between">
+        <div class="field d-flex flex-column">
+          <strong><%= form.label :template_id %> Choice:</strong>
+          <div class="d-flex w-full justify-content-between">
             <% @templates.each do |template| %>
-              <div class="mr-4 mb-4">
+              <div class="mr-4 mb-4 d-flex justify-content-start w-full align-items-center">
                 <%= radio_button_tag(:template_id, template.id) %>
-                <label><%= template.name %></label>
+                <label class="pl-10"><%= template.name %></label>
               </div>
             <% end %>
           </div>
         </div>
-        <br>
+        </div>
+<br>
             <div class="actions">
-              <%= form.submit 'Save', class: "btn-primary" %>
+              <%= form.submit 'Next', class: "btn-primary-cards" %>
             </div>
-        <br>
+<br>
       <% end %>
-
 
 <div class="d-flex justify-content-between">
 
   <div class="template-container">
-    <p>1. Colourful Template</p>
+  <p class="template-img">Colourful Template</p>
     <div class="modal" id="modal-3" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-content-media w-900 h-800">
@@ -61,7 +61,7 @@
   <!-- Modal toggle inside the content wrapper -->
   <div class="content-wrapper">
         <div data-toggle="modal" data-target="modal-3">
-        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807223/Colourful_Menu_zyhxuv.png"; style="width: 200px">
+        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807223/Colourful_Menu_zyhxuv.png"; style="width: 150px">
       </div>
   </div>
 </div>
@@ -69,8 +69,8 @@
   </div>
 
 
-  <div>
-    <p>2. Boho Template</p>
+    <div class="template-container">
+  <p class="template-img">Boho Template</p>
     <div class="modal" id="modal-4" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-content-media w-900 h-800">
@@ -88,15 +88,15 @@
   <!-- Modal toggle inside the content wrapper -->
   <div class="content-wrapper">
         <div data-toggle="modal" data-target="modal-4">
-        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807223/Boho_Menu_apkotv.png"; style="width: 200px">
+        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807223/Boho_Menu_apkotv.png"; style="width: 150px">
       </div>
   </div>
 </div>
   </div>
 
 
-  <div>
-    <p>3. Classic Template </p>
+  <div class="template-container">
+  <p class="template-img">Classic Template</p>
     <div class="modal" id="modal-6" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-content-media w-900 h-800">
@@ -114,15 +114,15 @@
   <!-- Modal toggle inside the content wrapper -->
   <div class="content-wrapper">
         <div data-toggle="modal" data-target="modal-6">
-        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807225/Classic_Menu_w4lvjp.png"; style="width: 200px">
+        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807225/Classic_Menu_w4lvjp.png"; style="width: 150px">
       </div>
   </div>
 </div>
   </div>
 
 
-  <div>
-    <p>4. Cute Cafe Template </p>
+  <div class="template-container">
+  <p class="template-img">Cute Cafe Template</p>
     <div class="modal" id="modal-5" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-content-media w-900 h-800">
@@ -140,10 +140,39 @@
   <!-- Modal toggle inside the content wrapper -->
   <div class="content-wrapper">
         <div data-toggle="modal" data-target="modal-5">
-        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807231/Cafe_menu_wtb0lz.png"; style="width: 200px">
+        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678807231/Cafe_menu_wtb0lz.png"; style="width: 150px">
       </div>
   </div>
 </div>
   </div>
+
+  <div class="template-container">
+  <p class="template-img">Simple Template</p>
+    <div class="modal" id="modal-7" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-content-media w-900 h-800">
+      <a href="#" class="close" role="button" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </a>
+            <h5 class="modal-title text-white">Simple Template</h5>
+      <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678879933/Simple_Menu_tes6st.png" class="img-fluid" alt="modal-img">
+
+    </div>
+  </div>
+</div>
+<!-- Page wrapper -->
+<div class="page-wrapper">
+  <!-- Modal toggle inside the content wrapper -->
+  <div class="content-wrapper">
+        <div data-toggle="modal" data-target="modal-7">
+        <img src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678879933/Simple_Menu_tes6st.png"; style="width: 150px">
+      </div>
+  </div>
+</div>
+  </div>
+
+
+
+
 </div>
 </div>
