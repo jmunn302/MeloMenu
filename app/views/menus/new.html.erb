@@ -35,8 +35,14 @@
         </div>
         </div>
 <br>
-            <div class="actions">
-              <%= form.submit 'Next', class: "btn-primary-cards" %>
+            <div class="actions d-flex">
+              <%= form.submit 'Add Dishes', class: "btn-primary-cards mr-20" %>
+              <div class="button">
+      <%= link_to user_restaurants_path do%>
+      <p class="btn-secondary-cards">Save Menu</p>
+      <% end %>
+      </div>
+
             </div>
 <br>
       <% end %>
