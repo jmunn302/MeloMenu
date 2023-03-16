@@ -26,6 +26,7 @@
 body {
   font-family: "Cardo";
   height: fit-content;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4 {
@@ -104,7 +105,7 @@ a:hover {
 }
 
 .menu {
-  margin-top: 15%;
+  margin-top: 10px;
 
 	ol {
 		list-style: none;
@@ -193,7 +194,7 @@ a:hover {
 
         a {
           font-family: "Cardo";
-          font-size: 1.3rem;
+          font-size: 1.7rem;
           text-transform: none;
           margin: 0 auto;
         }
@@ -336,4 +337,19 @@ footer {
 
 .template-img {
 width: 150px
+}
+
+.template-container {
+
+  p {
+    font-family: "Oswald";
+    margin-bottom: 10px;
+  }
+
+  img {
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px 3px rgba(0,0,0,0.18);
+
+  }
 }
