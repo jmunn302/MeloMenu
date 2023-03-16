@@ -7,11 +7,11 @@ class SupportRequestPolicy < ApplicationPolicy
     end
 
 
-end
+  end
 
 
   def index?
     true
-end
+  end
 
 end
