@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :menus, only: [:show]
   get "menus/:id/qr_code", to: "menus#qr_show"
   resources :templates, only: [:index, :show]
-  resources :support_requests, only: [:new, :create]
+  resources :support_requests, only: [:index]
   resources :users do
     resources :restaurants do
       resources :menus, only: [:index, :edit, :update, :destroy, :create, :new] do
