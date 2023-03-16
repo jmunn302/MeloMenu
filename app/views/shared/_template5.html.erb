@@ -3,16 +3,16 @@
   <div class="template-header template-5">
 
       <div class="d-flex justify-content-center align-content-center">
-        <div class="mx-20">
+        <div class="mx-20 my-20">
           <% if @menu.restaurant.user == current_user %>
-          <p class="btn-primary"><%= link_to "Add Dishes", new_user_restaurant_menu_dish_path(@user, @restaurant, @menu) %></p>
+          <p class="btn-primary-cards"><%= link_to "Add Dishes", new_user_restaurant_menu_dish_path(@user, @restaurant, @menu) %></p>
           <% end %>
 
         </div>
 
-        <div class="mx-20">
+        <div class="mx-20 my-20">
           <% if @menu.restaurant.user == current_user %>
-          <p class="btn-secondary"><%= link_to 'Edit Menu', edit_user_restaurant_menu_path(@user, @restaurant, @menu)%></p>
+          <p class="btn-secondary-cards"><%= link_to 'Menu Dashboard', edit_user_restaurant_menu_path(@user, @restaurant, @menu)%></p>
           <% end %>
 
         </div>

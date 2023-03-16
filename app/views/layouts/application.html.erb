@@ -15,10 +15,11 @@
 
   <body>
   <% if current_user%>
+  <% unless current_page?(root_path) %>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
   <% end %>
-
+<% end %>
   <%= yield %>
   <% unless current_page?(root_path) %>
     <%= render "shared/footer" %>

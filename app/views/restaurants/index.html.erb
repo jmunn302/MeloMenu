@@ -15,7 +15,7 @@
     <% @restaurants.each do |restaurant| %>
         <% if restaurant.user_id = current_user.id %>
 
-    <li class="menu-item d-flex flex-column align-items-center w-half">
+    <li class="menu-item d-flex flex-column align-items-center w-half mt-0">
          <div class="menu-img mx-auto"> <%= image_tag("#{@images.sample}")%></div>
       <%= link_to restaurant.name, user_restaurant_path(current_user, restaurant) %><p class="triangle">></p>
       <ol class="sub-menu align-items-center justify-content-center">
