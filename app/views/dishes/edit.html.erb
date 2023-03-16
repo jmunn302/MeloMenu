@@ -1,9 +1,12 @@
 <body style="height: 100%">
 <div class=bg-container-full>
-<div class=main-card>
+<div class=main-card-index>
 
-<div class="container" style="mt-20">
-  <h1>Edit Dish</h1>
+  <img class="corner-img" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678881148/corner_image_menoet.png">
+  <img class="sidebar-full" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1678891956/sidebar_cooking_lgruev.png">
+
+  <div class="container p-20"; style="margin-bottom: 50px;">
+  <h1 class="w-full all-content">Edit Dish</h1>
 
 <%= form_for @dish, url: user_restaurant_menu_dish_path(@dish), method: :patch do |f| %>
 
@@ -22,8 +25,8 @@
     <%= f.text_field :price %>
   </p>
 
-  <p class="btn-primary-cards b-10">
-    <%= f.submit %>
+  <p>
+    <%= f.submit "Update", class: "btn-primary-cards" %>
   </p>
 <% end %>
 </div>
